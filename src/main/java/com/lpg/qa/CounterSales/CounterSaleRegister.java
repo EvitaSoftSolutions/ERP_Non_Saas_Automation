@@ -24,8 +24,17 @@ public class CounterSaleRegister {
 			@FindBy(xpath="//input[@id='txtConsumerNo']")private WebElement consumerno;
 			@FindBy (xpath="//button[@id='btnGetdata']") private WebElement getdatabtn; 
 			@FindBy (xpath="//*[@id=\"divContentHolder\"]/form/div/section[2]/div/div/div/div") private WebElement body;
+			@FindBy(xpath="//span[text()='Counter Sales']")private WebElement countersales;
+			@FindBy(xpath="//a[text()=' DBC']")private WebElement clickdbc;
+			@FindBy(xpath="//input[@id='txtConsumerNoSearch']")private WebElement consumernumber;
+			@FindBy(xpath="//button[@id='btnGetConsumerData']")private WebElement searchbtn;
 			
 			// initialization
+			WebDriver driver;
+			public void setup(WebDriver driver) 
+			{
+				this.driver=driver;
+			}
 			public CounterSaleRegister(WebDriver driver) {
 				PageFactory.initElements(driver, this);
 			}
@@ -68,7 +77,7 @@ public class CounterSaleRegister {
 					 Reporter.log(" verifyMyerpselectdate", true);
 					 selectdate.click();
 					 selectdate.clear();
-					 selectdate.sendKeys("01/01/2023");
+					 selectdate.sendKeys("01/02/2023");
 					 body.click();
 					 Thread.sleep(500);
 				}
@@ -77,7 +86,7 @@ public class CounterSaleRegister {
 					 Reporter.log(" verifyMyerpselectdate", true);
 					 selectdate.click();
 					 selectdate.clear();
-					 selectdate.sendKeys("13/01/2023");
+					 selectdate.sendKeys("21/02/2023");
 					 body.click();
 					 Thread.sleep(500);
 				}
@@ -95,7 +104,7 @@ public class CounterSaleRegister {
 					Thread.sleep(1000);
 					Assert.assertFalse(selectpaymentmode.isDisplayed(),"selectpaymentmode is displayed");
 					Assert.assertFalse(selectpaymentmode.isSelected());
-					su.selectByVisibleText("UPI");
+					su.selectByVisibleText("CASH");
 				
 				}
 				
@@ -103,7 +112,7 @@ public class CounterSaleRegister {
 					 Assert.assertTrue(consumerno.isEnabled(),"consumerno is enabled");
 					 Reporter.log(" verifyMyerpconsumerno", true);
 					 consumerno.click();
-					 consumerno.sendKeys("40012");
+					 consumerno.sendKeys("879");
 					 
 				}
 				public void VerifyandClickonMyerpGetdataBtn() throws InterruptedException{
@@ -111,6 +120,31 @@ public class CounterSaleRegister {
 					 Assert.assertTrue(getdatabtn.isEnabled(),"getdatabtn is enabled");
 					 Reporter.log(" verifyMyerpgetdatabtn", true);
 					 getdatabtn.click();
-					 getdatabtn.click();
+					 Thread.sleep(6000); 
 				}
+				public void verifyMyerpCounterSales() throws InterruptedException {
+					Thread.sleep(1000); 
+					Assert.assertTrue(countersales.isEnabled(),"CounterSales is enable");
+					Reporter.log("verifyMyerpcountersales",true);
+					countersales.click();
+				}
+				public void verifyMyerpClickDbc() throws InterruptedException {
+					Thread.sleep(800); 
+					Assert.assertTrue(clickdbc.isEnabled(),"ClickDbc is enable");
+					Reporter.log("verifyMyerpclickdbc",true);
+					clickdbc.click();
+				}
+				public void verifyMyerpConsumerNumber() throws InterruptedException {
+					Thread.sleep(800); 
+					Assert.assertTrue(consumernumber.isEnabled(),"ConsumerNumber is enable");
+					Reporter.log("verifyMyerpconsumernumber",true);
+					consumernumber.sendKeys("1414");
+				}
+				public void verifyMyerpSearchbtn() throws InterruptedException {
+					Thread.sleep(800); 
+					Assert.assertTrue(searchbtn.isEnabled(),"Searchbtn is enable");
+					Reporter.log("verifyMyerpsearchbtn",true);
+					searchbtn.click();
+				}
+				
 }

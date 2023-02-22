@@ -29,14 +29,43 @@ public class TaoutTest extends LpgTestBase{
 	@Test
 	public void Taouttest() throws InterruptedException{
 		TaoutForm to=new TaoutForm(LpgTestBase.driver);
-		to.verifyMyerpagancycode();
-		to.verifyMyerpusrname();
-		to.verifyMyerppassword();
-		to.verifyMyerploginbtn();
+		/*
+		 * to.verifyMyerpagancycode(); to.verifyMyerpusrname();
+		 * to.verifyMyerppassword(); to.verifyMyerploginbtn();
+		 */
+		to.setup(driver);
 		to.verifyMyerpCounterSales();
 		to.verifyMyerpTaout();
 		to.verifyMyerpConsumerno();
 		to.verifyMyerpSerchbtn();
+		to.verifyMyerpConsumerGSTIN();
+		to.verifyMyerpDocSerialNo();
+		to.verifyMyerpEnterCity1();
+		to.SelectState1();
+		to.SelectDistrict1();
+		to.SelectTehsil1();
+		to.verifyMyerpEnterEmail();
+		to.verifyMyerpClearbtn();
+		to.verifyMyerpConsumerno();
+		to.verifyMyerpSerchbtn();
+		to.verifyMyerpConsumerGSTIN();
+		to.verifyMyerpDocSerialNo();
+		to.verifyMyerpEnterCity1();
+		to.SelectState1();
+		to.SelectDistrict1();
+		to.SelectTehsil1();
+		to.verifyMyerpEnterEmail();
+		to.verifyMyerpUUpdateSubmitBtn();
+		to.verifyMyerpConsumerno();
+		to.verifyMyerpSerchbtn();
+		to.verifyMyerpConsumerGSTIN();
+		to.verifyMyerpDocSerialNo();
+		to.verifyMyerpEnterCity1();
+		to.SelectState1();
+		to.SelectDistrict1();
+		to.SelectTehsil1();
+		to.verifyMyerpEnterEmail();
+		to.verifyMyerpDeletebtn();
 
 	}
 }

@@ -57,6 +57,7 @@ public class TAInTest extends LpgTestBase{
 		ta.verifyMyerpNumberofDpr();
 		ta.verifyMyerpRemarks();
 		ta.verifyMyerpclearbtn();
+		
 		ta.verifyMyerpConsumerGstin1();
 		ta.verifyMyerpDocSerialNo1();
 		ta.verifyMyerpConsumerno1();
@@ -78,7 +79,33 @@ public class TAInTest extends LpgTestBase{
 		ta.verifyMyerpNumberofcyl1();
 		ta.verifyMyerpNumberofDpr1();
 		ta.verifyMyerpRemarks1();
-		//ta.verifyMyerpSubmitbtn();
+		ta.verifyMyerpSubmitbtn();
+		ta.verifyMyerpViewReport();
+		ta.verifyMyerpPrint();
+		ta.verifyMyerpCounterSales1();
+		ta.verifyMyerpTransferAdvice1();
+		ta.verifyMyerpUpdateDBC();
+		ta.verifyMyerpDOCNO();
+		ta.verifyMyerpGetDataBtn();
+		ta.verifyMyerpUpdateDBCBtn();
+		ta.verifyMyerpUViewReport();
+		ta.verifyMyerpUPrint();
+		
+		ta.VerifyandClickonMyerpGeneralReport();
+		ta.VerifyandClickonMyerpConterInvoiceDetails();
+		ta.verifyMyerpCSelectCompany();
+		ta.VerifyandClickonMyerpCounterSaleVoucherNumber();
+		ta.VerifyandClickonMyerpGetdataBtn();
+		ta.VerifyandClickonMyerpPrintInvoiceBtn();
+		
+		ta.VerifyandClickonMyerpCSIDGeneralReport();
+		ta.VerifyandClickonMyerpCountersaleRegister();
+		ta.VerifyandClickonMyerpPlaseFromSelectDate();
+		ta.VerifyandClickonMyerpPlaseToSelectDate();
+		ta.verifyMyerpSelectCompany();
+		ta.verifyMyerpSelectPaymentMode();
+		ta.VerifyandClickonMyerpConsumerNumber();
+		ta.VerifyandClickonMyerpCSRGetdataBtn();
 		
 		
 	}

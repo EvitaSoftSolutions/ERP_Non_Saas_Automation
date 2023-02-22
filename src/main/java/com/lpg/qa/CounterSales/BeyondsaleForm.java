@@ -1,5 +1,7 @@
 package com.lpg.qa.CounterSales;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,8 +33,19 @@ public class BeyondsaleForm {
 	@FindBy(xpath="//input[@id='txtProduct']")private WebElement product;
 	@FindBy(xpath="//button[@id='btnclear']")private WebElement clearbtn;
 	@FindBy(xpath="//button[@id='btnSubmit']")private WebElement submitbtn;
+	@FindBy(xpath="//input[@id='btnback']")private WebElement ubackbtn; 
+	@FindBy(xpath="//*[@id=\"divContentHolder\"]/form/section[1]/h1/a")private WebElement updatebeyondsale;
+	@FindBy(xpath="//input[@id='txtMDLDocumentNo']")private WebElement updatedocno;
+	@FindBy(xpath="//button[@id='btnMDLGet']")private WebElement ugetdatabtn;
+	@FindBy(xpath="//button[@id='btnSubmit']")private WebElement usubmit;
+	
 	
 	//initialization
+	WebDriver driver;
+	public void setup(WebDriver driver) 
+	{
+		this.driver=driver;
+	}
 	public BeyondsaleForm(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 		}
@@ -73,7 +86,7 @@ public class BeyondsaleForm {
 	public void verifyMyerpConsumerNumberSearch() {
 		Assert.assertTrue(consumernumbersearch.isEnabled(),"ConsumerNumberSearch is enable");
 		Reporter.log("verifyMyerpconsumernumbersearch",true);
-		consumernumbersearch.sendKeys("9011");
+		consumernumbersearch.sendKeys("12921");
 	}
 	public void verifyMyerpSubmitBtnClick() {
 		Assert.assertTrue(submitbtnclick.isEnabled(),"SubmitBtnClick is enable");
@@ -83,17 +96,20 @@ public class BeyondsaleForm {
 	public void verifyMyerpInvoiceno() {
 		Assert.assertTrue(invoiceno.isEnabled(),"Invoiceno is enable");
 		Reporter.log("verifyMyerpinvoiceno",true);
-		invoiceno.sendKeys("29010");
+		invoiceno.clear();
+		invoiceno.sendKeys("12921");
 	}
 	public void verifyMyerpGstin() {
 		Assert.assertTrue(gstin.isEnabled(),"gstin is enable");
 		Reporter.log("verifyMyerpgstin",true);
-		gstin.sendKeys("12abcd1234ab12d");
+		gstin.clear();
+		gstin.sendKeys("1gsa45743877665gjn");
 	}
 	public void verifyMyerpDistributercode() {
 		Assert.assertTrue(distributercode.isEnabled(),"Distributercode is enable");
 		Reporter.log("verifyMyerpdistributercode",true);
-		distributercode.sendKeys("234516");
+		distributercode.clear();
+		distributercode.sendKeys("45921");
 	}
 	public void State() throws InterruptedException {
 		Select sc = new Select(state);
@@ -107,10 +123,10 @@ public class BeyondsaleForm {
 		Thread.sleep(1000);
 		Assert.assertFalse(district.isDisplayed(),"District is  displayed");
 		Assert.assertFalse(district.isSelected());
-		sc.selectByVisibleText("Palghar");
+		sc.selectByVisibleText("palghar");
 	}
 	public void Tahsil() throws InterruptedException {
-		Select sc = new Select(tahsil);
+	Select sc = new Select(tahsil);
 		Thread.sleep(1000);
 		Assert.assertFalse(tahsil.isDisplayed(),"Tahsil is  displayed");
 		Assert.assertFalse(tahsil.isSelected());
@@ -124,7 +140,7 @@ public class BeyondsaleForm {
 	public void verifyMyerpEmail() {
 		Assert.assertTrue(email.isEnabled(),"Email find is enable");
 		Reporter.log("verifyMyerpemail",true);
-		email.sendKeys("rahul123@gmial.com");
+		email.sendKeys("rahui123@gmial.com");
 	}
 	public void ModeofPayment() throws InterruptedException {
 		Select sc = new Select(modeofpayment);
@@ -141,7 +157,7 @@ public class BeyondsaleForm {
 	public void verifyMyerpProduct() {
 		Assert.assertTrue(product.isEnabled(),"Product find is enable");
 		Reporter.log("verifyMyerpproduct",true);
-		product.sendKeys("GAS STOVE");
+		product.sendKeys("SRT PIPE");
 	}
 	public void verifyMyerpClearbtn() {
 		Assert.assertTrue(clearbtn.isEnabled(),"Clearbtn find is enable");
@@ -151,7 +167,7 @@ public class BeyondsaleForm {
 	public void verifyMyerpConsumerNumberSearch1() {
 		Assert.assertTrue(consumernumbersearch.isEnabled(),"ConsumerNumberSearch is enable");
 		Reporter.log("verifyMyerpconsumernumbersearch",true);
-		consumernumbersearch.sendKeys("9011");
+		consumernumbersearch.sendKeys("12921");
 	}
 	public void verifyMyerpSubmitBtnClick1() {
 		Assert.assertTrue(submitbtnclick.isEnabled(),"SubmitBtnClick is enable");
@@ -161,17 +177,17 @@ public class BeyondsaleForm {
 	public void verifyMyerpInvoiceno1() {
 		Assert.assertTrue(invoiceno.isEnabled(),"Invoiceno is enable");
 		Reporter.log("verifyMyerpinvoiceno",true);
-		invoiceno.sendKeys("29010");
+		invoiceno.sendKeys("12921");
 	}
 	public void verifyMyerpGstin1() {
 		Assert.assertTrue(gstin.isEnabled(),"gstin is enable");
 		Reporter.log("verifyMyerpgstin",true);
-		gstin.sendKeys("12abcd1234ab12d");
+		gstin.sendKeys("12abcd0987786ab12d");
 	}
 	public void verifyMyerpDistributercode1() {
 		Assert.assertTrue(distributercode.isEnabled(),"Distributercode is enable");
 		Reporter.log("verifyMyerpdistributercode",true);
-		distributercode.sendKeys("234516");
+		distributercode.sendKeys("23476");
 	}
 	public void State1() throws InterruptedException {
 		Select sc = new Select(state);
@@ -202,7 +218,7 @@ public class BeyondsaleForm {
 	public void verifyMyerpEmail1() {
 		Assert.assertTrue(email.isEnabled(),"Email find is enable");
 		Reporter.log("verifyMyerpemail",true);
-		email.sendKeys("rahul123@gmial.com");
+		email.sendKeys("maya123@gmial.com");
 	}
 	public void ModeofPayment1() throws InterruptedException {
 		Select sc = new Select(modeofpayment);
@@ -214,17 +230,124 @@ public class BeyondsaleForm {
 	public void verifyMyerpCashamount1() {
 		Assert.assertTrue(cashamount.isEnabled(),"Cashamount find is enable");
 		Reporter.log("verifyMyerpcashamount",true);
-		cashamount.sendKeys("2000");
+		cashamount.sendKeys("6000");
 	}
-	public void verifyMyerpProduct1() {
+	public void verifyMyerpProduct1() throws InterruptedException {
+		Thread.sleep(800);
 		Assert.assertTrue(product.isEnabled(),"Product find is enable");
 		Reporter.log("verifyMyerpproduct",true);
-		product.sendKeys("GAS STOVE");
+		product.sendKeys("SRT PIPE");
+		Thread.sleep(1000);
 	}
-	public void verifyMyerpSubmitbtn() {
+	public void verifyMyerpSubmitbtn() throws InterruptedException {
+		Thread.sleep(12000);
 		Assert.assertTrue(submitbtn.isEnabled(),"Submitbtn find is enable");
 		Reporter.log("verifyMyerpsubmitbtn",true);
 		submitbtn.click();
+		Thread.sleep(1000);
+		if (isAlertPresent3(driver)) { System.out.println("alert is present");
+
+		}else
+		{ System.out.println("alert is not present"); }
 	}
 
+	public static boolean isAlertPresent3(WebDriver driver) throws
+	InterruptedException { 
+		try {
+			Thread.sleep(800);
+			Alert al=driver.switchTo().alert();
+			Thread.sleep(2000); 
+			al.accept(); 
+			Thread.sleep(2500);
+			al.accept();
+			return true; }
+		catch (UnhandledAlertException u) 
+		{ // TODO Auto-generated catch block
+			u.printStackTrace(); } return false;
+
+	
+	}
+
+	public void verifyMyerpubackbtn() throws InterruptedException {
+		Thread.sleep(1000);
+		Assert.assertTrue(ubackbtn.isEnabled(),"ubackbtn is enable");
+		Reporter.log("verifyMyerpubackbtn",true);
+		ubackbtn.click();
+		Thread.sleep(3000);
+
+	}
+	public void verifyMyerpupdatebeyondsaleform() throws InterruptedException {
+		Thread.sleep(800);
+		Assert.assertTrue(updatebeyondsale.isEnabled(),"updatebeyondsale is enable");
+		Reporter.log("verifyMyerpupdatebeyondsale",true);
+		updatebeyondsale.click();
+	}
+	public void verifyMyerpupdatedocno() throws InterruptedException {
+		Thread.sleep(800);
+		Assert.assertTrue(updatedocno.isEnabled(),"updatedocno is enable");
+		Reporter.log("verifyMyerpupdatedocno",true);
+		updatedocno.click();
+		updatedocno.sendKeys("2200019");
+	}
+	public void verifyMyerpugetdatabtn() throws InterruptedException {
+		Assert.assertTrue(ugetdatabtn.isEnabled(),"ugetdatabtn is enable");
+		Reporter.log("verifyMyerpugetdatabtn",true);
+		ugetdatabtn.click();
+		Thread.sleep(800);
+		if (isAlertPresent4(driver)) { System.out.println("alert is present");
+
+		}else
+		{ System.out.println("alert is not present"); }
+	}
+
+	public static boolean isAlertPresent4(WebDriver driver) throws
+	InterruptedException { 
+		try {
+			Thread.sleep(800);
+
+			Alert al=driver.switchTo().alert();
+			Thread.sleep(2000); 
+			al.accept(); 
+			Thread.sleep(800);
+			return true; }
+
+		catch (UnhandledAlertException u) 
+		{ // TODO Auto-generated catch block
+			u.printStackTrace(); } return false;
+	}
+	public void verifyMyerpUCashamount1() {
+
+		Reporter.log("verifyMyerpcashamount",true);
+		cashamount.clear();
+		cashamount.sendKeys("4000");
+	}
+	public void verifyMyerpUSubmitbtn() throws InterruptedException {
+		Thread.sleep(3000);
+		Assert.assertTrue(submitbtn.isEnabled(),"Submitbtn find is enable");
+		Reporter.log("verifyMyerpsubmitbtn",true);
+		submitbtn.click();
+		Thread.sleep(2000);
+		if (isAlertPresent5(driver)) { System.out.println("alert is present");
+
+		}else
+		{ System.out.println("alert is not present"); }
+	}
+
+	public static boolean isAlertPresent5(WebDriver driver) throws
+	InterruptedException { 
+		try {
+			Thread.sleep(800);
+			Alert al=driver.switchTo().alert();
+			Thread.sleep(3000); 
+			al.accept(); 
+			Thread.sleep(3800);
+			al.accept();
+			return true; }
+		catch (UnhandledAlertException u) 
+		{ // TODO Auto-generated catch blocks
+			u.printStackTrace(); } return false;
+
+	
+	}
+	
 }

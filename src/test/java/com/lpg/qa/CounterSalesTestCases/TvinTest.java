@@ -14,27 +14,29 @@ public class TvinTest extends LpgTestBase{
 	WebDriver driver;
 
 	// Open browser ==> Test Registration page ==> close the browser.
-	
+
 	@BeforeClass
 	public void setup() {
-		intializeBrowser("chrome");
+		driver=intializeBrowser("chrome");
 	}
-	
+
 	@AfterClass
 	public void teardown() {
-//		TestBase.driver.close();
+		//		TestBase.driver.close();
 	}
-	
+
 	@Test
 	public void Tvintest() throws InterruptedException{
 		TvinForm tv=new TvinForm(LpgTestBase.driver);
-		tv.verifyMyerpagancycode();
-		tv.verifyMyerpusrname();
-		tv.verifyMyerppassword();
-		tv.verifyMyerploginbtn();
-		tv.verifyMyerpCounterSales();
+		/*
+		 * tv.verifyMyerpagancycode(); tv.verifyMyerpusrname();
+		 * tv.verifyMyerppassword(); tv.verifyMyerploginbtn();
+		 */
+		tv.setup(driver);
+
+		tv.verifyMyerpCounterSales(); 
 		tv.verifyMyerpTvinlogin();
-		tv.verifyMyerpInvoiceno();
+		tv.verifyMyerpInvoiceno(); 
 		tv.verifyMyerpConsumergstin();
 		tv.verifyMyerpDocumentserialno();
 		tv.verifyMyerpSvno();
@@ -43,47 +45,57 @@ public class TvinTest extends LpgTestBase{
 		tv.SelectArea();
 		tv.Connectioncategory();
 		tv.verifyMyerpRegistrationno();
-		tv.verifyMyerpconsumername();
+		tv.verifyMyerpconsumername(); 
 		tv.verifyMyerpAdress();
-		tv.verifyMyerpEntercity();
-		tv.verifyMyerpContact();
+		tv.verifyMyerpEntercity(); 
+		tv.verifyMyerpContact(); 
 		tv.verifyMyerpEmail();
 		tv.verifyMyerpPredistibutorcode();
 		tv.verifyMyerpPreconsumerno();
 		tv.Predocumenttype();
 		tv.verifyMyerpPreoilcompany();
 		tv.verifyMyerpBluebookno();
-		tv.Modeofpayment();
+		tv.Modeofpayment(); 
 		tv.verifyMyerpCashAmount();
 		tv.verifyMyerpProduct();
-		tv.verifyMyerpQuantity();
+		tv.verifyMyerpQuantity(); 
 		tv.verifyMyerpUnitcost();
 		tv.verifyMyerpClearbtn();
-		tv.verifyMyerpInvoiceno1();
-		tv.verifyMyerpConsumergstin1();
-		tv.verifyMyerpDocumentserialno1();
-		tv.verifyMyerpSvno1();
-		tv.verifyMyerpconsumerno1();
-		tv.SelectConsumertype1();
-		tv.SelectArea1();
-		tv.Connectioncategory1();
-		tv.verifyMyerpRegistrationno1();
-		tv.verifyMyerpconsumername1();
-		tv.verifyMyerpAdress1();
-		tv.verifyMyerpEntercity1();
-		tv.verifyMyerpContact1();
-		tv.verifyMyerpEmail1();
+
+		/*
+		 * tv.verifyMyerpInvoiceno1(); tv.verifyMyerpConsumergstin1();
+		 * tv.verifyMyerpDocumentserialno1(); tv.verifyMyerpSvno1();
+		 * tv.verifyMyerpconsumerno1(); tv.SelectConsumertype1(); tv.SelectArea1();
+		 * tv.Connectioncategory1(); tv.verifyMyerpRegistrationno1();
+		 * tv.verifyMyerpconsumername1(); tv.verifyMyerpAdress1();
+		 * tv.verifyMyerpEntercity1(); tv.verifyMyerpContact1(); tv.verifyMyerpEmail1();
+		 * tv.verifyMyerpPredistibutorcode1(); tv.verifyMyerpPreconsumerno1();
+		 * tv.Predocumenttype1(); tv.verifyMyerpPreoilcompany1();
+		 * tv.verifyMyerpBluebookno1(); tv.Modeofpayment1();
+		 * tv.verifyMyerpCashAmount1(); tv.verifyMyerpProduct1();
+		 * tv.verifyMyerpQuantity1(); tv.verifyMyerpUnitcost1();
+		 * tv.verifyMyerpSubmitbtn(); tv.verifyMyerpubackbtn();
+		 */
+
+		tv.verifyMyerpupdatetvinform();
+		tv.verifyMyerpupdatedocno();
+		tv.verifyMyerpugetdatabtn();
+		tv.verifyMyerpUPreOilCompany();
 		tv.verifyMyerpPredistibutorcode1();
 		tv.verifyMyerpPreconsumerno1();
-		tv.Predocumenttype1();
-		tv.verifyMyerpPreoilcompany1();
-		tv.verifyMyerpBluebookno1();
-		tv.Modeofpayment1();
-		tv.verifyMyerpCashAmount1();
-		tv.verifyMyerpProduct1();
+		//tv.verifyMyerpUremoveservice();
+		tv.verifyMyerpunitcost1();
+		tv.SelectCompany();
+		tv.verifyMyerpuservicetextbox1();
 		tv.verifyMyerpQuantity1();
-		tv.verifyMyerpUnitcost1();
-		tv.verifyMyerpSubmitbtn();
-		
+        tv.verifyMyerpunitcost1();
+        tv.verifyMyerpuservicetextbox3();
+        tv.verifyMyerpunitcost3();
+        tv.verifyMyerpuremoveservice1();
+        tv.verifyMyerpuremoveservice2();
+        tv.verifyMyerpuremoveservice3();
+        tv.verifyMyerpuremoveservice4();
+        tv.verifyMyerpUSubmitbtn();
+
 	}
 }

@@ -14,7 +14,7 @@ public class CounterSaleRegisterTest  extends LpgTestBase{
    
 	@BeforeClass
 	public void setup() {
-		intializeBrowser("chrome");
+		driver=intializeBrowser("chrome");
 	}
 	
 	@AfterClass
@@ -26,10 +26,11 @@ public class CounterSaleRegisterTest  extends LpgTestBase{
 	@Test
 	public void CounterSaleRegisterPageTest() throws InterruptedException {
 		CounterSaleRegister cs=new CounterSaleRegister(LpgTestBase.driver); 
-		cs.verifyMyerpagancycode();
-		cs.verifyMyerpUserid();
-		cs.verifyMyerpPassword();
-		cs.VerifyandClickonMyerpLoginBtn();
+		/*
+		 * cs.verifyMyerpagancycode(); cs.verifyMyerpUserid(); cs.verifyMyerpPassword();
+		 * cs.VerifyandClickonMyerpLoginBtn();
+		 */
+		cs.setup(driver);
 		cs.VerifyandClickonMyerpGeneralReport();
 		cs.VerifyandClickonMyerpCountersaleRegister();
 		cs.VerifyandClickonMyerpPlaseFromSelectDate();
@@ -37,6 +38,10 @@ public class CounterSaleRegisterTest  extends LpgTestBase{
 		cs.verifyMyerpSelectPaymentMode();
 	    cs.VerifyandClickonMyerpConsumerNumber();
 		cs.VerifyandClickonMyerpGetdataBtn();
+		cs.verifyMyerpCounterSales();
+		cs.verifyMyerpClickDbc();
+		cs.verifyMyerpConsumerNumber();
+		cs.verifyMyerpSearchbtn();
 		
 		
 		

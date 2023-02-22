@@ -17,7 +17,7 @@ public class BeyondsaleTest extends LpgTestBase{
 	
 	@BeforeClass
 	public void setup() {
-		intializeBrowser("chrome");
+		driver=intializeBrowser("chrome");
 	}
 	
 	@AfterClass
@@ -28,38 +28,49 @@ public class BeyondsaleTest extends LpgTestBase{
 	@Test
 	public void Beyondsaletest() throws InterruptedException{
 		BeyondsaleForm bs=new BeyondsaleForm(LpgTestBase.driver);
-		bs.verifyMyerpagancycode();
-		bs.verifyMyerpusrname();
-		bs.verifyMyerppassword();
-		bs.verifyMyerploginbtn();
+		/*
+		 * bs.verifyMyerpagancycode(); bs.verifyMyerpusrname();
+		 * bs.verifyMyerppassword(); bs.verifyMyerploginbtn();
+		 */
+		bs.setup(driver);
 		bs.verifyMyerpCounterSales();
 		bs.verifyMyerpBeyondsale();
-		bs.verifyMyerpConsumerNumberSearch();
-		bs.verifyMyerpSubmitBtnClick();
-		bs.verifyMyerpInvoiceno();
-		bs.verifyMyerpGstin();
-		bs.verifyMyerpDistributercode();
-		bs.State();
-		bs.Tahsil();
-		bs.verifyMyerpEntercity();
-		bs.verifyMyerpEmail();
-		bs.ModeofPayment();
-		bs.verifyMyerpCashamount();
-		bs.verifyMyerpProduct();
-		bs.verifyMyerpClearbtn();
-		bs.verifyMyerpConsumerNumberSearch1();
-		bs.verifyMyerpSubmitBtnClick1();
-		bs.verifyMyerpInvoiceno1();
-		bs.verifyMyerpGstin1();
-		bs.verifyMyerpDistributercode1();
-		bs.State1();
-		bs.Tahsil1();
-		bs.verifyMyerpEntercity1();
-		bs.verifyMyerpEmail1();
-		bs.ModeofPayment1();
-		bs.verifyMyerpCashamount1();
-		bs.verifyMyerpProduct1();
-		bs.verifyMyerpSubmitbtn();
+		
+		  bs.verifyMyerpConsumerNumberSearch();
+		  bs.verifyMyerpSubmitBtnClick();
+		  bs.verifyMyerpInvoiceno(); 
+		  bs.verifyMyerpGstin(); 
+		  bs.State(); bs.District1();
+		  bs.Tahsil1(); // bs.District(); // bs.Tahsil();
+		  bs.verifyMyerpDistributercode();
+		  bs.verifyMyerpEntercity();
+		  bs.verifyMyerpEmail(); 
+		  bs.ModeofPayment();
+		  bs.verifyMyerpCashamount();
+		  bs.verifyMyerpProduct(); 
+		  bs.verifyMyerpClearbtn();
+		  bs.verifyMyerpConsumerNumberSearch1();
+		  bs.verifyMyerpSubmitBtnClick1();
+		  bs.verifyMyerpInvoiceno1();
+		  bs.verifyMyerpGstin1();
+		  bs.State1();
+		  bs.District1(); 
+		  bs.Tahsil1(); 
+		  bs.verifyMyerpEntercity1();
+		  bs.verifyMyerpEmail1(); 
+		  bs.ModeofPayment1(); 
+		  bs.verifyMyerpCashamount1();
+		  bs.verifyMyerpProduct1();
+		  bs.verifyMyerpDistributercode1();
+		  bs.verifyMyerpSubmitbtn(); 
+		  bs.verifyMyerpubackbtn();
+		 
+		bs.verifyMyerpupdatebeyondsaleform();
+		bs.verifyMyerpupdatedocno();
+		bs.verifyMyerpugetdatabtn();
+	//	bs.verifyMyerpUCashamount1();
+		bs.verifyMyerpUSubmitbtn();
+		
 	
 	
 	}

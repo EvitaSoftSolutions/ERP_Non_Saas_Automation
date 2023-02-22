@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.lpg.qa.CounterSalesTestCases.TAInTest">
+      <class name="com.lpg.qa.tvmoduletestcases.TranferVoucherTVOutTest">
         <methods>
-          <include name="teardown"/>
-          <include name="TAInpagetest"/>
-          <include name="screenshotCapture"/>
           <include name="setup"/>
+          <include name="TranferVoucherTVOutPageTest"/>
+          <include name="teardown"/>
+          <include name="screenshotCapture"/>
         </methods>
-      </class> <!-- com.lpg.qa.CounterSalesTestCases.TAInTest -->
+      </class> <!-- com.lpg.qa.tvmoduletestcases.TranferVoucherTVOutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

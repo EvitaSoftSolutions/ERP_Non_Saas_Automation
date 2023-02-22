@@ -17,7 +17,7 @@ public class ConnectionSwapTest extends LpgTestBase{
 	
 	@BeforeClass
 	public void setup() {
-		intializeBrowser("chrome");
+		driver=intializeBrowser("chrome");
 	}
 	
 	@AfterClass
@@ -28,18 +28,22 @@ public class ConnectionSwapTest extends LpgTestBase{
 	@Test
 	public void ConnectionSwaptest() throws InterruptedException{
 		ConnectionSwapForm cs=new ConnectionSwapForm(LpgTestBase.driver);
-		cs.verifyMyerpagancycode();
-		cs.verifyMyerpusrname();
-		cs.verifyMyerppassword();
-		cs.verifyMyerploginbtn();
+		/*
+		 * cs.verifyMyerpagancycode(); cs.verifyMyerpusrname();
+		 * cs.verifyMyerppassword(); cs.verifyMyerploginbtn();
+		 */
+		cs.setup(driver);
 		cs.verifyMyerpCounterSales();
 		cs.verifyMyerpConnectionswap();
 		cs.verifyMyerpConsumerno();
 		cs.verifyMyerpSearch();
+		cs.verifyMyerpSelectDate();
 		cs.Cylrecied();
 		cs.Product();
 		cs.verifyMyerpClearbtn();
+		cs.verifyMyerpConsumerno1();
 		cs.verifyMyerpSearch1();
+		cs.verifyMyerpSelectDate1(); 
 		cs.Cylrecied1();
 		cs.Product1();
 		cs.verifyMyerpsubmitbtn();

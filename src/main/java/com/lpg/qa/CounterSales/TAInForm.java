@@ -124,19 +124,19 @@ public class TAInForm {
 		Thread.sleep(1000);
 		Assert.assertTrue(consumergstin.isEnabled(),"ConsumerGstin is enable");
 		Reporter.log("verifyMyerpconsumergstin",true);
-		consumergstin.sendKeys("12asdf124df1as");
+		consumergstin.sendKeys("88asdf124df1as");
 	}
 	public void verifyMyerpDocSerialNo() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(docserialno.isEnabled(),"DocSerialNo is enable");
 		Reporter.log("verifyMyerpdocserialno",true);
-		docserialno.sendKeys("50030");
+		docserialno.sendKeys("40030");
 	}
 	public void verifyMyerpConsumerno() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(consumerno.isEnabled(),"Consumerno is enable");
 		Reporter.log("verifyMyerpconsumerno",true);
-		consumerno.sendKeys("2011");
+		consumerno.sendKeys("2012");
 	}
 	public void ConsumerType() throws InterruptedException {
 		Select ct= new Select(consumertype);
@@ -155,9 +155,9 @@ public class TAInForm {
 	public void ProductSelect() throws InterruptedException {
 		Select ps= new Select(productselect);
 		Thread.sleep(1000);
-		Assert.assertFalse(productselect.isDisplayed(),"ProductSelect is  displayed");
+		Assert.assertTrue(productselect.isDisplayed(),"ProductSelect is  displayed");
 		Assert.assertFalse(productselect.isSelected());
-		ps.selectByVisibleText("14.2 DOM");
+		ps.selectByVisibleText("14.2 KG");
 	}
 	public void verifyMyerpRegistratonNo() throws InterruptedException {
 		Thread.sleep(500);
@@ -169,7 +169,7 @@ public class TAInForm {
 		Thread.sleep(500);
 		Assert.assertTrue(consumername.isEnabled(),"ConsumerName is enable");
 		Reporter.log("verifyMyerpconsumername",true);
-		consumername.sendKeys("Ganesh sonar");
+		consumername.sendKeys("Vasim Saikh");
 	}
 	public void verifyMyerpAddress() throws InterruptedException {
 		Thread.sleep(500);
@@ -208,32 +208,32 @@ public class TAInForm {
 		Thread.sleep(500);
 		Assert.assertTrue(contact.isEnabled(),"contact is enable");
 		Reporter.log("verifyMyerpcontact",true);
-		contact.sendKeys("8970873496");
+		contact.sendKeys("9870893496");
 	}
 	public void verifyMyerpEmail() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(email.isEnabled(),"Email is enable");
 		Reporter.log("verifyMyerpemail",true);
-		email.sendKeys("ganeshsonar123@gmail.com");
+		email.sendKeys("vasimshaikh123@gmail.com");
 	}
 	public void verifyMyerpPredistCode() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(predistcode.isEnabled(),"PredistCode is enable");
 		Reporter.log("verifyMyerppredistcode",true);
-		predistcode.sendKeys("21451");
+		predistcode.sendKeys("41451");
 	}
 	public void verifyMyerpPreconSumerNo() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(preconsumerno.isEnabled(),"PreconSumerNo is enable");
 		Reporter.log("verifyMyerppreconsumerno",true);
-		preconsumerno.sendKeys("8978");
+		preconsumerno.sendKeys("4978");
 	}
 	public void PredocType() throws InterruptedException {
 		Select pt = new Select(predoctype);
 		Thread.sleep(1000);
 		Assert.assertFalse(predoctype.isDisplayed(),"PredocType is  displayed");
 		Assert.assertFalse(predoctype.isSelected());
-		pt.selectByVisibleText("DOMESTIC");
+		pt.selectByVisibleText("ADHAR CARD");
 	}
 	public void verifyMyerpNumberofcyl() throws InterruptedException {
 		Thread.sleep(500);
@@ -263,19 +263,19 @@ public class TAInForm {
 		Thread.sleep(500);
 		Assert.assertTrue(consumergstin.isEnabled(),"ConsumerGstin is enable");
 		Reporter.log("verifyMyerpconsumergstin",true);
-		consumergstin.sendKeys("19asdf1234df1as");
+		consumergstin.sendKeys("49asdf1234df1as");
 	}
 	public void verifyMyerpDocSerialNo1() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(docserialno.isEnabled(),"DocSerialNo is enable");
 		Reporter.log("verifyMyerpdocserialno",true);
-		docserialno.sendKeys("20090");
+		docserialno.sendKeys("44090");
 	}
 	public void verifyMyerpConsumerno1() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(consumerno.isEnabled(),"Consumerno is enable");
 		Reporter.log("verifyMyerpconsumerno",true);
-		consumerno.sendKeys("2011");
+		consumerno.sendKeys("2012");
 	}
 	public void ConsumerType1() throws InterruptedException {
 		Select ct = new Select(consumertype);
@@ -294,21 +294,21 @@ public class TAInForm {
 	public void ProductSelect1() throws InterruptedException {
 		Select ps = new Select(productselect);
 		Thread.sleep(1000);
-		Assert.assertFalse(productselect.isDisplayed(),"ProductSelect is  displayed");
+		Assert.assertTrue(productselect.isDisplayed(),"ProductSelect is  displayed");
 		Assert.assertFalse(productselect.isSelected());
-		ps.selectByVisibleText("14.2 DOM");
+		ps.selectByVisibleText("14.2 KG");
 	}
 	public void verifyMyerpRegistratonNo1() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(registratonno.isEnabled(),"RegistratonNo is enable");
 		Reporter.log("verifyMyerpregistratonno",true);
-		registratonno.sendKeys("3743");
+		registratonno.sendKeys("4743");
 	}
 	public void verifyMyerpConsumerName1() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(consumername.isEnabled(),"ConsumerName is enable");
 		Reporter.log("verifyMyerpconsumername",true);
-		consumername.sendKeys("Ganesh sonar");
+		consumername.sendKeys("Vasim Shaikh");
 	}
 	public void verifyMyerpAddress1() throws InterruptedException {
 		Thread.sleep(500);
@@ -347,19 +347,19 @@ public class TAInForm {
 		Thread.sleep(500);
 		Assert.assertTrue(contact.isEnabled(),"contact is enable");
 		Reporter.log("verifyMyerpcontact",true);
-		contact.sendKeys("8979923456");
+		contact.sendKeys("9879923456");
 	}
 	public void verifyMyerpEmail1() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(email.isEnabled(),"Email is enable");
 		Reporter.log("verifyMyerpemail",true);
-		email.sendKeys("ganeshsonar123@gmail.com");
+		email.sendKeys("vasimshaikh123@gmail.com");
 	}
 	public void verifyMyerpPredistCode1() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(predistcode.isEnabled(),"PredistCode is enable");
 		Reporter.log("verifyMyerppredistcode",true);
-		predistcode.sendKeys("213451");
+		predistcode.sendKeys("456451");
 	}
 	public void verifyMyerpPreconSumerNo1() throws InterruptedException {
 		Thread.sleep(500);
@@ -372,7 +372,7 @@ public class TAInForm {
 		Thread.sleep(1000);
 		Assert.assertFalse(predoctype.isDisplayed(),"PredocType is  displayed");
 		Assert.assertFalse(predoctype.isSelected());
-		pt.selectByVisibleText("DOMESTIC");
+		pt.selectByVisibleText("ADHAR CARD");
 	}
 	public void verifyMyerpNumberofcyl1() throws InterruptedException {
 		Thread.sleep(500);
@@ -410,7 +410,8 @@ public class TAInForm {
 			Alert al=driver.switchTo().alert();
 			Thread.sleep(2000); 
 			al.accept(); 
-
+			Thread.sleep(1000); 
+			al.accept(); 
 			return true; }
 		catch (UnhandledAlertException u) 
 		{ // TODO Auto-generated catch block
@@ -435,9 +436,20 @@ public class TAInForm {
 		Reporter.log("verifyMyerviewreport",true);
 		viewreport.click();
 		Thread.sleep(800);
-		Assert.assertTrue(btnback.isEnabled(),"btnback is enable");
-		Reporter.log("verifyMyerbtnback",true);
-		btnback.click();
+	
+		String id = driver.getWindowHandle();
+		//			 System.out.println(id)
+;
+
+		Thread.sleep(800);
+		// for multiple windows.
+		// itrate==> get respective window==> switch ==> action 
+		Set<String> winds = driver.getWindowHandles();
+		Iterator<String> iterate = winds.iterator();
+		String first_window = iterate.next();// 1 window is your parent window.
+		System.out.println(first_window);
+		driver.switchTo().window(first_window);
+		Thread.sleep(800);
 
 	}
 	public void verifyMyerpPrint() throws InterruptedException {
@@ -445,14 +457,27 @@ public class TAInForm {
 		Assert.assertTrue(print.isEnabled(),"print is enable");
 		Reporter.log("verifyMyerpprint",true);
 		print.click();
-		Thread.sleep(200);
+		Thread.sleep(1000);
 		if (isAlertPresent1(driver)) { 
 			System.out.println("alert is present");
 			driver.switchTo().alert().accept();
 
 		}else { System.out.println("alert is not present"); }
+		Thread.sleep(1000);
 
 	} 
+	public void verifyMyerpCounterSales1() throws InterruptedException {
+		Thread.sleep(1000);
+		Assert.assertTrue(countersales.isEnabled(),"CounterSales is enable");
+		Reporter.log("verifyMyerpcountersales",true);
+		countersales.click();
+	}
+	public void verifyMyerpTransferAdvice1() throws InterruptedException {
+		Thread.sleep(1000);
+		Assert.assertTrue(transferadvice.isEnabled(),"TransferAdvice is enable");
+		Reporter.log("verifyMyerptransferadvice",true);
+		transferadvice.click();
+	}
 	public void verifyMyerpUpdateDBC() throws InterruptedException {
 		Thread.sleep(2000);
 		Assert.assertTrue(updatedbcform.isEnabled(),"updatedbcform is enable");
@@ -465,23 +490,25 @@ public class TAInForm {
 		Assert.assertTrue(documentno.isEnabled(),"documentno is enable");
 		Reporter.log("verifyMyerpdocumentno",true);
 		documentno.click();
-		documentno.sendKeys("2200049");
+		documentno.sendKeys("2200006");
 	}
 	public void verifyMyerpGetDataBtn() throws InterruptedException {
 		Thread.sleep(2000);
 		Assert.assertTrue(ugetdatabtn.isEnabled(),"getdatabtn is enable");
 		Reporter.log("verifyMyerpugetdatabtn",true);
 		ugetdatabtn.click();
-		if (isAlertPresent3(driver)) { System.out.println("alert is present");
+		Thread.sleep(1000);
+		if (isAlertPresent6(driver)) { System.out.println("alert is present");
 
 		}else { System.out.println("alert is not present"); }
 
 	} 
-	public static boolean isAlertPresent2(WebDriver driver) throws
+	public static boolean isAlertPresent6(WebDriver driver) throws
 	InterruptedException { 
 		try {
+			Thread.sleep(1000);
 			Alert al=driver.switchTo().alert();
-			Thread.sleep(2000); 
+			Thread.sleep(1000); 
 			al.accept(); 
 
 			return true; }
@@ -495,11 +522,8 @@ public class TAInForm {
 		Assert.assertTrue(uupdate.isEnabled(),"uupdate is enable");
 		Reporter.log("verifyMyerpuupdate",true);
 		Thread.sleep(1000); 
-		//	userviceremove.click();
-		//	userviceremove.click();
-		Thread.sleep(1000); 
 		uupdate.click();
-
+		Thread.sleep(800);
 		if (isAlertPresent1(driver)) { System.out.println("alert is present");
 
 		}else { System.out.println("alert is not present"); }
@@ -508,6 +532,8 @@ public class TAInForm {
 	public static boolean isAlertPresent1(WebDriver driver) throws
 	InterruptedException { 
 		try {
+			Thread.sleep(800);
+			Thread.sleep(800);
 			Alert al=driver.switchTo().alert();
 			Thread.sleep(2000); 
 			al.accept(); 
@@ -545,8 +571,16 @@ public class TAInForm {
 		Assert.assertTrue(print.isEnabled(),"print is enable");
 		Reporter.log("verifyMyerpprint",true);
 		print.click();
-		Thread.sleep(200);
-	}
+		Thread.sleep(1000);
+		if (isAlertPresent1(driver)) { 
+			System.out.println("alert is present");
+			driver.switchTo().alert().accept();
+
+		}else { System.out.println("alert is not present"); }
+		Thread.sleep(1000);
+
+	} 
+
 
 
 	public void VerifyandClickonMyerpGeneralReport() throws InterruptedException {
@@ -576,7 +610,7 @@ public class TAInForm {
 		Assert.assertTrue(countersaleinvoiceno.isEnabled(),"purchasebillno is enabled");
 		Reporter.log(" verifyMyerppurchasebillno", true);
 		countersaleinvoiceno.click();
-		countersaleinvoiceno.sendKeys("2200049");
+		countersaleinvoiceno.sendKeys("");
 
 	}
 	public void VerifyandClickonMyerpGetdataBtn() throws InterruptedException {
@@ -611,7 +645,7 @@ public class TAInForm {
 		Reporter.log(" verifyMyerpselectdate", true);
 		selectdate.click();
 		selectdate.clear();
-		selectdate.sendKeys("7/01/2023");
+		selectdate.sendKeys("17/02/2023");
 		body.click();
 		Thread.sleep(500);
 	}
@@ -620,7 +654,7 @@ public class TAInForm {
 		Reporter.log(" verifyMyerptodate", true);
 		todate.click();
 		selectdate.clear();
-		selectdate.sendKeys("8/01/2023");
+		selectdate.sendKeys("17/02/2023");
 		body.click();
 		Thread.sleep(500);
 	}
@@ -647,7 +681,7 @@ public class TAInForm {
 		Assert.assertTrue(consumerno.isEnabled(),"consumerno is enabled");
 		Reporter.log(" verifyMyerpconsumerno", true);
 		consumerno.click();
-		consumerno.sendKeys("666645");
+		consumerno.sendKeys("2012");
 
 	}
 	public void VerifyandClickonMyerpCSRGetdataBtn() throws InterruptedException{
