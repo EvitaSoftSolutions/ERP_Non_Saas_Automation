@@ -15,7 +15,7 @@ import com.lpg.qa.tvmodules.PartialTVOut;
 		   
 			@BeforeClass
 			public void setup() {
-				intializeBrowser("chrome");
+				driver=intializeBrowser("chrome");
 			}
 			
 			@AfterClass
@@ -27,10 +27,11 @@ import com.lpg.qa.tvmodules.PartialTVOut;
 			public void  PartialTVOutPageTest() throws InterruptedException {
 				com.lpg.qa.tvmodules.PartialTVOut tvto=new  PartialTVOut(LpgTestBase.driver); 
 				
-				 tvto.verifyMyerpagancycode();
-				 tvto.verifyMyerpUserid();
-				 tvto.verifyMyerpPassword();
-				 tvto.VerifyandClickonMyerpLoginBtn();
+				/*
+				 * tvto.verifyMyerpagancycode(); tvto.verifyMyerpUserid();
+				 * tvto.verifyMyerpPassword(); tvto.VerifyandClickonMyerpLoginBtn();
+				 */
+				 tvto.setup(driver);
 				 tvto.VerifyMyerpTVModule();
 				 tvto.VerifyMyerpPartialTVtvoutForm();
 				 tvto.VerifyMyerpPTVOutIfConsumernotAvailbleCHK();
@@ -39,7 +40,16 @@ import com.lpg.qa.tvmodules.PartialTVOut;
 				 tvto.VerifyMyerpTVNumberOfCylender();
 				 tvto.VerifyMyerpTVSelectGodown();
 				 tvto.VerifyMyerpTVtvOutSubmitBtn();
-				
+				 tvto.VerifyMyerpTVModule();
+				 tvto.VerifyMyerpptvtvoutlistform();
+				 
+				 tvto.VerifyMyerpPartialTVtvoutForm();
+				 tvto.VerifyMyerpPTVtvoutWCConsumerNum();
+				 tvto.VerifyMyerpTVtvOutGetWCCylenderBtn();
+				 tvto.VerifyMyerpTVWCSelectGodown();
+				 tvto.VerifyMyerpTVtvOutWCSubmitBtn();
+				 tvto.VerifyMyerpTVModule();
+				 tvto.VerifyMyerpptvtvoutlistform();
 				 
 				 
 			}
