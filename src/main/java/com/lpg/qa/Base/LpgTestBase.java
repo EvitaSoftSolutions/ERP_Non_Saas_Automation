@@ -33,7 +33,7 @@ public class LpgTestBase {
 				driver.findElement(By.xpath("//input[@id='password-field']")).sendKeys("admin@123");
 				driver.findElement(By.xpath("//button[@id='btnLogin']")).click();
 				
-				driver.manage().timeouts().implicitlyWait(8000, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(30000, TimeUnit.SECONDS);
 				return driver;
 				
 				}

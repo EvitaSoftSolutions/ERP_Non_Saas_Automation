@@ -26,6 +26,7 @@ public class RegistrationTest  extends RegistrationBase{
 	@Test
 	public void RegistrationPageTest() throws InterruptedException {
 		Registration reg=new Registration(RegistrationBase.driver); 
+	reg.setup(driver);
 	reg.VerifyandClickonMyerpRegistrationFname();
 	reg.VerifyandClickonMyerpRegistrationLname();
 	reg.VerifyandClickonMyerpOwnerContanctnum();

@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.lpg.qa.tvmoduletestcases.PartialTVOutListTest">
+      <class name="com.lpg.qa.CommercialcylsaleTestCases.ComsaleListTest">
         <methods>
-          <include name="PartialTVOutListPageTest"/>
-          <include name="teardown"/>
-          <include name="screenshotCapture"/>
           <include name="setup"/>
+          <include name="teardown"/>
+          <include name="ComsaleListtest"/>
+          <include name="screenshotCapture"/>
         </methods>
-      </class> <!-- com.lpg.qa.tvmoduletestcases.PartialTVOutListTest -->
+      </class> <!-- com.lpg.qa.CommercialcylsaleTestCases.ComsaleListTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

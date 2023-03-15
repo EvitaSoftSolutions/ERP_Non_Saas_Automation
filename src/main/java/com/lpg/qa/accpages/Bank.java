@@ -23,6 +23,14 @@ import org.testng.Reporter;
 		@FindBy (xpath="//select[@id='ddlAccountType']") private WebElement bsaccounttype;
 		@FindBy (xpath="//select[@id='ddlCompanyID']") private WebElement bselectcompany;
 		@FindBy (xpath="//input[@id='txtAlias']") private WebElement baliasname;
+		@FindBy (xpath="//input[@id='txtBSR_Code']")private WebElement bsr;
+		@FindBy (xpath="//input[@id='txtAddr1']")private WebElement address;
+		@FindBy (xpath="//input[@id='txtBranch']")private WebElement branch;
+		@FindBy (xpath="//input[@id='txtEmail']")private WebElement email;
+		@FindBy (xpath="//input[@id='txtManager']")private WebElement manager;
+		@FindBy (xpath="//input[@id='txtCont_Person']")private WebElement contactperson;
+		@FindBy (xpath="//input[@id='txtPhone']")private WebElement phone;
+		@FindBy (xpath="//input[@id='txtIFSCode']")private WebElement ifsdcode;
 		@FindBy (xpath="//input[@id='chkActive']") private WebElement bactivechkbtn;
 		@FindBy (xpath="//button[@id='btnclear']") private WebElement bcleartbtn;
 		@FindBy (xpath="//button[@id='btnSubmit']") private WebElement bsubmitbtn;
@@ -96,35 +104,35 @@ import org.testng.Reporter;
 				Thread.sleep(500);
 				Assert.assertFalse(selectundergroup.isDisplayed(),"selectundergroup is displayed");
 				Assert.assertFalse(selectundergroup.isSelected());
-				bsug.selectByVisibleText("CASH IN HAND");
+				bsug.selectByVisibleText("BANK");
 			}
 			public void VerifyMyerpBankCode() throws InterruptedException {
 				Thread.sleep(500);
 				 Assert.assertTrue(bankcode.isEnabled(),"bankcode  field is enabled");		 
 				 Reporter.log("verifyMyerpbankcode", true);
 				 bankcode.click(); 
-				 bankcode.sendKeys("78914");
+				 bankcode.sendKeys("2024");
 			}
 			public void VerifyMyerpBankDescripption() throws InterruptedException {
 				Thread.sleep(500);
 				 Assert.assertTrue(bdescription.isEnabled(),"bdescription  field is enabled");		 
 				 Reporter.log("verifyMyerpbdescription", true);
 				 bdescription.click(); 
-				 bdescription.sendKeys("MYS BANK");
+				 bdescription.sendKeys("STATE BANK OF INDIA");
 			}
 			public void VerifyMyerpBankAccNumber() throws InterruptedException {
 				Thread.sleep(500);
 				Assert.assertTrue(baccountnumber.isEnabled(),"baccountnumber  field is enabled");		 
 				 Reporter.log("verifyMyerpbaccountnumber", true);
 				 baccountnumber.click(); 
-				 baccountnumber.sendKeys("YSSB1435678900906689");
+				 baccountnumber.sendKeys("SBI37487548483900");
 			}
 			public void BankSelectAccountType() throws InterruptedException {
 				Select bsat = new Select(bsaccounttype);
 				Thread.sleep(500);
 				Assert.assertFalse(bsaccounttype.isDisplayed(),"bsaccounttype is displayed");
 				Assert.assertFalse(bsaccounttype.isSelected());
-				bsat.selectByVisibleText("Current");
+				bsat.selectByVisibleText("Savings");
 			}
 			public void BankSelectCompany() throws InterruptedException {
 				Select bsug = new Select(bselectcompany);
@@ -138,7 +146,63 @@ import org.testng.Reporter;
 				 Assert.assertTrue(baliasname.isEnabled(),"baliasname field is enabled");		 
 				 Reporter.log("verifyMyerpbaliasname", true);
 				 baliasname.click(); 
-				 baliasname.sendKeys("MYS BANK");
+				 baliasname.sendKeys("STATE BANK OF INDIA");
+			}
+			public void VerifyMyerpBsr() throws InterruptedException {
+				Thread.sleep(500);
+				 Assert.assertTrue(bsr.isEnabled(),"bsr field is enabled");		 
+				 Reporter.log("verifyMyerpbsr", true);
+				 bsr.click(); 
+				 bsr.sendKeys("349802");
+			}
+			public void VerifyMyerpAddress() throws InterruptedException {
+				Thread.sleep(500);
+				 Assert.assertTrue(address.isEnabled(),"address field is enabled");		 
+				 Reporter.log("verifyMyerpaddress", true);
+				 address.click(); 
+				 address.sendKeys("VIRAR");
+			}
+			public void VerifyMyerpBranch() throws InterruptedException {
+				Thread.sleep(500);
+				 Assert.assertTrue(branch.isEnabled(),"branch field is enabled");		 
+				 Reporter.log("verifyMyerpbranch", true);
+				 branch.click(); 
+				 branch.sendKeys("VIRAR");
+			}
+			public void VerifyMyerpEmail() throws InterruptedException {
+				Thread.sleep(500);
+				 Assert.assertTrue(email.isEnabled(),"email field is enabled");		 
+				 Reporter.log("verifyMyerpemail", true);
+				 email.click(); 
+				 email.sendKeys("anitagaservices@gmail.com");
+			}
+			public void VerifyMyerpManager() throws InterruptedException {
+				Thread.sleep(500);
+				 Assert.assertTrue(manager.isEnabled(),"manager field is enabled");		 
+				 Reporter.log("verifyMyerpmanager", true);
+				 manager.click(); 
+				 manager.sendKeys("LAL THAKUR");
+			}
+			public void VerifyMyerpContactperson() throws InterruptedException {
+				Thread.sleep(500);
+				 Assert.assertTrue(contactperson.isEnabled(),"contactperson field is enabled");		 
+				 Reporter.log("verifyMyerpcontactperson", true);
+				 contactperson.click(); 
+				 contactperson.sendKeys("LAL THAKUR");
+			}
+			public void VerifyMyerpphone() throws InterruptedException {
+				Thread.sleep(500);
+				 Assert.assertTrue(phone.isEnabled(),"phone field is enabled");		 
+				 Reporter.log("verifyMyerpphone", true);
+				 phone.click(); 
+				 phone.sendKeys("8828420045");
+			}
+			public void VerifyMyerpIfsdcode() throws InterruptedException {
+				Thread.sleep(500);
+				 Assert.assertTrue(ifsdcode.isEnabled(),"ifsdcode field is enabled");		 
+				 Reporter.log("verifyMyerpifsdcode", true);
+				 ifsdcode.click(); 
+				 ifsdcode.sendKeys("SBI29383378232832938");
 			}
 			public void VerifyBankActiveCHKBtn() throws InterruptedException {
 				Thread.sleep(500);
@@ -173,7 +237,7 @@ import org.testng.Reporter;
 		    	  Reporter.log(" verifyMyerp pcsearchbar", true);
 		    	  pcsearchbar.click(); 
 		    	  pcsearchbar.clear();
-		    	  pcsearchbar.sendKeys("MYS BANK");
+		    	  pcsearchbar.sendKeys("STATE BANK OF INDIA");
 		    	  
 		    	  Thread.sleep(500);
 		    	  }
@@ -198,7 +262,7 @@ import org.testng.Reporter;
 				 Reporter.log("verifyMyerpbankcode", true);
 				 bankcode.click(); 
 				 bankcode.clear();
-				 bankcode.sendKeys("40004");
+				 bankcode.sendKeys("2024");
 			}
 			public void VerifyMyerpBankDescripption1() throws InterruptedException {
 				Thread.sleep(500);
@@ -206,7 +270,7 @@ import org.testng.Reporter;
 				 Reporter.log("verifyMyerpbdescription", true);
 				 bdescription.click(); 
 				 bdescription.clear();
-				 bdescription.sendKeys("MSK BANK");
+				 bdescription.sendKeys("STATE BANK OF INDIA");
 			}
 			public void VerifyMyerpBUpdateBtn() throws InterruptedException {
 				Thread.sleep(400);
@@ -237,7 +301,7 @@ import org.testng.Reporter;
 		    	  Reporter.log(" verifyMyerp pcsearchbar", true);
 		    	  pcsearchbar.click(); 
 		    	  pcsearchbar.clear();
-		    	  pcsearchbar.sendKeys("40004");
+		    	  pcsearchbar.sendKeys("2024");
 		    	  
 		    	  Thread.sleep(500);
 		    	  }

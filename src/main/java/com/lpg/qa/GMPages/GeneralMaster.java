@@ -19,7 +19,7 @@ public class GeneralMaster {
 	@FindBy (xpath="//*[@id=\"menuMasters\"]/ul/li[1]/a") private WebElement genralmaster;  
 	
 //product form
-	@FindBy (xpath="//a[text()='GeneralMaster']") private WebElement productform;
+	@FindBy (xpath="//a[text()='Product']") private WebElement productform;
 	@FindBy (xpath="//input[@id='txtProductName']") private WebElement productname;
 	@FindBy (xpath="//input[@id='txtProductCode']") private WebElement productcode;
 	@FindBy (xpath="//input[@id='txtDescription']") private WebElement productdesc; 
@@ -39,7 +39,7 @@ public class GeneralMaster {
 	@FindBy (xpath="//input[@id='btnback']")private WebElement backbtn;
 	
 //product Rate Slab
-	@FindBy (xpath="//a[text()='GeneralMaster Rate Slab']") private WebElement productrateslab;
+	@FindBy (xpath="//a[text()='Product Rate Slab']") private WebElement productrateslab;
 	@FindBy (xpath="//select[@id='ddlProductCode']") private WebElement selectproduct;
 	@FindBy (xpath="//select[@id=\"ddlArea\"]") private WebElement selectarea;
 	@FindBy (xpath="//input[@id='txtPurchaseRate']") private WebElement productrate;
@@ -52,20 +52,20 @@ public class GeneralMaster {
 	@FindBy (xpath="//input[@id='btnback']")private WebElement backbtn1;
 	
 //Supplier Form	
-	@FindBy (xpath="//a[text()='Supplier']") private WebElement supplier;
+	@FindBy (xpath="//a[text()='Supplier']")private WebElement supplier;
 	@FindBy (xpath="//select[@id='ddlCompanyID']")private WebElement selectcomp1;
-	@FindBy (xpath="//input[@id='txtSupplierCompanyCode']") private WebElement supcompanycode;
-	@FindBy (xpath="//input[@id='txtSupplierName']") private WebElement sname;
-	@FindBy (xpath="//select[@id='ddlGroup']") private WebElement selectgroup;
-	@FindBy (xpath="//input[@id='txtContactDetail']") private WebElement scontanctdetail;
-	@FindBy (xpath="//input[@id='txtAddress1']") private WebElement saddress1;
+	@FindBy (xpath="//input[@id='txtSupplierCompanyCode']")private WebElement supcompcode;
+	@FindBy (xpath="//input[@id='txtSupplierName']")private WebElement sname;
+	@FindBy (xpath="//select[@id='ddlGroup']")private WebElement selectgroup;
+	@FindBy (xpath="//input[@id='txtContactDetail']")private WebElement scontanctdetail;
+	@FindBy (xpath="//input[@id='txtAddress1']")private WebElement saddress1;
 	@FindBy (xpath="//select[@id='ddlstate']") private WebElement selectstate;
 	@FindBy (xpath="//select[@id='ddldistrict']")private WebElement selectdestrict;
 	@FindBy (xpath="//select[@id='ddlTahsil']")private WebElement selecttahasil;
 	@FindBy (xpath="//input[@id='txtCity']")private WebElement city;
 	@FindBy (xpath="//input[@id='txtPinCode']")private WebElement pincode1;
 	@FindBy (xpath="//input[@id='txtGSTINNo']")private WebElement gstinnumber;
-	@FindBy (xpath="txtPANNo")private WebElement pannumber;
+	@FindBy (xpath="//input[@id='txtPANNo']")private WebElement pannumber;
 	@FindBy (xpath="//select[@id='ddlCategory']")private WebElement tdscategory;
 	@FindBy (xpath="//input[@id='OpeningDate']")private WebElement openingdate;
 	@FindBy (xpath="//input[@id='chkActive']") private WebElement sactivechk;
@@ -120,7 +120,7 @@ public class GeneralMaster {
 	@FindBy (xpath="//input[@id='txtAddress1']") private WebElement taddress1;
 	@FindBy (xpath="//select[@id='ddlstate']")private WebElement selectstate2;
 	@FindBy (xpath="//select[@id='ddldistrict']")private WebElement selectdistrict1;
-	@FindBy(xpath="ddlTahsil")private WebElement selecttehsil1;
+	@FindBy (xpath="//select[@id='ddlTahsil']")private WebElement selecttehsil1;
 	@FindBy (xpath="//input[@id='txtCity']") private WebElement tselectcity;
 	@FindBy(xpath="//input[@id='txtPinCode']")private WebElement pincode2;
 	@FindBy (xpath="//input[@id='chkActive']") private WebElement tactivechk;
@@ -173,6 +173,7 @@ public class GeneralMaster {
 	@FindBy(xpath="//input[@id='txtGodown_Name']")private WebElement godownname;
 	@FindBy(xpath="//input[@id='txtGodown_Address']")private WebElement godownaddress;
 	@FindBy(xpath="//input[@id='chkActive']")private WebElement chekactive;
+	@FindBy(xpath="//button[@id='btnclear']")private WebElement gtclearbtn;
 	
 // User Master Form
 	@FindBy(xpath="//a[text()='User']")private WebElement usermaster;
@@ -185,6 +186,7 @@ public class GeneralMaster {
 	@FindBy(xpath="//input[@id='txtMobileNo']")private WebElement usermob;
 	@FindBy(xpath="//input[@id='chkActive']")private WebElement checkboxcl; 
 	@FindBy (xpath="//button[text()='OK']") private WebElement cdpsubmitokbtn;
+	@FindBy (xpath="//*[@id=\"tblmain_filter\"]/label/input") private WebElement  pcsearchbar; 
 	
 
 	// initialization
@@ -509,7 +511,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectproductcategory.isDisplayed(),"selectproductcategory is not displayed");
 		Assert.assertFalse(selectproductcategory.isSelected());
-		spc.selectByVisibleText("Oil Company Other GeneralMaster");
+		spc.selectByVisibleText("Oil Company Other Product");
 	}
 
 	public void setselectinventorymethod2() throws InterruptedException {
@@ -630,7 +632,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectproductcategory.isDisplayed(),"selectproductcategory is not displayed");
 		Assert.assertFalse(selectproductcategory.isSelected());
-		spc.selectByVisibleText("Oil Company Other GeneralMaster");
+		spc.selectByVisibleText("Oil Company Other Product");
 	}
 
 	public void setselectinventorymethod3() throws InterruptedException {
@@ -749,7 +751,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectproductcategory.isDisplayed(),"selectproductcategory is not displayed");
 		Assert.assertFalse(selectproductcategory.isSelected());
-		spc.selectByVisibleText("Oil Company Other GeneralMaster");
+		spc.selectByVisibleText("Oil Company Other Product");
 	}
 	public void setselectinventorymethod4() throws InterruptedException {
 		Select sim = new Select(selectinventorymethod);
@@ -890,7 +892,9 @@ public class GeneralMaster {
 		Assert.assertTrue(productdate.isEnabled(),"productdate field is enabled");		 
 		Reporter.log("verifyMyerproductdate", true);
 		productdate.click(); 
+		productdate.clear();
 		productdate.sendKeys("01-01-2023");
+		productdate.click();
 
 	}
 	public void selectcompany() throws InterruptedException {
@@ -925,19 +929,18 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectarea.isDisplayed(),"selectarea is  displayed");
 		Assert.assertFalse(selectarea.isSelected());
-		selectarea.clear();
 		sp.selectByVisibleText("VIRAR");
 	}
 	public void VerifyMyerpProductrate1() throws InterruptedException {
 		Thread.sleep(500);
-		Assert.assertTrue(productrate.isEnabled(),"productrate field is enabled");		 
+		Assert.assertTrue(productrate.isEnabled(),"Productrate1 field is enabled");		 
 		Reporter.log("verifyMyerpproductrate", true);
 		productrate.click(); 
 		productrate.sendKeys("337.54");
 	}
 	public void VerifyMyerpprdouctmrp1() throws InterruptedException {
 		Thread.sleep(500);
-		Assert.assertTrue(prdouctmrp.isEnabled(),"prdouctmrp field is enabled");		 
+		Assert.assertTrue(prdouctmrp.isEnabled(),"Productmrp1 field is enabled");		 
 		Reporter.log("verifyMyerpprdouctmrp", true);
 		prdouctmrp.click(); 
 		prdouctmrp.sendKeys("1052.5");
@@ -945,7 +948,7 @@ public class GeneralMaster {
 	}
 	public void VerifyMyerpProductDeposit1() throws InterruptedException {
 		Thread.sleep(500);
-		Assert.assertTrue(prdouctmrp.isEnabled(),"productdeposit field is enabled");		 
+		Assert.assertTrue(prdouctmrp.isEnabled(),"ProductDeposit1 field is enabled");		 
 		Reporter.log("verifyMyerproductdeposit", true);
 		productdeposit.click(); 
 		productdeposit.sendKeys("2200");
@@ -953,7 +956,7 @@ public class GeneralMaster {
 	}
 	public void VerifyMyerpProductDate1() throws InterruptedException {
 		Thread.sleep(500);
-		Assert.assertTrue(productdate.isEnabled(),"productdate field is enabled");		 
+		Assert.assertTrue(productdate.isEnabled(),"ProductDate1 field is enabled");		 
 		Reporter.log("verifyMyerproductdate", true);
 		productdate.click(); 
 		productdate.clear();
@@ -965,7 +968,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(selectcompany.isDisplayed(),"selectcompany is displayed");
 		Assert.assertFalse(selectcompany.isSelected());
-		sc.selectByVisibleText("Bugfix Gas");
+		sc.selectByVisibleText("Demo Gas");
 	}
 	public void VerifyMyerpProductActiveBtn1() throws InterruptedException {
 		Thread.sleep(500);
@@ -992,7 +995,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectarea.isDisplayed(),"selectarea is  displayed");
 		Assert.assertFalse(selectarea.isSelected());
-		selectarea.clear();
+	//	selectarea.clear();
 		sp.selectByVisibleText("VIRAR");
 	}
 	public void VerifyMyerpProductRate2() throws InterruptedException {
@@ -1035,7 +1038,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(selectcompany.isDisplayed(),"selectcompany is displayed");
 		Assert.assertFalse(selectcompany.isSelected());
-		sc.selectByVisibleText("Bugfix Gas");
+		sc.selectByVisibleText("Demo Gas");
 	}
 	public void VerifyMyerpProductActiveBtn2() throws InterruptedException {
 		Thread.sleep(500);
@@ -1102,7 +1105,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(selectcompany.isDisplayed(),"selectcompany is displayed");
 		Assert.assertFalse(selectcompany.isSelected());
-		sc.selectByVisibleText("Bugfix Gas");
+		sc.selectByVisibleText("Demo Gas");
 	}
 	public void VerifyMyerpProductActiveBtn3() throws InterruptedException {
 		Thread.sleep(500);
@@ -1169,7 +1172,7 @@ public class GeneralMaster {
 		Assert.assertTrue(selectcompany.isDisplayed(),"selectcompany is displayed");
 		Assert.assertFalse(selectcompany.isSelected());
 		selectcompany.clear();
-		sc.selectByVisibleText("Bugfix Gas");
+		sc.selectByVisibleText("Demo Gas");
 	}
 	public void VerifyMyerpProductActiveBtn4() throws InterruptedException {
 		Thread.sleep(500);
@@ -1202,18 +1205,18 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectcompany.isDisplayed(),"selectcompany is displayed");
 		Assert.assertFalse(selectcompany.isSelected());
-		sc.selectByVisibleText("Bugfix Gas");
+		sc.selectByVisibleText("Demo Gas");
 	}
-	public void VerifyMyerpSsupcompanyCode() throws InterruptedException {
-		Thread.sleep(500);
-		Assert.assertTrue(supcompanycode.isEnabled(),"supcompanycode field is enabled");		 
-		Reporter.log("verifyMyerpsupcompanycode", true);
-		supcompanycode.click(); 
-		supcompanycode.sendKeys("12345");
+	public void VerifyMyerpSupcompanyCode() throws InterruptedException {
+		Thread.sleep(1000);
+		Assert.assertTrue(supcompcode.isEnabled(),"SupcompanyCode field is enabled");		 
+		Reporter.log("verifyMyerpsupcompcode", true);
+		supcompcode.click();
+		supcompcode.sendKeys("2100");
 	}
 	public void VerifyMyerpSupplierName() throws InterruptedException {
 		Thread.sleep(500);
-		Assert.assertTrue(sname.isEnabled(),"sname field is enabled");		 
+		Assert.assertTrue(sname.isEnabled(),"SupplierName field is enabled");		 
 		Reporter.log("verifyMyerpsname", true);
 		sname.click();
 		sname.sendKeys("BPCL");
@@ -1251,14 +1254,14 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectdestrict.isDisplayed(),"selectdestrict is displayed");
 		Assert.assertFalse(selectdestrict.isSelected());
-		ss.selectByVisibleText("");
+		ss.selectByVisibleText("Palghar");
 	}
 	public void SelectTahasil() throws InterruptedException {
 		Select ss = new Select(selecttahasil);
 		Thread.sleep(1000);
 		Assert.assertFalse(selecttahasil.isDisplayed(),"selecttahasil is displayed");
 		Assert.assertFalse(selecttahasil.isSelected());
-		ss.selectByVisibleText("");
+		ss.selectByVisibleText("Vasai");
 	}
 		public void VeryFymyerpCity() throws InterruptedException {
 			Thread.sleep(500);
@@ -1289,11 +1292,11 @@ public class GeneralMaster {
 			pannumber.sendKeys("ACSPT8705B");
 	}
 		public void VeryFymyerptdscategory() throws InterruptedException {
-			Select ss = new Select(selecttahasil);
+			Select ss = new Select(tdscategory);
 			Thread.sleep(1000);
 			Assert.assertFalse(tdscategory.isDisplayed(),"tdscategory is displayed");
 			Assert.assertFalse(tdscategory.isSelected());
-			ss.selectByVisibleText("");
+			ss.selectByVisibleText("Company");
 	}
 		public void VerifyMyerpOpeningdate() throws InterruptedException {
 			Thread.sleep(500);
@@ -1361,7 +1364,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(transportername.isDisplayed(),"transportername is displayed");
 		Assert.assertFalse(transportername.isSelected());
-		tn.selectByVisibleText("Bugfix Gas");
+		tn.selectByVisibleText("DEMO GAS");
 	}
 	public void verifyMyerpVehicleNo() {
 		Assert.assertTrue(vehicleno.isEnabled(),"vehicleno is Enable");
@@ -1547,7 +1550,7 @@ public class GeneralMaster {
 			Assert.assertTrue(eactivechk.isEnabled()," eactivechk field is enabled");		 
 			Reporter.log("verifyMyerpeactivechk", true);
 			eactivechk.click(); 
-			Thread.sleep(500);
+			
 		}
 			public void VerifyMyerpEmployeeSubmitBtn() throws InterruptedException {
 			Thread.sleep(500);
@@ -1585,7 +1588,6 @@ public class GeneralMaster {
 			Thread.sleep(1000);
 			Assert.assertFalse(selectcompany.isDisplayed(),"selectcompany is displayed");
 			Assert.assertFalse(selectcompany.isSelected());
-			selectcompany.clear();
 			sc.selectByVisibleText("Bugfix Gas");
 		}
 		public void setEmpPageGender3(String gender) {
@@ -1600,9 +1602,8 @@ public class GeneralMaster {
 		public void ESelectDesignation3() throws InterruptedException {
 			Select sc = new Select(eselectdesignation);
 			Thread.sleep(1000);
-			Assert.assertFalse(eselectdesignation.isDisplayed(),"eselect designation is not displayed");
+			Assert.assertFalse(eselectdesignation.isDisplayed(),"eselectdesignation is not displayed");
 			Assert.assertFalse(eselectdesignation.isSelected());
-			eselectdesignation.clear();
 			sc.selectByVisibleText("Driver");
 		}
 
@@ -1628,10 +1629,9 @@ public class GeneralMaster {
 			emailid.sendKeys("evitasoft@gmail.com");
 		}
 		public void VerifyMyerpAddress3() {
-			Assert.assertTrue(address1.isEnabled()," address1 field is enabled");		 
+			Assert.assertTrue(address1.isEnabled(),"address1 field is enabled");		 
 			Reporter.log("verifyMyerp address1", true);
 			address1.click(); 
-			address1.clear();
 			address1.sendKeys("virar");
 		}
 		public void VerifyMyerpSelectState3() throws InterruptedException {
@@ -1639,7 +1639,6 @@ public class GeneralMaster {
 			Thread.sleep(1000);
 			Assert.assertFalse(selectstate.isDisplayed(),"selectstate is displayed");
 			Assert.assertFalse(selectstate.isSelected());
-			selectstate.clear();
 			sc.selectByVisibleText("MAHARASHTRA");
 		}
 		public void VerifyMyerpSelectDistrict3() throws InterruptedException {
@@ -1647,63 +1646,54 @@ public class GeneralMaster {
 			Thread.sleep(1000);
 			Assert.assertFalse(selectdistrict.isDisplayed(),"selectdistrict is displayed");
 			Assert.assertFalse(selectdistrict.isSelected());
-			selectdistrict.clear();
 			sc.selectByVisibleText("Palghar");
 
 		}
-
 		public void voidVerifyMyerpSelectTehsil3() throws InterruptedException {
 			Select sc = new Select(selecttehsil);
 			Thread.sleep(1000);
 			Assert.assertFalse(selecttehsil.isDisplayed(),"selecttehsil is displayed");
 			Assert.assertFalse(selecttehsil.isSelected());
-			selecttehsil.clear();
 			sc.selectByVisibleText("Vasai");
 		}
 		public void VerifyMyerpEnterCity3() {
-			Assert.assertTrue(entercity.isEnabled()," entercity field is enabled");		 
+			Assert.assertTrue(entercity.isEnabled(),"entercity field is enabled");		 
 			Reporter.log("verifyMyerpentercity", true);
 			entercity.click(); 
-			entercity.clear();
 			entercity.sendKeys("virar");
 		}
 		public void VerifyMyerpPincode3() {
 			Assert.assertTrue(pincode.isEnabled()," pincode field is enabled");		 
 			Reporter.log("verifyMyerppincode", true);
 			pincode.click(); 
-			pincode.clear();
 			pincode.sendKeys("401303");
 		}
 		public void VerifyMyerpBasicPay3() {
-			Assert.assertTrue(basicpay.isEnabled(),"basicpay field is enabled");		 
+			Assert.assertTrue(basicpay.isEnabled()," basicpay field is enabled");		 
 			Reporter.log("verifyMyerpbasicpay", true);
 			basicpay.click(); 
-			basicpay.clear();
 			basicpay.sendKeys("14000");
 		}
 		public void VerifyMyerpDOB3() {
 			Assert.assertTrue(dob.isEnabled()," dob field is enabled");		 
 			Reporter.log("verifyMyerpdob", true);
 			dob.click(); 
-			dob.clear();
 			dob.sendKeys("14/06/1994");
 		}
 		public void VerifyMyerpJoiningDate3() {
-			Assert.assertTrue(joiningdate.isEnabled(),"joiningdate field is enabled");		 
+			Assert.assertTrue(joiningdate.isEnabled()," joiningdate field is enabled");		 
 			Reporter.log("verifyMyerpjoiningdate", true);
 			joiningdate.click(); 
-			joiningdate.clear();
 			joiningdate.sendKeys("01/01/2023");
 		}
-
 		public void VerifyMyerpEmployeeActiveCHK3() throws InterruptedException {
-			Thread.sleep(1000);
-			Assert.assertTrue(eactivechk.isEnabled(),"eactivechk field is enabled");		 
+			Thread.sleep(500);
+			Assert.assertTrue(eactivechk.isEnabled()," eactivechk field is enabled");		 
 			Reporter.log("verifyMyerpeactivechk", true);
 			eactivechk.click(); 
-
+			Thread.sleep(500);
 		}
-		public void VerifyMyerpEmployeeSubmitBtn3() throws InterruptedException {
+			public void VerifyMyerpEmployeeSubmitBtn3() throws InterruptedException {
 			Thread.sleep(500);
 			Assert.assertTrue(ebtnsubmit.isEnabled(),"ebtnsubmitfield is enabled");		 
 			Reporter.log("verifyMyerpebtnsubmit", true);
@@ -1756,7 +1746,6 @@ public class GeneralMaster {
 			Thread.sleep(1000);
 			Assert.assertFalse(eselectdesignation.isDisplayed(),"eselectdesignation is not displayed");
 			Assert.assertFalse(eselectdesignation.isSelected());
-			eselectdesignation.clear();
 			sc.selectByVisibleText("Domestic Deliveryman");
 		}
 		public void VerifyMyerppersonalcontanctnumber4() {
@@ -1784,7 +1773,6 @@ public class GeneralMaster {
 			Assert.assertTrue(address1.isEnabled(),"address1 field is enabled");		 
 			Reporter.log("verifyMyerp address1", true);
 			address1.click(); 
-			address1.clear();
 			address1.sendKeys("virar");
 		}
 		public void VerifyMyerpSelectState4() throws InterruptedException {
@@ -1792,7 +1780,6 @@ public class GeneralMaster {
 			Thread.sleep(1000);
 			Assert.assertFalse(selectstate.isDisplayed(),"selectstate is displayed");
 			Assert.assertFalse(selectstate.isSelected());
-			selectstate.clear();
 			sc.selectByVisibleText("MAHARASHTRA");
 		}
 		public void VerifyMyerpSelectDistrict4() throws InterruptedException {
@@ -1800,7 +1787,6 @@ public class GeneralMaster {
 			Thread.sleep(1000);
 			Assert.assertFalse(selectdistrict.isDisplayed(),"selectdistrict is displayed");
 			Assert.assertFalse(selectdistrict.isSelected());
-			selectdistrict.clear();
 			sc.selectByVisibleText("Palghar");
 
 		}
@@ -1809,61 +1795,58 @@ public class GeneralMaster {
 			Thread.sleep(1000);
 			Assert.assertFalse(selecttehsil.isDisplayed(),"selecttehsil is displayed");
 			Assert.assertFalse(selecttehsil.isSelected());
-			selecttehsil.clear();
 			sc.selectByVisibleText("Vasai");
 		}
 		public void VerifyMyerpEnterCity4() {
 			Assert.assertTrue(entercity.isEnabled(),"entercity field is enabled");		 
 			Reporter.log("verifyMyerpentercity", true);
 			entercity.click(); 
-			entercity.clear();
 			entercity.sendKeys("virar");
 		}
 		public void VerifyMyerpPincode4() {
-			Assert.assertTrue(pincode.isEnabled(),"pincode field is enabled");		 
+			Assert.assertTrue(pincode.isEnabled()," pincode field is enabled");		 
 			Reporter.log("verifyMyerppincode", true);
 			pincode.click(); 
-			pincode.clear();
 			pincode.sendKeys("401303");
 		}
 		public void VerifyMyerpBasicPay4() {
-			Assert.assertTrue(basicpay.isEnabled(),"basicpay field is enabled");		 
+			Assert.assertTrue(basicpay.isEnabled()," basicpay field is enabled");		 
 			Reporter.log("verifyMyerpbasicpay", true);
 			basicpay.click(); 
-			basicpay.clear();
-			basicpay.sendKeys("14500");
+			basicpay.sendKeys("14000");
 		}
 		public void VerifyMyerpDOB4() {
-			Assert.assertTrue(dob.isEnabled(),"dob field is enabled");		 
+			Assert.assertTrue(dob.isEnabled()," dob field is enabled");		 
 			Reporter.log("verifyMyerpdob", true);
 			dob.click(); 
-			dob.clear();
-			dob.sendKeys("09/02/1999");
+			dob.sendKeys("14/06/1994");
 		}
 		public void VerifyMyerpJoiningDate4() {
-			Assert.assertTrue(joiningdate.isEnabled(),"joiningdate field is enabled");		 
+			Assert.assertTrue(joiningdate.isEnabled()," joiningdate field is enabled");		 
 			Reporter.log("verifyMyerpjoiningdate", true);
 			joiningdate.click(); 
-			joiningdate.clear();
 			joiningdate.sendKeys("01/01/2023");
 		}
 		public void VerifyMyerpEmployeeActiveCHK4() throws InterruptedException {
-			Thread.sleep(1000);
-			Assert.assertTrue(eactivechk.isEnabled(),"eactivechk field is enabled");		 
-			Reporter.log("verifyMyerp eactivechk", true);
+			Thread.sleep(500);
+			Assert.assertTrue(eactivechk.isEnabled()," eactivechk field is enabled");		 
+			Reporter.log("verifyMyerpeactivechk", true);
 			eactivechk.click(); 
+			Thread.sleep(500);
 		}
-		public void VerifyMyerpEmployeeSubmitBtn4() throws InterruptedException {
+			public void VerifyMyerpEmployeeSubmitBtn4() throws InterruptedException {
 			Thread.sleep(500);
 			Assert.assertTrue(ebtnsubmit.isEnabled(),"ebtnsubmitfield is enabled");		 
 			Reporter.log("verifyMyerpebtnsubmit", true);
 			ebtnsubmit.click(); 
+
 		}
 		public void VerifyMyerpEmployeeSubmitOKBtn4() throws InterruptedException {
 			Thread.sleep(500);
 			Assert.assertTrue(ebtnsubmitok.isEnabled(),"ebtnsubmitok is enabled");		 
 			Reporter.log("verifyMyerpebtnsubmitok", true);
 			ebtnsubmitok.click();
+
 		}
 		
 		public void VerifyMyerpEmployeeFirstName5() throws InterruptedException {
@@ -1904,7 +1887,6 @@ public class GeneralMaster {
 			Thread.sleep(1000);
 			Assert.assertFalse(eselectdesignation.isDisplayed(),"eselectdesignation is not displayed");
 			Assert.assertFalse(eselectdesignation.isSelected());
-			eselectdesignation.clear();
 			sc.selectByVisibleText("Commercial Deliveryman");
 		}
 		public void VerifyMyerppersonalcontanctnumber5() {
@@ -1930,9 +1912,8 @@ public class GeneralMaster {
 		}
 		public void VerifyMyerpAddress5() {
 			Assert.assertTrue(address1.isEnabled(),"address1 field is enabled");		 
-			Reporter.log("verifyMyerpaddress1", true);
+			Reporter.log("verifyMyerp address1", true);
 			address1.click(); 
-			address1.clear();
 			address1.sendKeys("virar");
 		}
 		public void VerifyMyerpSelectState5() throws InterruptedException {
@@ -1940,7 +1921,6 @@ public class GeneralMaster {
 			Thread.sleep(1000);
 			Assert.assertFalse(selectstate.isDisplayed(),"selectstate is displayed");
 			Assert.assertFalse(selectstate.isSelected());
-			selectstate.clear();
 			sc.selectByVisibleText("MAHARASHTRA");
 		}
 		public void VerifyMyerpSelectDistrict5() throws InterruptedException {
@@ -1948,71 +1928,66 @@ public class GeneralMaster {
 			Thread.sleep(1000);
 			Assert.assertFalse(selectdistrict.isDisplayed(),"selectdistrict is displayed");
 			Assert.assertFalse(selectdistrict.isSelected());
-			selectdistrict.clear();
 			sc.selectByVisibleText("Palghar");
 
 		}
-
 		public void voidVerifyMyerpSelectTehsil5() throws InterruptedException {
 			Select sc = new Select(selecttehsil);
 			Thread.sleep(1000);
 			Assert.assertFalse(selecttehsil.isDisplayed(),"selecttehsil is displayed");
 			Assert.assertFalse(selecttehsil.isSelected());
-			selecttehsil.clear();
 			sc.selectByVisibleText("Vasai");
 		}
 		public void VerifyMyerpEnterCity5() {
 			Assert.assertTrue(entercity.isEnabled(),"entercity field is enabled");		 
 			Reporter.log("verifyMyerpentercity", true);
 			entercity.click(); 
-			entercity.clear();
 			entercity.sendKeys("virar");
 		}
 		public void VerifyMyerpPincode5() {
-			Assert.assertTrue(pincode.isEnabled(),"pincode field is enabled");		 
+			Assert.assertTrue(pincode.isEnabled()," pincode field is enabled");		 
 			Reporter.log("verifyMyerppincode", true);
 			pincode.click(); 
-			pincode.clear();
 			pincode.sendKeys("401303");
 		}
 		public void VerifyMyerpBasicPay5() {
-			Assert.assertTrue(basicpay.isEnabled(),"basicpay field is enabled");		 
+			Assert.assertTrue(basicpay.isEnabled()," basicpay field is enabled");		 
 			Reporter.log("verifyMyerpbasicpay", true);
 			basicpay.click(); 
-			basicpay.clear();
 			basicpay.sendKeys("14000");
 		}
 		public void VerifyMyerpDOB5() {
-			Assert.assertTrue(dob.isEnabled(),"dob field is enabled");		 
+			Assert.assertTrue(dob.isEnabled()," dob field is enabled");		 
 			Reporter.log("verifyMyerpdob", true);
 			dob.click(); 
-			dob.clear();
-			dob.sendKeys("27/10/1998");
+			dob.sendKeys("14/06/1994");
 		}
 		public void VerifyMyerpJoiningDate5() {
-			Assert.assertTrue(joiningdate.isEnabled(),"joiningdate field is enabled");		 
+			Assert.assertTrue(joiningdate.isEnabled()," joiningdate field is enabled");		 
 			Reporter.log("verifyMyerpjoiningdate", true);
 			joiningdate.click(); 
-			joiningdate.clear();
 			joiningdate.sendKeys("01/01/2023");
 		}
 		public void VerifyMyerpEmployeeActiveCHK5() throws InterruptedException {
-			Thread.sleep(1000);
-			Assert.assertTrue(eactivechk.isEnabled(),"eactivechk field is enabled");		 
+			Thread.sleep(500);
+			Assert.assertTrue(eactivechk.isEnabled()," eactivechk field is enabled");		 
 			Reporter.log("verifyMyerpeactivechk", true);
 			eactivechk.click(); 
+			Thread.sleep(500);
 		}
-		public void VerifyMyerpEmployeeSubmitBtn5() throws InterruptedException {
+			public void VerifyMyerpEmployeeSubmitBtn5() throws InterruptedException {
 			Thread.sleep(500);
 			Assert.assertTrue(ebtnsubmit.isEnabled(),"ebtnsubmitfield is enabled");		 
 			Reporter.log("verifyMyerpebtnsubmit", true);
 			ebtnsubmit.click(); 
+
 		}
 		public void VerifyMyerpEmployeeSubmitOKBtn5() throws InterruptedException {
 			Thread.sleep(500);
 			Assert.assertTrue(ebtnsubmitok.isEnabled(),"ebtnsubmitok is enabled");		 
 			Reporter.log("verifyMyerpebtnsubmitok", true);
 			ebtnsubmitok.click();
+
 		}
 		public void VerifyMyerpBackbtn6() throws InterruptedException {
 			Thread.sleep(500);
@@ -2040,7 +2015,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectcompany.isDisplayed(),"selectcompany is displayed");
 		Assert.assertFalse(selectcompany.isSelected());
-		sc.selectByVisibleText("Bugfix Gas ");
+		sc.selectByVisibleText("Demo Gas ");
 	}
 
 	public void VerifyMyerpTcompanyCode() throws InterruptedException {
@@ -2055,7 +2030,7 @@ public class GeneralMaster {
 		Assert.assertTrue(tname.isEnabled(),"tname field is enabled");		 
 		Reporter.log("verifyMyerptname", true);
 		tname.click();
-		tname.sendKeys("Bugfix Gas");
+		tname.sendKeys("Demo Gas");
 	}
 
 	public void TSelectGroup() throws InterruptedException {
@@ -2253,23 +2228,21 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(cpselectbussinesstype.isDisplayed(),"cpselectbussinesstype is displayed");
 		Assert.assertFalse(cpselectbussinesstype.isSelected());
-		cpselectbussinesstype.clear();
 		cpbt.selectByVisibleText("Hotel_Restaurent");
 	}
+
 	public void VerifyMyerpCPSelectGroup2() throws InterruptedException {
 		Select spg = new Select(cpselectgroup);
 		Thread.sleep(1000);
 		Assert.assertFalse(cpselectgroup.isDisplayed(),"selectgroup is displayed");
 		Assert.assertFalse(cpselectgroup.isSelected());
-		cpselectgroup.clear();
 		spg.selectByVisibleText("SUNDRY DEBTORS");
 	}
-	public void VerifyMyerpCPAddress12() throws InterruptedException {
+	public void VerifyMyerpCPAddress2() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(cpaddress1.isEnabled(),"cpaddress1 field is enabled");		 
 		Reporter.log("verifyMyerpcpaddress1", true);
 		cpaddress1.click(); 
-		cpaddress1.clear();
 		cpaddress1.sendKeys("Virar");
 	}
 	public void VerifyMyerpCPSelectState2() throws InterruptedException {
@@ -2277,7 +2250,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(cpselectstate.isDisplayed(),"cpselectstate is displayed");
 		Assert.assertFalse(cpselectstate.isSelected());
-		cpselectstate.clear();
 		spss.selectByVisibleText("MAHARASHTRA");
 	}
 	public void VerifyMyerpbillingtype2() throws InterruptedException {
@@ -2285,7 +2257,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(billingtype.isDisplayed(),"billingtype is displayed");
 		Assert.assertFalse(billingtype.isSelected());
-		billingtype.clear();
 		spss.selectByVisibleText("Monthly");
 	}
 	public void VerifyMyerpCPActivechk2() throws InterruptedException {
@@ -2363,7 +2334,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(cpselectbussinesstype.isDisplayed(),"cpselectbussinesstype is displayed");
 		Assert.assertFalse(cpselectbussinesstype.isSelected());
-		cpselectbussinesstype.clear();
 		cpbt.selectByVisibleText("Hotel_Restaurent");
 	}
 
@@ -2372,7 +2342,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(cpselectgroup.isDisplayed(),"selectgroup is displayed");
 		Assert.assertFalse(cpselectgroup.isSelected());
-		cpselectgroup.clear();
 		spg.selectByVisibleText("SUNDRY DEBTORS");
 	}
 	public void VerifyMyerpCPAddress3() throws InterruptedException {
@@ -2380,7 +2349,6 @@ public class GeneralMaster {
 		Assert.assertTrue(cpaddress1.isEnabled(),"cpaddress1 field is enabled");		 
 		Reporter.log("verifyMyerpcpaddress1", true);
 		cpaddress1.click(); 
-		cpaddress1.clear();
 		cpaddress1.sendKeys("Virar");
 	}
 	public void VerifyMyerpCPSelectState3() throws InterruptedException {
@@ -2388,7 +2356,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(cpselectstate.isDisplayed(),"cpselectstate is displayed");
 		Assert.assertFalse(cpselectstate.isSelected());
-		cpselectstate.clear();
 		spss.selectByVisibleText("MAHARASHTRA");
 	}
 	public void VerifyMyerpbillingtype3() throws InterruptedException {
@@ -2396,7 +2363,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(billingtype.isDisplayed(),"billingtype is displayed");
 		Assert.assertFalse(billingtype.isSelected());
-		billingtype.clear();
 		spss.selectByVisibleText("FORTHNIGHT");
 	}
 	public void VerifyMyerpCPActivechk3() throws InterruptedException {
@@ -2473,7 +2439,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(cpselectbussinesstype.isDisplayed(),"cpselectbussinesstype is displayed");
 		Assert.assertFalse(cpselectbussinesstype.isSelected());
-		cpselectbussinesstype.clear();
 		cpbt.selectByVisibleText("Hotel_Restaurent");
 	}
 
@@ -2482,7 +2447,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(cpselectgroup.isDisplayed(),"selectgroup is displayed");
 		Assert.assertFalse(cpselectgroup.isSelected());
-		cpselectgroup.clear();
 		spg.selectByVisibleText("SUNDRY DEBTORS");
 	}
 	public void VerifyMyerpCPAddress4() throws InterruptedException {
@@ -2490,7 +2454,6 @@ public class GeneralMaster {
 		Assert.assertTrue(cpaddress1.isEnabled(),"cpaddress1 field is enabled");		 
 		Reporter.log("verifyMyerpcpaddress1", true);
 		cpaddress1.click(); 
-		cpaddress1.clear();
 		cpaddress1.sendKeys("Virar");
 	}
 	public void VerifyMyerpCPSelectState4() throws InterruptedException {
@@ -2498,7 +2461,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(cpselectstate.isDisplayed(),"cpselectstate is displayed");
 		Assert.assertFalse(cpselectstate.isSelected());
-		cpselectstate.clear();
 		spss.selectByVisibleText("MAHARASHTRA");
 	}
 	public void VerifyMyerpbillingtype4() throws InterruptedException {
@@ -2506,7 +2468,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(billingtype.isDisplayed(),"billingtype is displayed");
 		Assert.assertFalse(billingtype.isSelected());
-		billingtype.clear();
 		spss.selectByVisibleText("custom");
 	}
 	public void VerifyMyerpCPActivechk4() throws InterruptedException {
@@ -2584,16 +2545,14 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(cpselectbussinesstype.isDisplayed(),"cpselectbussinesstype is displayed");
 		Assert.assertFalse(cpselectbussinesstype.isSelected());
-		cpselectbussinesstype.clear();
 		cpbt.selectByVisibleText("Hotel_Restaurent");
 	}
 
 	public void VerifyMyerpCPSelectGroup5() throws InterruptedException {
 		Select spg = new Select(cpselectgroup);
 		Thread.sleep(1000);
-		Assert.assertFalse(cpselectgroup.isDisplayed(),"cpselectgroup is displayed");
+		Assert.assertFalse(cpselectgroup.isDisplayed(),"selectgroup is displayed");
 		Assert.assertFalse(cpselectgroup.isSelected());
-		cpselectgroup.clear();
 		spg.selectByVisibleText("SUNDRY DEBTORS");
 	}
 	public void VerifyMyerpCPAddress5() throws InterruptedException {
@@ -2601,7 +2560,6 @@ public class GeneralMaster {
 		Assert.assertTrue(cpaddress1.isEnabled(),"cpaddress1 field is enabled");		 
 		Reporter.log("verifyMyerpcpaddress1", true);
 		cpaddress1.click(); 
-		cpaddress1.clear();
 		cpaddress1.sendKeys("Virar");
 	}
 	public void VerifyMyerpCPSelectState5() throws InterruptedException {
@@ -2609,7 +2567,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(cpselectstate.isDisplayed(),"cpselectstate is displayed");
 		Assert.assertFalse(cpselectstate.isSelected());
-		cpselectstate.clear();
 		spss.selectByVisibleText("MAHARASHTRA");
 	}
 	public void VerifyMyerpbillingtype5() throws InterruptedException {
@@ -2617,7 +2574,6 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(billingtype.isDisplayed(),"billingtype is displayed");
 		Assert.assertFalse(billingtype.isSelected());
-		billingtype.clear();
 		spss.selectByVisibleText("Immediate");
 	}
 	public void VerifyMyerpCPActivechk5() throws InterruptedException {
@@ -2716,10 +2672,10 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectcom.isDisplayed(),"selectcom is displayed");
 		Assert.assertFalse(selectcom.isSelected());
-		sc.selectByVisibleText("Bugfix Gas ");
+		sc.selectByVisibleText("ANITA GAS SERVICES");
 
 	}
-	public void verifyMyerpSelectselecttype() throws InterruptedException {
+	public void verifyMyerpSelecttype() throws InterruptedException {
 		Select su = new Select(selecttype);
 		Thread.sleep(1000);
 		Assert.assertFalse(selecttype.isDisplayed(),"selecttype is displayed");
@@ -2818,8 +2774,8 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectcom.isDisplayed(),"selectcom is displayed");
 		Assert.assertFalse(selectcom.isSelected());
-		selectcom.clear();
-		sc.selectByVisibleText("Bugfix Gas ");
+	//	selectcom.clear();
+		sc.selectByVisibleText("ANITA GAS SERVICES ");
 
 	}
 	public void verifyMyerpSelectselecttype2() throws InterruptedException {
@@ -2827,7 +2783,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selecttype.isDisplayed(),"selecttype is displayed");
 		Assert.assertFalse(selecttype.isSelected());
-		selecttype.clear();
+	//	selecttype.clear();
 		su.selectByVisibleText("NON-REFUNDABLE-INCOME");
 
 	}
@@ -2925,8 +2881,8 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectcom.isDisplayed(),"selectcom is displayed");
 		Assert.assertFalse(selectcom.isSelected());
-		selectcom.clear();
-		sc.selectByVisibleText("Bugfix Gas ");
+	//	selectcom.clear();
+		sc.selectByVisibleText("ANITA GAS SERVICES");
 
 	}
 	public void verifyMyerpSelectselecttype3() throws InterruptedException {
@@ -2934,7 +2890,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selecttype.isDisplayed(),"selecttype is displayed");
 		Assert.assertFalse(selecttype.isSelected());
-		selecttype.clear();
+	//  selecttype.clear();
 		su.selectByVisibleText("NON-REFUNDABLE-INCOME");
 
 	}
@@ -3053,6 +3009,7 @@ public class GeneralMaster {
 		Assert.assertTrue(okbtn.isEnabled(),"okbtn is Enable");
 		Reporter.log("verifyMyerpokbtn",true);
 		okbtn.click();
+		gtclearbtn.click();
 
 	}
 	
@@ -3079,12 +3036,14 @@ public class GeneralMaster {
 		Assert.assertTrue(submitbtn.isEnabled(),"submitbtn is Enable");
 		Reporter.log("verifyMyerpsubmitbtn",true);
 		submitbtn.click();
+
 	}
 	public void verifyMyerpOKButton1() throws InterruptedException {
 		Thread.sleep(500);
 		Assert.assertTrue(okbtn.isEnabled(),"okbtn is Enable");
 		Reporter.log("verifyMyerpokbtn",true);
 		okbtn.click();
+		gtclearbtn.click();
 	}
 	public void VerifyMyerpBackbtn8() throws InterruptedException {
 		Thread.sleep(500);
@@ -3107,7 +3066,7 @@ public class GeneralMaster {
 
 	}
 	public void verifyMyerpSelectEmployee() throws InterruptedException {
-		Thread.sleep(1500);
+		Thread.sleep(2000);
 		Select sc = new Select(selectempy);
 		Thread.sleep(1000);
 		Assert.assertFalse(selectempy.isDisplayed(),"selectempy is displayed");
@@ -3129,7 +3088,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectcomp.isDisplayed(),"selectcomp is displayed");
 		Assert.assertFalse(selectcomp.isSelected());
-		su.selectByVisibleText("Bugfix Gas ");
+		su.selectByVisibleText("ANITA GAS SERVICES");
 
 	}
 	public void verifyMyerpUseridname()  throws InterruptedException {
@@ -3177,12 +3136,11 @@ public class GeneralMaster {
 	}
 	
 	public void verifyMyerpSelectEmployee2() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		Select sc = new Select(selectempy);
 		Thread.sleep(1000);
 		Assert.assertFalse(selectempy.isDisplayed(),"selectempy is displayed");
 		Assert.assertFalse(selectempy.isSelected());
-		selectempy.clear();
 		sc.selectByVisibleText("DEEPAK PARAMAR : Commercial Deliveryman");
 	}
 	public void verifyMyerpSelectUserType2() throws InterruptedException {
@@ -3191,7 +3149,7 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertTrue(selectusertyp.isDisplayed(),"selectusertyp is displayed");
 		Assert.assertFalse(selectusertyp.isSelected());
-		selectusertyp.clear();
+
 		su.selectByVisibleText("Android");
 	}
 	public void verifyMyerpSelectCompany2() throws InterruptedException {
@@ -3199,8 +3157,8 @@ public class GeneralMaster {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectcomp.isDisplayed(),"selectcomp is displayed");
 		Assert.assertFalse(selectcomp.isSelected());
-		selectcomp.clear();
-		su.selectByVisibleText("Bugfix Gas ");
+	//	selectcomp.clear();
+		su.selectByVisibleText("ANITA GAS SERVICES");
 
 	}
 	public void verifyMyerpUseridname2()  throws InterruptedException {
@@ -3250,5 +3208,178 @@ public class GeneralMaster {
 		cdpsubmitokbtn.click();
 	}
 	
+	public void verifyMyerpSelectEmployee4() throws InterruptedException {
+		Thread.sleep(2000);
+		Select sc = new Select(selectempy);
+		Thread.sleep(1000);
+		Assert.assertFalse(selectempy.isDisplayed(),"selectempy is displayed");
+		Assert.assertFalse(selectempy.isSelected());
+		sc.selectByVisibleText("RAMESH SACHAN : Domestic Deliveryman");
+
+	}
+
+	public void verifyMyerpSelectUserType4() throws InterruptedException {
+		Thread.sleep(400);
+		Select su = new Select(selectusertyp);
+		Thread.sleep(1000);
+		Assert.assertTrue(selectusertyp.isDisplayed(),"SelectUserType is displayed");
+		Assert.assertFalse(selectusertyp.isSelected());
+		su.selectByVisibleText("Android");
+
+	}
+	public void verifyMyerpSelectCompany4() throws InterruptedException {
+		Select su = new Select(selectcomp);
+		Thread.sleep(1000);
+		Assert.assertFalse(selectcomp.isDisplayed(),"SelectCompany is displayed");
+		Assert.assertFalse(selectcomp.isSelected());
+		su.selectByVisibleText("ANITA GAS SERVICES");
+
+	}
+	public void verifyMyerpUseridname4()  throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(useridname.isEnabled(),"Useridname is Enable");
+		Reporter.log("verifyMyerpuseridname",true);
+		useridname.sendKeys("ramesh");
+
+	}
+	public void verifyMyerpUserpass4()  throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(userpass.isEnabled(),"Userpass is Enable");
+		Reporter.log("verifyMyerpuserpass",true);
+		userpass.sendKeys("ramesh@123");
+
+	}
+	public void verifyMyerpUseremail4()  throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(useremail.isEnabled(),"Useremail is Enable");
+		Reporter.log("verifyMyerpuseremail",true);
+		useremail.sendKeys("evitasoftech@gmail.com");
+
+	}
+	public void verifyMyerpUserMob4()  throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(usermob.isEnabled(),"UserMob is Enable");
+		Reporter.log("verifyMyerpusermob",true);
+		usermob.sendKeys("8828420054"); 
+
+	}
+	public void verifyMyerpcheckboxcl4()  throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(checkboxcl.isEnabled(),"Checkboxcl is Enable");
+		Reporter.log("verifyMyerpcheckboxcl",true);
+		checkboxcl.click();
+
+	}
+
+	public void verifyMyerpsubmitbtn4()  throws InterruptedException {
+		Thread.sleep(1000);
+		Assert.assertTrue(submitbtn.isEnabled(),"submitbtn is Enable");
+		Reporter.log("verifyMyerpsubmitbtn",true);
+		submitbtn.click();
+
+	}
+	public void VerifySubmitOKBtn4() throws InterruptedException {
+		Thread.sleep(700);
+		Assert.assertTrue(cdpsubmitokbtn.isEnabled(),"cdpsubmitokbtn is enabled");
+		Reporter.log(" verifyMyerpcdpsubmitokbtn", true);
+		cdpsubmitokbtn.click();
+	}
+	public void VerifyandClickonPSearchbar4() throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(pcsearchbar.isEnabled()," pcsearchbar field is enabled");
+		Reporter.log(" verifyMyerp pcsearchbar", true);
+		pcsearchbar.click(); 
+		pcsearchbar.clear();
+		pcsearchbar.sendKeys("Ramesh");
+
+		Thread.sleep(500);
+	}
+	
+	public void verifyMyerpSelectEmployee5() throws InterruptedException {
+		Thread.sleep(2000);
+		Select sc = new Select(selectempy);
+		Thread.sleep(1000);
+		Assert.assertFalse(selectempy.isDisplayed(),"selectempy is displayed");
+		Assert.assertFalse(selectempy.isSelected());
+		sc.selectByVisibleText("SURESH MISHRA : Driver");
+
+	}
+
+	public void verifyMyerpSelectUserType5() throws InterruptedException {
+		Thread.sleep(400);
+		Select su = new Select(selectusertyp);
+		Thread.sleep(1000);
+		Assert.assertTrue(selectusertyp.isDisplayed(),"SelectUserType is displayed");
+		Assert.assertFalse(selectusertyp.isSelected());
+		su.selectByVisibleText("Android");
+
+	}
+	public void verifyMyerpSelectCompany5() throws InterruptedException {
+		Select su = new Select(selectcomp);
+		Thread.sleep(1000);
+		Assert.assertFalse(selectcomp.isDisplayed(),"SelectCompany is displayed");
+		Assert.assertFalse(selectcomp.isSelected());
+		su.selectByVisibleText("ANITA GAS SERVICES");
+
+	}
+	public void verifyMyerpUseridname5()  throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(useridname.isEnabled(),"Useridname is Enable");
+		Reporter.log("verifyMyerpuseridname",true);
+		useridname.sendKeys("suresh");
+
+	}
+	public void verifyMyerpUserpass5()  throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(userpass.isEnabled(),"Userpass is Enable");
+		Reporter.log("verifyMyerpuserpass",true);
+		userpass.sendKeys("suresh@123");
+
+	}
+	public void verifyMyerpUseremail5()  throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(useremail.isEnabled(),"Useremail is Enable");
+		Reporter.log("verifyMyerpuseremail",true);
+		useremail.sendKeys("evitasoftech@gmail.com");
+
+	}
+	public void verifyMyerpUserMob5()  throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(usermob.isEnabled(),"UserMob is Enable");
+		Reporter.log("verifyMyerpusermob",true);
+		usermob.sendKeys("8828420054"); 
+
+	}
+	public void verifyMyerpcheckboxcl5()  throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(checkboxcl.isEnabled(),"Checkboxcl is Enable");
+		Reporter.log("verifyMyerpcheckboxcl",true);
+		checkboxcl.click();
+
+	}
+
+	public void verifyMyerpsubmitbtn5()  throws InterruptedException {
+		Thread.sleep(1000);
+		Assert.assertTrue(submitbtn.isEnabled(),"submitbtn is Enable");
+		Reporter.log("verifyMyerpsubmitbtn",true);
+		submitbtn.click();
+
+	}
+	public void VerifySubmitOKBtn5() throws InterruptedException {
+		Thread.sleep(700);
+		Assert.assertTrue(cdpsubmitokbtn.isEnabled(),"cdpsubmitokbtn is enabled");
+		Reporter.log(" verifyMyerpcdpsubmitokbtn", true);
+		cdpsubmitokbtn.click();
+	}
+	public void VerifyandClickonPSearchbar5() throws InterruptedException {
+		Thread.sleep(500);
+		Assert.assertTrue(pcsearchbar.isEnabled()," pcsearchbar field is enabled");
+		Reporter.log(" verifyMyerp pcsearchbar", true);
+		pcsearchbar.click(); 
+		pcsearchbar.clear();
+		pcsearchbar.sendKeys("Ramesh");
+
+		Thread.sleep(500);
+	}
 
 }

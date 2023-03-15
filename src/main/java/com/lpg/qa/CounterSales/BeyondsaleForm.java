@@ -244,12 +244,14 @@ public class BeyondsaleForm {
 		Assert.assertTrue(submitbtn.isEnabled(),"Submitbtn find is enable");
 		Reporter.log("verifyMyerpsubmitbtn",true);
 		submitbtn.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		if (isAlertPresent3(driver)) { System.out.println("alert is present");
 
 		}else
-		{ System.out.println("alert is not present"); }
-	}
+		{ System.out.println("alert is not present"); 
+		}
+		}
+	
 
 	public static boolean isAlertPresent3(WebDriver driver) throws
 	InterruptedException { 
@@ -326,28 +328,32 @@ public class BeyondsaleForm {
 		Assert.assertTrue(submitbtn.isEnabled(),"Submitbtn find is enable");
 		Reporter.log("verifyMyerpsubmitbtn",true);
 		submitbtn.click();
-		Thread.sleep(2000);
+		Thread.sleep(700);
 		if (isAlertPresent5(driver)) { System.out.println("alert is present");
 
 		}else
-		{ System.out.println("alert is not present"); }
-	}
+		{ System.out.println("alert is not present"); 
+		}
+		}
+	
 
 	public static boolean isAlertPresent5(WebDriver driver) throws
 	InterruptedException { 
 		try {
 			Thread.sleep(800);
 			Alert al=driver.switchTo().alert();
-			Thread.sleep(3000); 
+			Thread.sleep(2000); 
 			al.accept(); 
-			Thread.sleep(3800);
-			al.accept();
+			/*
+			 * Thread.sleep(2500); al.accept();
+			 */
 			return true; }
 		catch (UnhandledAlertException u) 
-		{ // TODO Auto-generated catch blocks
+		{ // TODO Auto-generated catch block
 			u.printStackTrace(); } return false;
 
 	
 	}
+
 	
 }
