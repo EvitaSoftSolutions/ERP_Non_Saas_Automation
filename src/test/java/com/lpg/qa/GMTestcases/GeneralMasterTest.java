@@ -237,11 +237,11 @@ public class GeneralMasterTest  extends LpgTestBase{
 		pr.VerifyMyerpBasicPay3();
 		pr.VerifyMyerpDOB3();
 		pr.VerifyMyerpJoiningDate3(); 
-		pr.VerifyMyerpEmployeeActiveCHK3();
-		pr.VerifyMyerpEmployeeSubmitBtn3();
+		pr.VerifyMyerpEmployeeActiveCHK();
+		pr.VerifyMyerpEmployeeSubmitBtn();
 		pr.VerifyMyerpEmployeeSubmitOKBtn3();
 
-		
+		pr.VerifyMyerpEmployeeForm(); 
 		pr.VerifyMyerpEmployeeFirstName4(); 
 		pr.VerifyMyerpEmployeeLastName4();
 		pr.ESelectCompany(); 
@@ -258,8 +258,8 @@ public class GeneralMasterTest  extends LpgTestBase{
 		pr.VerifyMyerpBasicPay4(); 
 		pr.VerifyMyerpDOB4();
 		pr.VerifyMyerpJoiningDate4(); 
-		pr.VerifyMyerpEmployeeActiveCHK4();
-		pr.VerifyMyerpEmployeeSubmitBtn4();
+		pr.VerifyMyerpEmployeeActiveCHK();
+		pr.VerifyMyerpEmployeeSubmitBtn();
 		pr.VerifyMyerpEmployeeSubmitOKBtn4();
 
 		pr.VerifyMyerpEmployeeFirstName5(); 
@@ -278,8 +278,8 @@ public class GeneralMasterTest  extends LpgTestBase{
 		pr.VerifyMyerpBasicPay5();
 		pr.VerifyMyerpDOB5();
 		pr.VerifyMyerpJoiningDate5(); 
-		pr.VerifyMyerpEmployeeActiveCHK4();
-		pr.VerifyMyerpEmployeeSubmitBtn5(); 
+		pr.VerifyMyerpEmployeeActiveCHK();
+		pr.VerifyMyerpEmployeeSubmitBtn(); 
 		pr.VerifyMyerpEmployeeSubmitOKBtn5();
 		pr.VerifyMyerpBackbtn6(); 
 
@@ -298,7 +298,6 @@ public class GeneralMasterTest  extends LpgTestBase{
 		pr.VerifyMyerpTSubmiOKBtn();
 		pr.VerifyMyerpBackbtn4();
 	
-
 		//Vehicle
 	    pr.verifyMyerpPageNavigation1();
 		pr.verifyMyerpVehicleMaster(); 
@@ -329,10 +328,11 @@ public class GeneralMasterTest  extends LpgTestBase{
         pr.VerifyMyerpbillingtype1(); 
 	//  pr.VerifyMyerpCPActivechk2();
 		pr.VerifyMyerpCPProduct();
-		pr.VerifyMyerpCPPQantity();
+		pr.VerifyMyerpCPPQantity(); 
 		pr.VerifyMyerpCPPOpeningCycle(); 
 		pr.VerifyMyerpCPSubmitBtn();
 
+		
 		pr.VerifyMyerpConsumerNumber2();
 		pr.VerifyMyerpCPBusinessname2();
 		pr.VerifyMyerpCPSelectBusinessType2(); 
@@ -364,7 +364,7 @@ public class GeneralMasterTest  extends LpgTestBase{
 		pr.VerifyMyerpCPContactPersonName1();
 		pr.VerifyMyerpCPMobileNumber1();
         pr.VerifyMyerpbillingtype3(); 
-		pr.VerifyMyerpCPActivechk3();
+		pr.VerifyMyerpCPActivechk2();
 		pr.VerifyMyerpCPProduct3(); 
 		pr.VerifyMyerpCPPQantity3();
 		pr.VerifyMyerpCPPOpeningCycle3(); 
@@ -382,7 +382,7 @@ public class GeneralMasterTest  extends LpgTestBase{
 		pr.VerifyMyerpCPContactPersonName1();
 		pr.VerifyMyerpCPMobileNumber1();
 		pr.VerifyMyerpbillingtype4();
-		pr.VerifyMyerpCPActivechk4();
+		pr.VerifyMyerpCPActivechk2();
 		pr.VerifyMyerpCPProduct4(); 
 		pr.VerifyMyerpCPPQantity4();
 		pr.VerifyMyerpCPPOpeningCycle4(); 
@@ -400,7 +400,7 @@ public class GeneralMasterTest  extends LpgTestBase{
 		pr.VerifyMyerpCPContactPersonName1();
 		pr.VerifyMyerpCPMobileNumber1();
         pr.VerifyMyerpbillingtype5(); 
-		pr.VerifyMyerpCPActivechk5();
+		pr.VerifyMyerpCPActivechk2();
 		pr.VerifyMyerpCPProduct5(); 
 		pr.VerifyMyerpCPPQantity5();
 		pr.VerifyMyerpCPPOpeningCycle5(); 
@@ -461,7 +461,7 @@ public class GeneralMasterTest  extends LpgTestBase{
 		pr.verifyMyerpSubmit3();
 		pr.verifyMyerpOKButton3(); 
 		pr.VerifyMyerpBackbtn7();
-    	pr.verifyMyerpPageNavigation2();
+    	//pr.verifyMyerpPageNavigation1();
   
 
 		//Godown Transaction Form

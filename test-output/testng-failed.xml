@@ -3,11 +3,11 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)" preserve-order="false">
     <classes>
-      <class name="com.lpg.qa.accTestcases.AccountMasterTest">
+      <class name="com.lpg.qa.GMTestcases.GeneralMasterTest">
         <methods>
-          <include name="setup"/>
           <include name="screenshotCapture"/>
-          <include name="AccountMasterPageTest"/>
+          <include name="setup"/>
+          <include name="ProductPageTest"/>
         </methods>
       </class>
     </classes>

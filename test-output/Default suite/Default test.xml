@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="DESKTOP-BFPKR04" failures="0" tests="1" name="com.lpg.qa.accTestcases.LedgersConfigrationTest" time="58.9" errors="0" timestamp="22 Mar 2023 04:15:17 GMT">
-  <testcase classname="com.lpg.qa.accTestcases.LedgersConfigrationTest" name="LedgersConfigrationPageTest" time="48.294"/>
+<testsuite hostname="DESKTOP-BFPKR04" failures="0" tests="1" name="com.lpg.qa.accTestcases.LedgersConfigrationTest" time="58.855" errors="0" timestamp="22 Mar 2023 09:39:17 GMT">
+  <testcase classname="com.lpg.qa.accTestcases.LedgersConfigrationTest" name="LedgersConfigrationPageTest" time="50.995"/>
 </testsuite>

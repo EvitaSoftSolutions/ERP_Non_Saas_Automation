@@ -1617,10 +1617,11 @@ public class GeneralMaster {
 			Thread.sleep(500);
 		}
 			public void VerifyMyerpEmployeeSubmitBtn3() throws InterruptedException {
-			Thread.sleep(500);
-			Assert.assertTrue(ebtnsubmit.isEnabled(),"ebtnsubmitfield is enabled");		 
+			Thread.sleep(700);
+			Assert.assertTrue(ebtnsubmit.isEnabled(),"ebtnsubmit is enabled");		 
 			Reporter.log("verifyMyerpebtnsubmit", true);
 			ebtnsubmit.click(); 
+			Thread.sleep(500);
 
 		}
 		public void VerifyMyerpEmployeeSubmitOKBtn3() throws InterruptedException {
@@ -1900,8 +1901,8 @@ public class GeneralMaster {
 		}
 			public void VerifyMyerpEmployeeSubmitBtn5() throws InterruptedException {
 			Thread.sleep(1500);
-			Assert.assertTrue(ebtnsubmit.isEnabled(),"ebtnsubmitfield is enabled");		 
-			Reporter.log("verifyMyerpebtnsubmit", true);
+			Assert.assertTrue(ebtnsubmit.isEnabled(),"ebtnsubmit is enabled");		 
+			Reporter.log("verifyMyebtnsubmit", true);
 			ebtnsubmit.click(); 
 
 		}

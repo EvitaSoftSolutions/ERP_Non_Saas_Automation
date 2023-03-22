@@ -14,16 +14,16 @@
       <![CDATA[verifyMyerplcsubmitbtn]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-03-22T09:44:18Z" name="Default suite" finished-at="2023-03-22T09:45:17Z" duration-ms="58900">
+  <suite started-at="2023-03-22T15:08:17Z" name="Default suite" finished-at="2023-03-22T15:09:16Z" duration-ms="58855">
     <groups>
     </groups>
-    <test started-at="2023-03-22T09:44:18Z" name="Default test" finished-at="2023-03-22T09:45:17Z" duration-ms="58900">
+    <test started-at="2023-03-22T15:08:17Z" name="Default test" finished-at="2023-03-22T15:09:16Z" duration-ms="58855">
       <class name="com.lpg.qa.accTestcases.LedgersConfigrationTest">
-        <test-method is-config="true" signature="setup()" started-at="2023-03-22T09:44:18Z" name="setup" finished-at="2023-03-22T09:44:28Z" duration-ms="10583" status="PASS">
+        <test-method is-config="true" signature="setup()" started-at="2023-03-22T15:08:17Z" name="setup" finished-at="2023-03-22T15:08:25Z" duration-ms="7842" status="PASS">
         </test-method>
-        <test-method signature="LedgersConfigrationPageTest()" started-at="2023-03-22T09:44:28Z" name="LedgersConfigrationPageTest" finished-at="2023-03-22T09:45:17Z" duration-ms="48294" status="PASS">
+        <test-method signature="LedgersConfigrationPageTest()" started-at="2023-03-22T15:08:25Z" name="LedgersConfigrationPageTest" finished-at="2023-03-22T15:09:16Z" duration-ms="50995" status="PASS">
         </test-method>
-        <test-method is-config="true" signature="screenshotCapture(org.testng.ITestResult)" started-at="2023-03-22T09:45:17Z" name="screenshotCapture" finished-at="2023-03-22T09:45:17Z" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="screenshotCapture(org.testng.ITestResult)" started-at="2023-03-22T15:09:16Z" name="screenshotCapture" finished-at="2023-03-22T15:09:16Z" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,7 +32,7 @@
             </param>
           </params>
         </test-method>
-        <test-method is-config="true" signature="teardown()" started-at="2023-03-22T09:45:17Z" name="teardown" finished-at="2023-03-22T09:45:17Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="teardown()" started-at="2023-03-22T15:09:16Z" name="teardown" finished-at="2023-03-22T15:09:16Z" duration-ms="0" status="PASS">
         </test-method>
       </class>
     </test>
