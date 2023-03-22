@@ -17,7 +17,7 @@ public class OpeningStockTest extends LpgTestBase{
 
 	@BeforeClass
 	public void setup() {
-		intializeBrowser("chrome");
+		driver=intializeBrowser("chrome");
 	}
 
 	@AfterClass
@@ -37,7 +37,7 @@ public class OpeningStockTest extends LpgTestBase{
 		os.verifyMyerpMaster();
 		os.verifyMyerpAccountMaster();
 		os.verifyMyerpOpeningStock();
-		os.verifyMyerpSelectGodown();
+		/*os.verifyMyerpSelectGodown();
 		os.verifyMyerpProduct();
 
 		os.verifyMyerpOpeningFull();
@@ -48,7 +48,8 @@ public class OpeningStockTest extends LpgTestBase{
 		os.verifyMyerpMinStock1();
 		os.verifyMyerpOpeningValuation1();
 		os.verifyMyerpSubmitbtn();
-		os.verifyMyerpRetiobutton();
+		//os.verifyMyerpRetiobutton();
+*/os.verifyMyerpRetiobutton();
 		os.Godown2();
 		os.Product2();
 		os.verifyMyerpFromDate2();

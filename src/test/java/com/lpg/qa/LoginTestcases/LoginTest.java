@@ -29,6 +29,7 @@ public class LoginTest  extends TestBase{
 	Login lpg=new Login(TestBase.driver); 
 		//lpg.VerifyandClickonMyerpLoginwithoutBtn1();
 		//lpg.verifyMyerpagancycode();
+	
 		lpg.setup(driver);
 		lpg.verifyMyerpUserid();
 		lpg.verifyMyerpPassword();

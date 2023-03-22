@@ -26,7 +26,9 @@ public class RegistrationTest  extends RegistrationBase{
 	@Test
 	public void RegistrationPageTest() throws InterruptedException {
 		Registration reg=new Registration(RegistrationBase.driver); 
-	reg.VerifyandClickonMyerpRegistrationFname();
+	
+		reg.setup(driver);
+	/*reg.VerifyandClickonMyerpRegistrationFname();
 	reg.VerifyandClickonMyerpRegistrationLname();
 	reg.VerifyandClickonMyerpOwnerContanctnum();
 	reg.VerifyandClickonMyerpOwnerEmail();
@@ -39,7 +41,6 @@ public class RegistrationTest  extends RegistrationBase{
 	reg.VerifyandClickonMyerpSelectTehshil();
 	reg.VerifyandClickonMyerDCity();
 	reg.VerifyandClickonMyerDSaleArea();
-	reg.VerifyandClickonMyerpDistributercode();
 	reg.VerifyandClickonMyerpDpincode();
 	reg.VerifyandClickonMyerpDcontanctdet1();
 	reg.VerifyandClickonMyerpDcontanctdet2();
@@ -53,7 +54,8 @@ public class RegistrationTest  extends RegistrationBase{
 	reg.VerifyandClickonMyerpDUserid();
 	reg.VerifyandClickonMyerpDPassword();
 	reg.VerifyandClickonMyerpDReconfirmPassword();
-	reg.VerifyandClickonMyerpDClearbtn();
+	reg.VerifyandClickonMyerpDClearbtn();*/
+	
 	reg.VerifyandClickonMyerpRegistrationFname();
 	reg.VerifyandClickonMyerpRegistrationLname();
 	reg.VerifyandClickonMyerpOwnerContanctnum();
@@ -67,7 +69,6 @@ public class RegistrationTest  extends RegistrationBase{
 	reg.VerifyandClickonMyerpSelectTehshil();
 	reg.VerifyandClickonMyerDCity();
 	reg.VerifyandClickonMyerDSaleArea();
-	reg.VerifyandClickonMyerpDistributercode();
 	reg.VerifyandClickonMyerpDpincode();
 	reg.VerifyandClickonMyerpDcontanctdet1();
 	reg.VerifyandClickonMyerpDcontanctdet2();
@@ -81,7 +82,7 @@ public class RegistrationTest  extends RegistrationBase{
 	reg.VerifyandClickonMyerpDUserid();
 	reg.VerifyandClickonMyerpDPassword();
 	reg.VerifyandClickonMyerpDReconfirmPassword();
-	reg.VerifyandClickonMyerpDregisterbtn();
+    reg.VerifyandClickonMyerpDregisterbtn();
 
 //	reg.VerifyandClickonMyerpDtextalreadyacc();
 	

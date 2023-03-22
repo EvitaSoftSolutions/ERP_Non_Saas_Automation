@@ -45,6 +45,7 @@ import com.lpg.qa.accpages.Bank;
 				bt.VerifyMyerpBankAlias();
 				bt.VerifyBankActiveCHKBtn();
 				bt.VerifyMyerpBClearBtn();
+				
 				bt.BankSelectUnderGroup();
 				bt.VerifyMyerpBankCode();
 				bt.VerifyMyerpBankDescripption();

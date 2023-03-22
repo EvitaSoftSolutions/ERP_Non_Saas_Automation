@@ -1,5 +1,7 @@
 package com.lpg.qa.accpages;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -184,11 +186,30 @@ public class OpeningStockForm {
 				Reporter.log("verifyMyerpopeningvaluation",true);
 				openingvaluation.sendKeys("20");
 			}
-			public void verifyMyerpSubmitbtn() {
+			public void verifyMyerpSubmitbtn() throws InterruptedException {
 				Assert.assertTrue(submitbtn.isEnabled(),"Submitbtn is enable");
 				Reporter.log("verifyMyerpsubmitbtn",true);
 				submitbtn.click();
-			}
+				 Thread.sleep(1000);
+				 if (isAlertPresent(driver)) { System.out.println("alert is present");
+				  
+				  }else { System.out.println("alert is not present"); }
+				  
+				  } 
+			public static boolean isAlertPresent(WebDriver driver) throws
+			InterruptedException { 
+				try {
+					Alert al=driver.switchTo().alert();
+					Thread.sleep(2000); 
+					 al.accept();
+				return true; }
+				catch (UnhandledAlertException u)
+				{ // TODO Auto-generated catch block
+					u.printStackTrace(); } return false;
+
+				}
+           
+			
 			public void verifyMyerpRetiobutton() {
 				Assert.assertTrue(retiobutton.isEnabled(),"Retiobutton is enable");
 				Reporter.log("verifyMyerpretiobutton",true);
@@ -216,7 +237,7 @@ public class OpeningStockForm {
 			public void verifyMyerpStockOpeningValuation() {
 				Assert.assertTrue(stockopeningvaluation.isEnabled(),"StockOpeningValuation is enable");
 				Reporter.log("verifyMyerpstockopeningvaluation",true);
-				stockopeningvaluation.sendKeys("01/12/2022");
+				stockopeningvaluation.sendKeys("200");
 			}
 			public void CompanySelect() throws InterruptedException {
     			Select cs = new Select(companyselect);
@@ -271,9 +292,26 @@ public class OpeningStockForm {
 				Reporter.log("verifyMyerpopeningqty",true);
 				openingqty.sendKeys("10");
 			}
-			public void verifyMyerpSubmitbtn1() {
+			public void verifyMyerpSubmitbtn1() throws InterruptedException {
 				Assert.assertTrue(submitbtn.isEnabled(),"Submitbtn is enable");
 				Reporter.log("verifyMyerpsubmitbtn",true);
 				submitbtn.click();
-			}
-}
+				 Thread.sleep(800);
+				 if (isAlertPresent1(driver)) { System.out.println("alert is present");
+				  
+				  }else { System.out.println("alert is not present"); }
+				  
+				  } 
+			public static boolean isAlertPresent1(WebDriver driver) throws
+			InterruptedException { 
+				try {
+					Alert al=driver.switchTo().alert();
+					Thread.sleep(2000); 
+					 al.accept();
+				return true; }
+				catch (UnhandledAlertException u)
+				{ // TODO Auto-generated catch block
+					u.printStackTrace(); } return false;
+
+				}
+}           

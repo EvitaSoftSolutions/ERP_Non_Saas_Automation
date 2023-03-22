@@ -139,7 +139,7 @@ import org.testng.Reporter;
 				Thread.sleep(500);
 				Assert.assertFalse(bselectcompany.isDisplayed(),"bselectcompany is displayed");
 				Assert.assertFalse(bselectcompany.isSelected());
-				bsug.selectByVisibleText("ANITA GAS SERVICES");
+				bsug.selectByVisibleText("PANKAJ GAS SERVICES");
 			}
 			public void VerifyMyerpBankAlias() throws InterruptedException {
 				Thread.sleep(500);

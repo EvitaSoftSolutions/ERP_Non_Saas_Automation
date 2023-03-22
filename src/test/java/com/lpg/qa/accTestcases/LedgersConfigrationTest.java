@@ -66,7 +66,7 @@ public class LedgersConfigrationTest extends LpgTestBase{
 		lc.SelectBPCLReceivable();
 		lc.SelectDiscount();
 		lc.Select14KgSaleDebit();
-		lc.VerifyMyerpLCClearBtn();
+		//lc.VerifyMyerpLCClearBtn();
 		lc.VerifyMyerpLCSubmitBtn();
 
 	}

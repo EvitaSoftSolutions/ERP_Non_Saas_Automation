@@ -11,7 +11,7 @@ public class RegistrationBase {
 
 	public WebDriver intializeBrowser(String browser) {
 		if(browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\dell\\Downloads\\chromedriver (1).exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\YOGESH\\Desktop\\Selenium all jar file\\chromedriver.exe");
 			driver=new ChromeDriver();
 			System.out.println("Chrome driver sucessfully open");
 		}

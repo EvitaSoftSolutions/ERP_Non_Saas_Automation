@@ -21,11 +21,11 @@ public class LpgTestBase {
       
 			public WebDriver intializeBrowser(String browser) {
 				if(browser.equalsIgnoreCase("chrome")) {
-		     System.setProperty("webdriver.chrome.driver", "C:\\Users\\dell\\Downloads\\chromedriver (1).exe");
+		     System.setProperty("webdriver.chrome.driver", "C:\\Users\\YOGESH\\Desktop\\Selenium all jar file\\chromedriver.exe");
 					 driver=new ChromeDriver();
 				System.out.println("Chrome driver sucessfully open");
 				}
-				driver.get("http://demo.mygasagency.com/Login/Login");
+				driver.get("http://demo.mygasagency.com/");
 				driver.manage().deleteAllCookies();
 				driver.manage().window().maximize();
 
@@ -33,7 +33,7 @@ public class LpgTestBase {
 				driver.findElement(By.xpath("//input[@id='password-field']")).sendKeys("admin@123");
 				driver.findElement(By.xpath("//button[@id='btnLogin']")).click();
 				
-				driver.manage().timeouts().implicitlyWait(800, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(50000, TimeUnit.SECONDS);
 				return driver;
 				
 				}

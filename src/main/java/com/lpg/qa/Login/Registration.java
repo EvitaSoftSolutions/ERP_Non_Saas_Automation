@@ -94,7 +94,7 @@ import org.openqa.selenium.WebElement;
 					Thread.sleep(500);
 					 Assert.assertTrue(fname.isEnabled(),"dname is enabled");
 					 Reporter.log(" verifyMyerpdname",true);
-					 dname.sendKeys("Anita Gas Services");
+					 dname.sendKeys("Pankaj Gas Services");
 				}
 				
 				public void VerifyandClickonMyerpDAddress1() throws InterruptedException {

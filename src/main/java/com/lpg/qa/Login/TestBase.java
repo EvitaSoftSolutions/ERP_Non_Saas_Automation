@@ -28,7 +28,7 @@ public class TestBase {
 			System.out.println("Chrome driver sucessfully open");
 			}
 			
-			driver.get("http://demo.mygasagency.com/Login/Login");
+			driver.get("http://pankaj.mygasagency.com/Login/Login");
 			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
