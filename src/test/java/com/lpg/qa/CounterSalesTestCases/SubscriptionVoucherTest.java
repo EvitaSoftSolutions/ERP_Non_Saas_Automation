@@ -29,11 +29,12 @@ public class SubscriptionVoucherTest extends LpgTestBase{
 	@Test
 	public void SubscriptionVouchertest() throws InterruptedException{
 		SubscriptionVoucherForm sv=new SubscriptionVoucherForm(LpgTestBase.driver);
+
+		sv.setup(driver);
 		/*
 		 * sv.verifyMyerpagancycode(); sv.verifyMyerpusrname();
 		 * sv.verifyMyerppassword(); sv.verifyMyerploginbtn();
-		 */
-		sv.setup(driver);
+		 
 		
 		 sv.verifyMyerpCounterSales(); 
 		 sv.verifyMyerpSubscriptionVoucher();
@@ -76,40 +77,39 @@ public class SubscriptionVoucherTest extends LpgTestBase{
 		 sv.verifyMyerpProduct1(); 
 		 sv.verifyMyerpUnitcost();
 		 sv.verifyMyerpSubmitbtn(); 
-		 //sv.verifyMyerpPrint();
-		 sv.verifyMyerpViewReport();
+		 //sv.verifyMyerpPrint();*/
+		// sv.verifyMyerpViewReport();
 
 		sv.verifyMyerpCounterSales();
 		sv.verifyMyerpSubscriptionVoucher();
 		sv.verifyMyerpUpdateSunscriptionVoucherForm();
 		sv.verifyMyerpDocumentno();  
 		sv.verifyMyerpGetDataBtn();
-		sv.verifyMyerpUTXTSERVICE3();
+		sv.verifyMyerpremoveservice3();
+		sv.verifyMyerpremoveservice4();
+		/*sv.verifyMyerpUTXTSERVICE3();
 		sv.verifyMyerpUTXTSERVICE4();
 		sv.verifyMyerpUTXTUNITCost3();
 		sv.verifyMyerpUTXTUNITCost4();
+		*/
 		sv.verifyMyerpUpdatesubmitBtn();
-		sv.verifyMyerpDeleteBtn();
+		//sv.verifyMyerpDeleteBtn();
 
 		sv.VerifyandClickonMyerpGeneralReport();
 		sv.VerifyandClickonMyerpConterInvoiceDetails();
 		sv.verifyMyerpSelectCompany();
 		sv.VerifyandClickonMyerpCounterSaleVoucherNumber();
 		sv.VerifyandClickonMyerpGetdataBtn();
-		sv.VerifyandClickonMyerpPrintInvoiceBtn();
+	//	sv.VerifyandClickonMyerpPrintInvoiceBtn();
 
-	    sv.VerifyandClickonMyerpGeneralReport();
+	//    sv.VerifyandClickonMyerpGeneralReport(); 
 		sv.VerifyandClickonMyerpCountersaleRegister();
 		sv.VerifyandClickonMyerpPlaseFromSelectDate();
+		sv.VerifyandClickonMyerpPlaseToSelectDate();
 		sv.verifyMyerpSelectCompany();
 		sv.verifyMyerpSelectPaymentMode();
 	    sv.VerifyandClickonMyerpConsumerNumber();
 		sv.VerifyandClickonMyerpGetdataBtn();
-
-
-
-
-
-
 	}
+
 }

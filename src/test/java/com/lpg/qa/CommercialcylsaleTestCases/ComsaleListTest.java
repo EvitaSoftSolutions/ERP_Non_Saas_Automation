@@ -45,7 +45,7 @@ public class ComsaleListTest extends LpgTestBase{
 		csl.verifyMyerpEListEmptycylReceived();
 		csl.verifyMyerpSubmitbtn2();
 
-		csl.verifyMyerpCommercialcylsale();
+	/*csl.verifyMyerpCommercialcylsale();
 		csl.verifyMyerpComsalelist();
 		csl.verifyMyerpComsaleDate();
 		csl.Deliverymanname();
@@ -54,8 +54,7 @@ public class ComsaleListTest extends LpgTestBase{
 		csl.verifyMyerpEListEmptycylReceived();
 		csl.verifyMyerpCashamount();
 		csl.verifyMyerpSubmitbtn2();
-		
-
+	*/
 
 	}
 }

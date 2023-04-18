@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -36,9 +37,29 @@ public class DebitNoteVoucher  {
 	@FindBy (xpath="//input[@id='txtaccount_3']") private WebElement dbvledger4;
 	@FindBy (xpath="//button[@id='btnSubmit']") private WebElement dbvsavebtn;
 	@FindBy (xpath="//button[@id='btnclear']") private WebElement dbvnewbtn;
+
 	@FindBy (xpath="//*[@id=\"divContentHolder\"]/form/section[1]/h1/a[1]") private WebElement dbvupdatedebitnote;
 	@FindBy (xpath="//input[@id='txtMDLDocumentNo']") private WebElement udbvdocno;
 	@FindBy (xpath="//button[@id='btnMDLGet']") private WebElement udbvgetdatabtn;
+	@FindBy (xpath="//*[@id=\"btnSubmit\"]") private WebElement usavebtn;
+
+	@FindBy (xpath="//span[text()='Accounts Report']") private WebElement accountreport;
+	@FindBy (xpath="//a[text()=' Accounting Reports']") private WebElement accountingreport;
+	@FindBy (xpath="//*[@id=\"divContentHolder\"]/form/section[1]/h1/a[2]") private WebElement debitnoteregister;
+	@FindBy(xpath="//select[@id='ddlCompanyCode']")private WebElement selectcomp;
+	@FindBy (xpath="//input[@id='FromDate']") private WebElement fromdate;
+	@FindBy (xpath="//input[@id='ToDate']") private WebElement todate;
+	@FindBy (xpath="//button[@id='btnGetdata']") private WebElement getdatabtn;
+	@FindBy (xpath="//*[@id=\"divContentHolder\"]/form/div/section[2]/div/div/div/div") private WebElement body;
+	@FindBy (xpath="//*[@id=\"btnback\"]") private WebElement backbtn;
+
+	@FindBy (xpath="//*[@id=\"divContentHolder\"]/form/section[1]/h1/a[3]") private WebElement debitnotenowisereport;
+	@FindBy(xpath="//select[@id='ddlCompanyCode']")private WebElement selectcomp1;
+	@FindBy (xpath="//input[@id='txtFromDocNo']") private WebElement fromdocno;
+	@FindBy (xpath="//input[@id='txtToDocNo']") private WebElement todocno;
+	@FindBy (xpath="//button[@id='btnGetdata']") private WebElement getdatabtn1;
+
+
 
 
 
@@ -106,7 +127,7 @@ public class DebitNoteVoucher  {
 		Reporter.log("VerifyMyercrvtransactiondate", true);
 		dbvtransactiondate.clear();
 		dbvtransactiondate.click();
-		dbvtransactiondate.sendKeys("8/03/2023");
+		dbvtransactiondate.sendKeys("21/03/2023");
 
 	} 
 	public void VerifyandClickonMyerpDBVDebitFromLedger() throws InterruptedException { 
@@ -215,6 +236,8 @@ public class DebitNoteVoucher  {
 			Alert al=driver.switchTo().alert();
 			Thread.sleep(2000); 
 			al.accept(); 
+			Thread.sleep(1000); 
+			al.accept(); 
 			return true; }
 		catch (UnhandledAlertException u) 
 		{ // TODO Auto-generated catch block
@@ -238,7 +261,7 @@ public class DebitNoteVoucher  {
 		Assert.assertTrue(udbvdocno.isEnabled(),"udbvdocno is enabled");
 		Reporter.log("udbvdocno", true);
 		udbvdocno.click();
-		udbvdocno.sendKeys("2200024");
+		udbvdocno.sendKeys("2300001");
 
 
 	} 
@@ -258,8 +281,9 @@ public class DebitNoteVoucher  {
 		try {
 			Thread.sleep(800);
 			Alert al=driver.switchTo().alert();
-			Thread.sleep(2000); 
-			al.accept(); 
+			Thread.sleep(1000); 
+			al.accept();
+			Thread.sleep(1000);
 			return true; }
 		catch (UnhandledAlertException u) 
 		{ // TODO Auto-generated catch block
@@ -267,4 +291,135 @@ public class DebitNoteVoucher  {
 
 	}
 
+	public void VerifyandClickonMyerpDBVUSavebtn() throws InterruptedException { 
+		Thread.sleep(2000);
+		Assert.assertTrue(usavebtn.isEnabled(),"usavebtn is enabled");
+		Reporter.log("Verifymyerpusavebtn", true);
+		usavebtn.click();
+		Thread.sleep(1000);
+		if (isAlertPresent3(driver)) { System.out.println("alert is present");
+
+		}else
+		{ System.out.println("alert is not present"); }
 	}
+
+	public static boolean isAlertPresent3(WebDriver driver) throws
+	InterruptedException { 
+		try {
+			Thread.sleep(2000);
+			Alert al=driver.switchTo().alert();
+			Thread.sleep(1000); 
+			al.accept(); 
+			Thread.sleep(1000); 
+			al.accept(); 
+			return true; }
+		catch (UnhandledAlertException u) 
+		{ // TODO Auto-generated catch block
+			u.printStackTrace(); } return false;
+	}
+
+
+
+
+	public void VerifyandClickonMyerpAccountReport() throws InterruptedException {
+		Thread.sleep(1000); 
+		Assert.assertTrue(accountreport.isEnabled(),"accountreport is enabled");
+		Reporter.log("verifyMyerpaccountreport", true);
+		accountreport.click();
+	}
+	public void VerifyandClickonMyerpAccountingReport() throws InterruptedException {
+		Thread.sleep(1000); 
+		Assert.assertTrue(accountingreport.isEnabled(),"accountingreport is enabled");
+		Reporter.log("verifyMyerpaccountingreport", true);
+		accountingreport.click();
+	}
+
+
+	public void VerifyandClickonMyerpDebitnoteRegisterReport() throws InterruptedException {
+		Thread.sleep(600);
+		Assert.assertTrue(debitnoteregister.isEnabled(),"debitnoteregister is enabled");
+		Reporter.log("verifyMyerpdebitnoteregister", true);
+		debitnoteregister.click();
+
+	}
+	public void verifyMyerpSelectCompany() throws InterruptedException {
+		Select su = new Select(selectcomp);
+		Thread.sleep(1000);
+		Assert.assertFalse(selectcomp.isDisplayed(),"SelectCompany is displayed");
+		Assert.assertFalse(selectcomp.isSelected());
+		su.selectByVisibleText("ANITA GAS SERVICES");
+
+	}
+
+	public void VerifyMyerpFromDate() {
+		Assert.assertTrue(fromdate.isEnabled(),"fromdate field is enabled");		 
+		Reporter.log("verifyMyerpfromdate", true);
+		fromdate.click(); 
+		fromdate.clear();
+		fromdate.sendKeys("10/03/2023");
+	}
+
+	public void VerifyMyerpTodate() {
+		Assert.assertTrue(todate.isEnabled(),"todate field is enabled");		 
+		Reporter.log("verifyMyerptodate", true);
+		todate.click(); 
+		todate.clear();
+		todate.sendKeys("20/03/2023");
+		body.click();
+	}
+
+	public void VerifyandClickonMyerpGetdataBtn() throws InterruptedException {
+		Assert.assertTrue(getdatabtn.isEnabled(),"getdatabtn is enabled");
+		Reporter.log(" verifyMyerpgetdatabtn", true);
+		getdatabtn.click();
+		Thread.sleep(1000); 
+
+	}
+	public void VerifyandClickonMyerpBackBtn() throws InterruptedException {
+		Assert.assertTrue(backbtn.isEnabled(),"backbtn is enabled");
+		Reporter.log(" verifyMyerpbackbtn", true);
+		backbtn.click();
+		backbtn.click();
+		Thread.sleep(1500); 
+
+	}
+	public void VerifyandClickonMyerpDebitNoteNoWiseReport() throws InterruptedException {
+		Thread.sleep(1000);
+		Assert.assertTrue(debitnotenowisereport.isEnabled(),"debitnotenowisereport is enabled");
+		Reporter.log("verifyMyerpdebitnotenowisereport", true);
+		debitnotenowisereport.click();
+
+	}
+	public void verifyMyerpSelectCompany1() throws InterruptedException {
+		Select su = new Select(selectcomp);
+		Thread.sleep(1000);
+		Assert.assertFalse(selectcomp.isDisplayed(),"SelectCompany is displayed");
+		Assert.assertFalse(selectcomp.isSelected());
+		su.selectByVisibleText("ANITA GAS SERVICES");
+
+	}
+
+	public void VerifyMyerpFromDocNo() {
+		Assert.assertTrue(fromdocno.isEnabled(),"fromdocno field is enabled");		 
+		Reporter.log("verifyMyerpfromdocno", true);
+		fromdocno.click(); 
+		fromdocno.clear();
+		fromdocno.sendKeys("2300001");
+	}
+
+	public void VerifyMyerpToDocNo() {
+		Assert.assertTrue(todocno.isEnabled(),"todocno field is enabled");		 
+		Reporter.log("verifyMyerptodocno", true);
+		todocno.click(); 
+		todocno.clear();
+		todocno.sendKeys("2300001");
+
+	}
+
+	public void VerifyandClickonMyerpGetdataBtn1() {
+		Assert.assertTrue(getdatabtn.isEnabled(),"getdatabtn is enabled");
+		Reporter.log(" verifyMyerpgetdatabtn", true);
+		getdatabtn.click();
+
+	}
+}                 

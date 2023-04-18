@@ -86,7 +86,7 @@ public class BeyondsaleForm {
 	public void verifyMyerpConsumerNumberSearch() {
 		Assert.assertTrue(consumernumbersearch.isEnabled(),"ConsumerNumberSearch is enable");
 		Reporter.log("verifyMyerpconsumernumbersearch",true);
-		consumernumbersearch.sendKeys("12921");
+		consumernumbersearch.sendKeys("3434");
 	}
 	public void verifyMyerpSubmitBtnClick() {
 		Assert.assertTrue(submitbtnclick.isEnabled(),"SubmitBtnClick is enable");
@@ -167,7 +167,7 @@ public class BeyondsaleForm {
 	public void verifyMyerpConsumerNumberSearch1() {
 		Assert.assertTrue(consumernumbersearch.isEnabled(),"ConsumerNumberSearch is enable");
 		Reporter.log("verifyMyerpconsumernumbersearch",true);
-		consumernumbersearch.sendKeys("12921");
+		consumernumbersearch.sendKeys("3434");
 	}
 	public void verifyMyerpSubmitBtnClick1() {
 		Assert.assertTrue(submitbtnclick.isEnabled(),"SubmitBtnClick is enable");

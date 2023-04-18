@@ -41,6 +41,7 @@ import com.lpg.qa.GodownTransaction.AcceptedLoad;
 				// ptvto.VerifyandClickonMyerpGTAccountTextBox();
 				// ptvto.VerifyandClickonMyerpGTClearBtn();
 			     ptvto.VerifyMyerpALSelectCompany();
+			     ptvto.VerifyandClickoncompanyinvoicedate();
 				 ptvto.VerifyMyerpALSelectSupplier();
 				 ptvto.VerifyandClickonMyerpALAccountTextbox();
 				 ptvto.VerifyandClickonMyerpALSubmitBtn();

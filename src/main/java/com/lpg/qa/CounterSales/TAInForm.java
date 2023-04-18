@@ -275,7 +275,7 @@ public class TAInForm {
 		Thread.sleep(500);
 		Assert.assertTrue(consumerno.isEnabled(),"Consumerno is enable");
 		Reporter.log("verifyMyerpconsumerno",true);
-		consumerno.sendKeys("2012");
+		consumerno.sendKeys("20812");
 	}
 	public void ConsumerType1() throws InterruptedException {
 		Select ct = new Select(consumertype);
@@ -302,7 +302,7 @@ public class TAInForm {
 		Thread.sleep(500);
 		Assert.assertTrue(registratonno.isEnabled(),"RegistratonNo is enable");
 		Reporter.log("verifyMyerpregistratonno",true);
-		registratonno.sendKeys("4743");
+		registratonno.sendKeys("473");
 	}
 	public void verifyMyerpConsumerName1() throws InterruptedException {
 		Thread.sleep(500);
@@ -347,7 +347,7 @@ public class TAInForm {
 		Thread.sleep(500);
 		Assert.assertTrue(contact.isEnabled(),"contact is enable");
 		Reporter.log("verifyMyerpcontact",true);
-		contact.sendKeys("9879923456");
+		contact.sendKeys("9879934456");
 	}
 	public void verifyMyerpEmail1() throws InterruptedException {
 		Thread.sleep(500);
@@ -490,7 +490,7 @@ public class TAInForm {
 		Assert.assertTrue(documentno.isEnabled(),"documentno is enable");
 		Reporter.log("verifyMyerpdocumentno",true);
 		documentno.click();
-		documentno.sendKeys("2200006");
+		documentno.sendKeys("2200007");
 	}
 	public void verifyMyerpGetDataBtn() throws InterruptedException {
 		Thread.sleep(2000);

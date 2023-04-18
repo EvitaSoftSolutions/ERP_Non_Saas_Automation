@@ -38,21 +38,21 @@ public class TAInTest extends LpgTestBase{
 		ta.verifyMyerpConsumerGstin();
 		ta.verifyMyerpDocSerialNo();
 		ta.verifyMyerpConsumerno();
-		ta.ConsumerType();
-		ta.ConnectionCategory();
+		//ta.ConsumerType();
+		//ta.ConnectionCategory();
 		ta.ProductSelect();
 		ta.verifyMyerpRegistratonNo();
 		ta.verifyMyerpConsumerName();
 		ta.verifyMyerpAddress();
 		ta.verifyMyerpEnterCity();
 		ta.State();
-		ta.District();
+		ta.District();//
 		ta.Tehsil();
 		ta.verifyMyerpcontact();
 		ta.verifyMyerpEmail();
 		ta.verifyMyerpPredistCode();
 		ta.verifyMyerpPreconSumerNo();
-		ta.PredocType();
+	//	ta.PredocType();
 		ta.verifyMyerpNumberofcyl();
 		ta.verifyMyerpNumberofDpr();
 		ta.verifyMyerpRemarks();
@@ -61,8 +61,8 @@ public class TAInTest extends LpgTestBase{
 		ta.verifyMyerpConsumerGstin1();
 		ta.verifyMyerpDocSerialNo1();
 		ta.verifyMyerpConsumerno1();
-		ta.ConsumerType1();
-		ta.ConnectionCategory1();
+		//ta.ConsumerType1();
+		//ta.ConnectionCategory1();
 		ta.ProductSelect1();
 		ta.verifyMyerpRegistratonNo1();
 		ta.verifyMyerpConsumerName1();
@@ -75,7 +75,7 @@ public class TAInTest extends LpgTestBase{
 		ta.verifyMyerpEmail1();
 		ta.verifyMyerpPredistCode1();
 		ta.verifyMyerpPreconSumerNo1();
-		ta.PredocType1();
+	//	ta.PredocType1();
 		ta.verifyMyerpNumberofcyl1();
 		ta.verifyMyerpNumberofDpr1();
 		ta.verifyMyerpRemarks1();

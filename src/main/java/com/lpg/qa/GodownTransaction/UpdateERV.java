@@ -74,7 +74,7 @@ public class UpdateERV {
 					 Assert.assertTrue(ervnumber.isEnabled(),"ervnumber is enabled");
 					 Reporter.log(" verifyMyerpervnumber", true);
 					 ervnumber.click();
-					 ervnumber.sendKeys("4003");
+					 ervnumber.sendKeys("5002");
 				}
 			
                 public void VerifyandClickonMyerpClearBtn() throws InterruptedException { 

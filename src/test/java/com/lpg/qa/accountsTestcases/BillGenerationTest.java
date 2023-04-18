@@ -50,6 +50,7 @@ public class BillGenerationTest extends LpgTestBase{
 		bg.verifyMyerpSelectMonth();
 		bg.verifyMyerpBillgenerationmonthYear();
 		bg.verifyMyerpBillingdatemon();
+		bg.verifyMyerpinvoicenumber();
 	    bg.verifyMyerpSubmitbtn();
 	    
 	    bg.verifyMyerpbillgenerationForthNight();
@@ -57,17 +58,20 @@ public class BillGenerationTest extends LpgTestBase{
 	    bg.verifyMyerpSelectMonthFN();
 	    bg.verifyMyerpBillgenerationmonthYearFN();
 	    bg.verifyMyerpBillinddateFN();
+	    bg.verifyMyerpinvoicenumber();
 	    bg.verifyMyerpSubmitbtn();
 	    
 	    bg.verifyMyerpbillgenerationcustom();
 	    bg.verifyMyerpbillingtypecustom();
 	    bg.verifyMyerpselectpartycustom();
 	    bg.verifyMyerpbillinddatecustom();
+	    bg.verifyMyerpinvoicenumber();
 	    bg.verifyMyerpSubmitbtn();
 	    
 	    bg.verifyMyerpbillgenerationimmegiate();
 	    bg.verifyMyerpbillingtypeimmegiate();
 	    bg.verifyMyerpbillinddateimmegiate();
+	    bg.verifyMyerpinvoicenumber();
 	    bg.verifyMyerpSubmitbtn();
 	    
 	    

@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.lpg.qa.CommercialcylsaleTestCases.ComsaleListTest">
+      <class name="com.lpg.qa.accountsTestcases.PaymentVoucherTest">
         <methods>
+          <include name="PaymentVoucherPageTest"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="ComsaleListtest"/>
           <include name="screenshotCapture"/>
         </methods>
-      </class> <!-- com.lpg.qa.CommercialcylsaleTestCases.ComsaleListTest -->
+      </class> <!-- com.lpg.qa.accountsTestcases.PaymentVoucherTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

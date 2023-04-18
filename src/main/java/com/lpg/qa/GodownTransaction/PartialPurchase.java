@@ -89,7 +89,7 @@ public class PartialPurchase {
 					 Assert.assertTrue(ppinvoicenumber.isEnabled(),"ppinvoicenumber is enabled");
 					 Reporter.log("verifyMyerpppinvoicenumberr", true);
 					 ppinvoicenumber.click();
-					 ppinvoicenumber.sendKeys("5008");
+					 ppinvoicenumber.sendKeys("5002");
 					 
                }
 				public void VerifyandClickonMyerpGTPPErvNumber() throws InterruptedException { 
@@ -97,7 +97,7 @@ public class PartialPurchase {
 					 Assert.assertTrue(ppervnumber.isEnabled(),"ppervnumber is enabled");
 					 Reporter.log("verifyMyerpppervnumber", true);
 					 ppervnumber.click();
-					 ppervnumber.sendKeys("5008");
+					 ppervnumber.sendKeys("5003");
 
                 }
 				
@@ -106,21 +106,21 @@ public class PartialPurchase {
 					Thread.sleep(500);
 					Assert.assertTrue(ppselectgodown.isDisplayed(),"ppselectgodown is displayed");
 					Assert.assertFalse(ppselectgodown.isSelected());
-					ppsg.selectByVisibleText("VIRAR");
+					ppsg.selectByVisibleText("VIRAR EAST");
 				}
 				public void VerifyMyerpPPSelectVehicle()  throws InterruptedException {
 					Select ppsg = new Select(ppselectvehicle);
 					Thread.sleep(500);
 					Assert.assertTrue(ppselectvehicle.isDisplayed(),"ppselectvehicle is displayed");
 					Assert.assertFalse(ppselectvehicle.isSelected());
-					ppsg.selectByVisibleText("MH 48 AA 7886");
+					ppsg.selectByVisibleText("MH 02 BA 1237");
 				}
 				public void VerifyandClickonMyerpGTPPProduct() throws InterruptedException { 
 					Thread.sleep(500);
 					 Assert.assertTrue(ppproduct.isEnabled(),"ppproduct is enabled");
 					 Reporter.log("verifyMyerpppproduct", true);
 					 ppproduct.click();
-					 ppproduct.sendKeys("5 KG COMM");
+					 ppproduct.sendKeys("14.2 KG");
 				}
 				public void VerifyandClickonMyerpGTPPQauntity() throws InterruptedException { 
 					Thread.sleep(500);
@@ -134,7 +134,7 @@ public class PartialPurchase {
 					 Assert.assertTrue(pplost.isEnabled(),"pplost is enabled");
 					 Reporter.log("verifyMyerppplost", true);
 					 pplost.click();
-					 pplost.sendKeys("9");
+					 pplost.sendKeys("5");
 				}
 				public void VerifyandClickonMyerpGTPPDefective() throws InterruptedException { 
 					Thread.sleep(500);

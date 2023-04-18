@@ -53,11 +53,35 @@ import com.lpg.qa.accountsPages.PaymentVoucher;
 				apv.VerifyandClickonMyerpPVAmountTextbox();
 				apv.VerifyandClickonMyerpPVSelectDebitCredit();
 				apv.VerifyandClickonMyerpPVSavebtn();
-				apv.VerifyandClickonMyerpPVAddHeaderbtn();
+				//apv.VerifyandClickonMyerpPVAddHeaderbtn();
 				//apv.VerifyandClickonMyerpPVLedger1();
 				//apv.VerifyandClickonMyerpPVAmountTextbox1();
 				//apv.VerifyandClickonMyerpPVSelectDebitCredit1();
 				//apv.VerifyandClickonMyerpPVSavebtn1();
+				
+				apv.VerifyandClickonMyerpupdatepaymentvoucher();
+				apv.VerifyandClickonMyerpdocumentno();
+				apv.VerifyandClickonMyerpugetdatabtn();
+				apv.VerifyandClickonMyerpusubmitbtn();
+				
+				
+				 apv.VerifyandClickonMyerpAccountReport();
+				 apv.VerifyandClickonMyerpAccountingReport();
+				 apv.VerifyandClickonMyerpPaymentRegisterReport();
+				 apv.verifyMyerpSelectCompany();
+				 apv.VerifyMyerpFromDate();
+				 apv.VerifyMyerpTodate();
+				 apv.VerifyMyerpPVSelectBank();
+				 apv.VerifyandClickonMyerpGetdataBtn();
+				 
+				 apv.VerifyandClickonMyerpPaymentNoWiseReport();
+				 apv.verifyMyerpSelectCompany();
+				 apv.VerifyMyerpFromDocNo();
+				 apv.VerifyMyerpToDocNo();
+				 apv.VerifyandClickonMyerpGetdataBtn();
+				 
+				 
+				 
 				
 				
 				

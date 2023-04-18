@@ -43,10 +43,12 @@ public class SubscriptionVoucherForm {
 	@FindBy(xpath="//*[@id=\"tblmain\"]/tbody/tr/td[5]/a[2]")private WebElement print; 
 	@FindBy(xpath="//input[@id='btnback']")private WebElement btnback;
 	@FindBy(xpath="//*[@id=\"divContentHolder\"]/form/section[1]/h1/a")private WebElement updatesubscriptionvoucherform;
-	@FindBy(xpath="//input[@id='txtMDLDocumentNo']")private WebElement documentno; 
+	@FindBy(xpath="//*[@id=\"txtMDLDocumentNo\"]")private WebElement documentno; 
 	@FindBy(xpath="//button[@id='btnMDLGet']")private WebElement ugetdatabtn;
 	@FindBy(xpath="//*[@id=\"txtService_3\"]")private WebElement  utextservice3;
 	@FindBy(xpath="//*[@id=\"txtService_4\"]")private WebElement  utextservice4;
+	@FindBy(xpath="//input[@id='imgServiceRemove_3']")private WebElement  removeservice3;
+	@FindBy(xpath="//input[@id='imgServiceRemove_4']")private WebElement  removeservice4;
 	@FindBy(xpath="//*[@id=\"txtSrvUnitCost_3\"]")private WebElement utxtunitcost3;
 	@FindBy(xpath="//*[@id=\"txtSrvUnitCost_4\"]")private WebElement utxtunitcost4;
 	@FindBy(xpath="//button[@id='btnSubmit']")private WebElement uupdate;
@@ -58,6 +60,7 @@ public class SubscriptionVoucherForm {
 	@FindBy (xpath="//input[@id='txtCounterSaleId']") private WebElement countersaleinvoiceno;
 	@FindBy (xpath="//button[@id='btnGetdata']") private WebElement igetdatabtn; 
 	@FindBy (xpath="//button[@id='btnPrint']") private WebElement printinvoicebtn; 
+	@FindBy (xpath="//*[@id=\"sidebar\"]//print-preview-button-strip//div/cr-button[2]") private WebElement cancelbtn;
 
 	@FindBy (xpath="//*[@id=\"menuReports\"]/ul/li[7]/a") private WebElement contersaleregister; 
 	@FindBy (xpath="//input[@id='FromDate']") private WebElement selectdate;
@@ -117,28 +120,28 @@ public class SubscriptionVoucherForm {
 	public void verifyMyerpInvoiceno() {
 		Assert.assertTrue(invoiceno.isEnabled(),"Invoiceno is enable");
 		Reporter.log("verifyMyerpinvoiceno",true);
-		invoiceno.sendKeys("88593");
+		invoiceno.sendKeys("886593");
 
 	}
 	public void verifyMyerpGstIn() {
 		Assert.assertTrue(gstin.isEnabled(),"GstIN is enable");
 		Reporter.log("verifyMyerpgstin",true);
-		gstin.sendKeys("98aaghja0320d1");
+		gstin.sendKeys("9aaghja0320d1");
 	}
 	public void verifyMyerpDomesticserno() {
 		Assert.assertTrue(domesticserno.isEnabled(),"Domesticserno is enable");
 		Reporter.log("verifyMyerpdomesticserno",true);
-		domesticserno.sendKeys("7799");
+		domesticserno.sendKeys("779");
 	}
 	public void verifyMyerpSvno() {
 		Assert.assertTrue(svno.isEnabled(),"Svno is enable");
 		Reporter.log("verifyMyerpsvno",true);
-		svno.sendKeys("17799");
+		svno.sendKeys("1779");
 	}
 	public void verifyMyerpConsumerno() {
 		Assert.assertTrue(sconsumerno.isEnabled(),"sConsumerno is enable");
 		Reporter.log("verifyMyerpsconsumerno",true);
-		sconsumerno.sendKeys("77720");
+		sconsumerno.sendKeys("7720");
 	}
 	public void SelDconsumertype() throws InterruptedException {
 		Select dt = new Select(seldconsumertype);
@@ -164,12 +167,12 @@ public class SubscriptionVoucherForm {
 	public void verifyMyerpRegistration() {
 		Assert.assertTrue(registration.isEnabled(),"Registration is enable");
 		Reporter.log("verifyMyerpregistration",true);
-		registration.sendKeys("44011");
+		registration.sendKeys("4011");
 	}
 	public void verifyMyerponsumerName() {
 		Assert.assertTrue(consumername.isEnabled(),"ConsumerName is enable");
 		Reporter.log("verifyMyerpconsumername",true);
-		consumername.sendKeys("MAHI VYAS");
+		consumername.sendKeys("MAHI NIGAM");
 	}
 	public void verifyMyerpContact() {
 		Assert.assertTrue(contact.isEnabled(),"Contact is enable");
@@ -189,7 +192,7 @@ public class SubscriptionVoucherForm {
 	public void verifyMyerpBlueBookno() {
 		Assert.assertTrue(bluebookno.isEnabled(),"BlueBookno is enable");
 		Reporter.log("verifyMyerpbluebookno",true);
-		bluebookno.sendKeys("134909");
+		bluebookno.sendKeys("13409");
 	}
 	public void verifyMyerpEmail() {
 		Assert.assertTrue(email.isEnabled(),"Email is enable");
@@ -206,12 +209,12 @@ public class SubscriptionVoucherForm {
 	public void verifyMyerpCashAmount() {
 		Assert.assertTrue(cashamount.isEnabled(),"CashAmount is enable");
 		Reporter.log("verifyMyerpcashamount",true);
-		cashamount.sendKeys("204450");
+		cashamount.sendKeys("20450");
 	}
 	public void verifyMyerpProduct() {
 		Assert.assertTrue(product.isEnabled(),"Product is enable");
 		Reporter.log("verifyMyerpproduct",true);
-		product.sendKeys("14.2 DOM");
+		product.sendKeys("14.2 KG");
 	}
 	public void verifyMyerpClearbtn() {
 		Assert.assertTrue(clearbtn.isEnabled(),"Clearbtn is enable");
@@ -221,30 +224,30 @@ public class SubscriptionVoucherForm {
 	public void verifyMyerpInvoiceno1() {
 		Assert.assertTrue(invoiceno.isEnabled(),"Invoiceno is enable");
 		Reporter.log("verifyMyerpinvoiceno",true);
-		invoiceno.sendKeys("45655");
+		invoiceno.sendKeys("45685");
 	}
 	public void verifyMyerpGstIn1() {
 		Assert.assertTrue(gstin.isEnabled(),"GstIN is enable");
 		Reporter.log("verifyMyerpgstin",true);
-		gstin.sendKeys("56aaq20d1z3");
+		gstin.sendKeys("55643aaq0d1z3");
 	}
 	public void verifyMyerpDomesticserno1() throws InterruptedException {
 		Thread.sleep(800);
 		Assert.assertTrue(domesticserno.isEnabled(),"Domesticserno is enable");
 		Reporter.log("verifyMyerpdomesticserno",true);
-		domesticserno.sendKeys("10125");
+		domesticserno.sendKeys("1025");
 	}
 	public void verifyMyerpSvno1() throws InterruptedException {
 		Thread.sleep(800);
 		Assert.assertTrue(svno.isEnabled(),"Svno is enable");
 		Reporter.log("verifyMyerpsvno",true);
-		svno.sendKeys("15420");
+		svno.sendKeys("5420");
 	}
 	public void verifyMyerpConsumerno1() throws InterruptedException {
 		Thread.sleep(800);
 		Assert.assertTrue(sconsumerno.isEnabled(),"sconsumerno is enable");
 		Reporter.log("verifyMyerpsconsumerno",true);
-		sconsumerno.sendKeys("25670");
+		sconsumerno.sendKeys("2120");
 	}
 	public void SelDconsumertype1() throws InterruptedException {
 		Select dt = new Select(seldconsumertype);
@@ -277,13 +280,13 @@ public class SubscriptionVoucherForm {
 		Thread.sleep(800);
 		Assert.assertTrue(consumername.isEnabled(),"ConsumerName is enable");
 		Reporter.log("verifyMyerpconsumername",true);
-		consumername.sendKeys("MAHI VYAS");
+		consumername.sendKeys("MAHI PATEL");
 	}
 	public void verifyMyerpContact1() throws InterruptedException {
 		Thread.sleep(800);
 		Assert.assertTrue(contact.isEnabled(),"Contact is enable");
 		Reporter.log("verifyMyerpcontact",true);
-		contact.sendKeys("7037538349");
+		contact.sendKeys("7089538349");
 	}
 	public void verifyMyerpAddress1() throws InterruptedException {
 		Thread.sleep(800);
@@ -326,13 +329,13 @@ public class SubscriptionVoucherForm {
 		Thread.sleep(800);
 		Assert.assertTrue(product.isEnabled(),"Product is enable");
 		Reporter.log("verifyMyerpproduct",true);
-		product.sendKeys("14.2 DOM");
+		product.sendKeys("14.2 KG");
 	}
 	public void verifyMyerpUnitcost() throws InterruptedException {
 		Thread.sleep(800);
 		Assert.assertTrue(unitcost.isEnabled(),"Unitcost is enable");
 		Reporter.log("verifyMyerpunitcost",true);
-		unitcost.clear();
+		//unitcost.clear();
 		unitcost.sendKeys("100");
 	}
 
@@ -390,6 +393,7 @@ public class SubscriptionVoucherForm {
 			Alert al=driver.switchTo().alert();
 			Thread.sleep(2000); 
 			al.accept(); 
+			Thread.sleep(800);
 			return true; }
 		catch (UnhandledAlertException u)
 		{ // TODO Auto-generated catch block
@@ -403,11 +407,11 @@ public class SubscriptionVoucherForm {
 		updatesubscriptionvoucherform.click();
 	}
 	public void verifyMyerpDocumentno() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(200);
 		Assert.assertTrue(documentno.isEnabled(),"documentno is enable");
 		Reporter.log("verifyMyerpdocumentno",true);
 		documentno.click();
-		documentno.sendKeys("2200045");
+		documentno.sendKeys("2200020");
 	}
 	public void verifyMyerpGetDataBtn() throws InterruptedException {
 		Thread.sleep(2000);
@@ -432,6 +436,20 @@ public class SubscriptionVoucherForm {
 			u.printStackTrace(); } return false;
 
 	}
+	public void verifyMyerpremoveservice3() throws InterruptedException {
+		Thread.sleep(4000);
+		Assert.assertTrue(removeservice3.isEnabled(),"removeservice3 is enable");
+		Reporter.log("verifyMyerpremoveservice3",true);
+		removeservice3.click();
+		
+		}
+	public void verifyMyerpremoveservice4() throws InterruptedException {
+			Thread.sleep(4000);
+			Assert.assertTrue(removeservice4.isEnabled(),"removeservice4 is enable");
+			Reporter.log("verifyMyerpremoveservice4",true);
+			removeservice4.click();
+			
+			}
 	public void verifyMyerpUTXTSERVICE3() throws InterruptedException {
 		Thread.sleep(4000);
 		Assert.assertTrue(utextservice3.isEnabled(),"utextservice3 is enable");
@@ -548,7 +566,7 @@ public class SubscriptionVoucherForm {
 		Assert.assertTrue(countersaleinvoiceno.isEnabled(),"purchasebillno is enabled");
 		Reporter.log(" verifyMyerppurchasebillno", true);
 		countersaleinvoiceno.click();
-		countersaleinvoiceno.sendKeys("2200042");
+		countersaleinvoiceno.sendKeys("2200020");
 
 	}
 	public void VerifyandClickonMyerpGetdataBtn() throws InterruptedException {
@@ -563,6 +581,8 @@ public class SubscriptionVoucherForm {
 		Assert.assertTrue(printinvoicebtn.isEnabled(),"printinvoicebtn is enabled");
 		Reporter.log(" verifyMyerprintinvoicebtn", true);
 		printinvoicebtn.click();
+		Thread.sleep(1000);
+		cancelbtn.click();
 
 	}
 	public void VerifyandClickonMyerpCSIDGeneralReport() throws InterruptedException { 
@@ -583,7 +603,7 @@ public class SubscriptionVoucherForm {
 		Reporter.log(" verifyMyerpselectdate", true);
 		selectdate.click();
 		selectdate.clear();
-		selectdate.sendKeys("7/01/2023");
+		selectdate.sendKeys("23/03/2023");
 		body.click();
 		Thread.sleep(500);
 	}
@@ -592,7 +612,7 @@ public class SubscriptionVoucherForm {
 		Reporter.log(" verifyMyerpselectdate", true);
 		selectdate.click();
 		selectdate.clear();
-		selectdate.sendKeys("8/01/2023");
+		selectdate.sendKeys("24/03/2023");
 		body.click();
 		Thread.sleep(500);
 	}
@@ -602,7 +622,7 @@ public class SubscriptionVoucherForm {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectcomp.isDisplayed(),"SelectCompany is displayed");
 		Assert.assertFalse(selectcomp.isSelected());
-		su.selectByVisibleText("ANITA GAS SERVICES");
+		su.selectByVisibleText("PANKAJ GAS SERVICES");
 
 	}
 	public void verifyMyerpSelectPaymentMode() throws InterruptedException {
@@ -619,7 +639,7 @@ public class SubscriptionVoucherForm {
 		Assert.assertTrue(consumerno.isEnabled(),"consumerno is enabled");
 		Reporter.log(" verifyMyerpconsumerno", true);
 		consumerno.click();
-		consumerno.sendKeys("59820");
+		consumerno.sendKeys("7720");
 
 	}
 	public void VerifyandClickonMyerpCSRGetdataBtn() throws InterruptedException{

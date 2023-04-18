@@ -259,6 +259,8 @@ public class SaleEmptyReceivedForm {
 			Thread.sleep(2000); 
 			al.accept(); 
 			Thread.sleep(800);
+			al.accept(); 
+			Thread.sleep(800);
 			return true; }
 
 		catch (UnhandledAlertException u) 

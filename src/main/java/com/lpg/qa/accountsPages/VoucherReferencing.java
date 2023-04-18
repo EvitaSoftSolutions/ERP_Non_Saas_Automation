@@ -120,7 +120,7 @@ public class VoucherReferencing{
 						Assert.assertFalse(vrselectdocid.isDisplayed(),"vrselectdocid is displayed");
 						Assert.assertFalse(vrselectdocid.isSelected());
 						Thread.sleep(500);
-						jscb.selectByVisibleText("2300001****13/03/2023****100001****SURYA HOTEL");
+						jscb.selectByVisibleText("2300002****04/04/2023****100001****SURYA HOTEL");
 						Thread.sleep(500);
 
 	                } 

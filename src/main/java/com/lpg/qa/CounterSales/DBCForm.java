@@ -28,7 +28,7 @@ public class DBCForm {
 	@FindBy(xpath="//input[@id='txtCashAmount']")private WebElement cashpayment;
 	@FindBy(xpath="//input[@id='txtProduct']")private WebElement product;
 	@FindBy(xpath="//input[@id='txtPrdQunatity']")private WebElement quantity;
-	@FindBy(xpath="//input[@id='txtSrvUnitCost']")private WebElement unitcost;
+	@FindBy(xpath="//input[@id='txtPrdUnitCost']")private WebElement unitcost;
 	@FindBy(xpath="//button[@id='btnSubmit']")private WebElement submitbtn;
 	@FindBy(xpath="//*[@id=\"tblmain\"]/tbody/tr/td[5]/a[1]")private WebElement viewreport;
 	@FindBy(xpath="//*[@id=\"tblmain\"]/tbody/tr/td[5]/a[2]")private WebElement print; 
@@ -36,6 +36,12 @@ public class DBCForm {
 	@FindBy(xpath="//*[@id=\"divContentHolder\"]/form/section[1]/h1/a")private WebElement updatedbcform;
 	@FindBy(xpath="//input[@id='txtMDLDocumentNo']")private WebElement documentno; 
 	@FindBy(xpath="//button[@id='btnMDLGet']")private WebElement ugetdatabtn;
+	@FindBy(xpath="//*[@id=\"ddlCompanyProduct\"]")private WebElement uselectcomp;
+	@FindBy(xpath="//input[@id='txtProduct']")private WebElement uproduct;
+	@FindBy(xpath="//input[@id='txtPrdQunatity']")private WebElement uquantity;
+	@FindBy(xpath="//input[@id='txtPrdUnitCost']")private WebElement uunitcost;
+	@FindBy(xpath="//button[@id='btnSubmit']")private WebElement usubmitbtn;
+	
 	@FindBy(xpath="//*[@id=\"imgServiceRemove_6\"]")private WebElement userviceremove;
 	@FindBy(xpath="//button[@id='btnSubmit']")private WebElement uupdate;
 	@FindBy(xpath="//*[@id=\"tblmain\"]/tbody/tr/td[5]/a[1]")private WebElement uviewreport;
@@ -44,7 +50,7 @@ public class DBCForm {
 	@FindBy (xpath="//*[@id=\"menuReports\"]/a/span[1]") private WebElement gerneralreport; 
 	@FindBy (xpath="//*[@id=\"menuReports\"]/ul/li[8]/a") private WebElement counterinvoicedetails;
 	@FindBy(xpath="//select[@id='ddlCompanyCode']")private WebElement iselectcomp;
-	@FindBy (xpath="//input[@id='txtCounterSaleId']") private WebElement countersaleinvoiceno;
+	@FindBy (xpath="//*[@id=\"txtCounterSaleId\"]") private WebElement countersaleinvoiceno;
 	@FindBy (xpath="//button[@id='btnGetdata']") private WebElement igetdatabtn; 
 	@FindBy (xpath="//button[@id='btnPrint']") private WebElement printinvoicebtn; 
 
@@ -109,7 +115,7 @@ public class DBCForm {
 		Thread.sleep(800); 
 		Assert.assertTrue(consumernumber.isEnabled(),"ConsumerNumber is enable");
 		Reporter.log("verifyMyerpconsumernumber",true);
-		consumernumber.sendKeys("666645");
+		consumernumber.sendKeys("2120");
 	}
 	public void verifyMyerpSearchbtn() throws InterruptedException {
 		Thread.sleep(800); 
@@ -120,7 +126,7 @@ public class DBCForm {
 	public void verifyMyerpSVNumber() {
 		Assert.assertTrue(svnumber.isEnabled(),"SVNumber is enable");
 		Reporter.log("verifyMyerpsvnumber",true);
-		svnumber.sendKeys("417");
+		svnumber.sendKeys("47");
 	}
 	public void ModofPayment() throws InterruptedException {
 		Select mp = new Select(modofpayment);
@@ -147,12 +153,13 @@ public class DBCForm {
 		Thread.sleep(800); 
 		Assert.assertTrue(quantity.isEnabled(),"quantity is enable");
 		Reporter.log("verifyMyerpquantity",true);
-		quantity.sendKeys("12");
+		quantity.sendKeys("1");
 	}
 	public void verifyMyerpUnitcost() throws InterruptedException {
 		Thread.sleep(800); 
 		Assert.assertTrue(unitcost.isEnabled(),"Unitcost is enable");
 		Reporter.log("verifyMyerpunitcost",true);
+		unitcost.clear();
 		unitcost.sendKeys("20");
 	}
 	public void verifyMyerpSubmitbtn() throws InterruptedException {
@@ -215,13 +222,68 @@ public class DBCForm {
 		Assert.assertTrue(documentno.isEnabled(),"documentno is enable");
 		Reporter.log("verifyMyerpdocumentno",true);
 		documentno.click();
-		documentno.sendKeys("2200049");
+		documentno.sendKeys("2200007");
 	}
 	public void verifyMyerpGetDataBtn() throws InterruptedException {
 		Thread.sleep(2000);
 		Assert.assertTrue(ugetdatabtn.isEnabled(),"getdatabtn is enable");
 		Reporter.log("verifyMyerpugetdatabtn",true);
 		ugetdatabtn.click();
+		if (isAlertPresent6(driver)) { System.out.println("alert is present");
+
+		}else { System.out.println("alert is not present"); }
+
+	} 
+	public static boolean isAlertPresent6(WebDriver driver) throws
+	InterruptedException { 
+		try {
+			Alert al=driver.switchTo().alert();
+			Thread.sleep(2000); 
+			al.accept(); 
+			Thread.sleep(2000); 
+			return true; }
+		catch (UnhandledAlertException u)
+		{ // TODO Auto-generated catch block
+			u.printStackTrace(); } return false;
+
+	}
+	public void verifyMyerpUSelectCompany() throws InterruptedException {
+		Thread.sleep(500);
+		Select su = new Select(uselectcomp);
+		Thread.sleep(1000);
+		Assert.assertTrue(uselectcomp.isDisplayed(),"USelectCompany is displayed");
+		Assert.assertFalse(uselectcomp.isSelected());
+		su.selectByVisibleText("PANKAJ GAS SERVICES");
+
+	}
+	public void verifyMyerpUProduct() throws InterruptedException {
+		Thread.sleep(800); 
+		Assert.assertTrue(product.isEnabled(),"Product is enable");
+		Reporter.log("verifyMyerpproduct",true);
+		Thread.sleep(200);
+		product.clear();
+		product.sendKeys("14.2 KG");
+		Thread.sleep(800);
+	}
+	public void verifyMyerpUQuantity() throws InterruptedException {
+		Thread.sleep(800); 
+		Assert.assertTrue(quantity.isEnabled(),"quantity is enable");
+		Reporter.log("verifyMyerpquantity",true);
+		quantity.clear();
+		quantity.sendKeys("1");
+	}
+	public void verifyMyerpUUnitcost() throws InterruptedException {
+		Thread.sleep(800); 
+		Assert.assertTrue(unitcost.isEnabled(),"Unitcost is enable");
+		Reporter.log("verifyMyerpunitcost",true);
+		unitcost.clear();
+		unitcost.sendKeys("20");
+	}
+	public void verifyMyerpUSubmitbtn() throws InterruptedException {
+		Thread.sleep(800); 
+		Assert.assertTrue(submitbtn.isEnabled(),"Submitbtn is enable");
+		Reporter.log("verifyMyerpsubmitbtn",true);
+		submitbtn.click();
 		if (isAlertPresent2(driver)) { System.out.println("alert is present");
 
 		}else { System.out.println("alert is not present"); }
@@ -233,13 +295,18 @@ public class DBCForm {
 			Alert al=driver.switchTo().alert();
 			Thread.sleep(2000); 
 			al.accept(); 
-
+			Thread.sleep(2000);
+			al.accept();
 			return true; }
-		catch (UnhandledAlertException u)
+		catch (UnhandledAlertException u) 
 		{ // TODO Auto-generated catch block
 			u.printStackTrace(); } return false;
 
 	}
+	
+	
+	
+	
 	public void verifyMyerpUpdateDBCBtn() throws InterruptedException {
 		Thread.sleep(2000);
 		Assert.assertTrue(uupdate.isEnabled(),"uupdate is enable");
@@ -247,7 +314,7 @@ public class DBCForm {
 		Thread.sleep(1000); 
 		//	userviceremove.click();
 		//	userviceremove.click();
-		Thread.sleep(1000); 
+		Thread.sleep(2000); 
 		uupdate.click();
 
 		if (isAlertPresent1(driver)) { System.out.println("alert is present");
@@ -313,11 +380,11 @@ public class DBCForm {
 	}
 
 	public void verifyMyerpCSelectCompany() throws InterruptedException {
-		Select su = new Select(selectcomp);
+		Select su = new Select(iselectcomp);
 		Thread.sleep(1000);
 		Assert.assertFalse(iselectcomp.isDisplayed(),"iSelectCompany is displayed");
 		Assert.assertFalse(iselectcomp.isSelected());
-		su.selectByVisibleText("ANITA GAS SERVICES");
+		su.selectByVisibleText("PANKAJ GAS SERVICES");
 
 	}
 
@@ -326,7 +393,7 @@ public class DBCForm {
 		Assert.assertTrue(countersaleinvoiceno.isEnabled(),"purchasebillno is enabled");
 		Reporter.log(" verifyMyerppurchasebillno", true);
 		countersaleinvoiceno.click();
-		countersaleinvoiceno.sendKeys("2200049");
+		countersaleinvoiceno.sendKeys("2200007");
 
 	}
 	public void VerifyandClickonMyerpGetdataBtn() throws InterruptedException {
@@ -334,8 +401,17 @@ public class DBCForm {
 		Assert.assertTrue(igetdatabtn.isEnabled(),"igetdatabtn is enabled");
 		Reporter.log(" verifyMyerpgetdatabtn", true);
 		igetdatabtn.click();
+		Thread.sleep(1000);
+	}
+	public void verifyMyerpiSelectCompany() throws InterruptedException {
+		Select su = new Select(uselectcomp);
+		Thread.sleep(1000);
+		Assert.assertFalse(uselectcomp.isDisplayed(),"uselectcomp is displayed");
+		Assert.assertFalse(uselectcomp.isSelected());
+		su.selectByVisibleText("PANKAJ GAS SERVICES");
 
 	}
+	
 	public void VerifyandClickonMyerpPrintInvoiceBtn() throws InterruptedException {
 		Thread.sleep(1000);
 		Assert.assertTrue(printinvoicebtn.isEnabled(),"printinvoicebtn is enabled");
@@ -361,7 +437,7 @@ public class DBCForm {
 		Reporter.log(" verifyMyerpselectdate", true);
 		selectdate.click();
 		selectdate.clear();
-		selectdate.sendKeys("7/01/2023");
+		selectdate.sendKeys("22/03/2023");
 		body.click();
 		Thread.sleep(500);
 	}
@@ -370,7 +446,7 @@ public class DBCForm {
 		Reporter.log(" verifyMyerptodate", true);
 		todate.click();
 		selectdate.clear();
-		selectdate.sendKeys("8/01/2023");
+		selectdate.sendKeys("24/03/2023");
 		body.click();
 		Thread.sleep(500);
 	}
@@ -380,7 +456,7 @@ public class DBCForm {
 		Thread.sleep(1000);
 		Assert.assertFalse(selectcomp.isDisplayed(),"SelectCompany is displayed");
 		Assert.assertFalse(selectcomp.isSelected());
-		su.selectByVisibleText("ANITA GAS SERVICES");
+		su.selectByVisibleText("PANKAJ GAS SERVICES");
 
 	}
 	public void verifyMyerpSelectPaymentMode() throws InterruptedException {
@@ -397,7 +473,7 @@ public class DBCForm {
 		Assert.assertTrue(consumerno.isEnabled(),"consumerno is enabled");
 		Reporter.log(" verifyMyerpconsumerno", true);
 		consumerno.click();
-		consumerno.sendKeys("666645");
+		consumerno.sendKeys("21270");
 
 	}
 	public void VerifyandClickonMyerpCSRGetdataBtn() throws InterruptedException{

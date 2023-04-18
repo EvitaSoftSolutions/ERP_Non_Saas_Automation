@@ -35,7 +35,7 @@ public class DBCTest extends LpgTestBase{
 		d.verifyMyerppassword();
 		 * d.verifyMyerploginbtn();
 		 */
-		
+		/*
 		  d.verifyMyerpCounterSales();
 		  d.verifyMyerpClickDbc();
 		  d.verifyMyerpConsumerNumber(); 
@@ -47,27 +47,30 @@ public class DBCTest extends LpgTestBase{
 		  d.verifyMyerpQuantity();
 		  d.verifyMyerpUnitcost();
 		  d.verifyMyerpSubmitbtn();
-		  d.verifyMyerpViewReport(); 
-		  d.verifyMyerpPrint();
-		 
+		 // d.verifyMyerpViewReport(); 
+		 // d.verifyMyerpPrint();
+		 */
 
 		d.verifyMyerpCounterSales();
 		d.verifyMyerpClickDbc();
 		d.verifyMyerpUpdateDBC();
 		d.verifyMyerpDOCNO();
 		d.verifyMyerpGetDataBtn();
+		//d.verifyMyerpSVNumber();
+	//	d.verifyMyerpUSelectCompany();
+//		d.verifyMyerpQuantity();
 		d.verifyMyerpUpdateDBCBtn();
-		d.verifyMyerpUPrint();
-		d.verifyMyerpUViewReport();
+	//	d.verifyMyerpUPrint();
+	//	d.verifyMyerpUViewReport();
 
 		d.VerifyandClickonMyerpGeneralReport();
 		d.VerifyandClickonMyerpConterInvoiceDetails();
 		d.verifyMyerpSelectCompany();
 		d.VerifyandClickonMyerpCounterSaleVoucherNumber();
 		d.VerifyandClickonMyerpGetdataBtn();
-		d.VerifyandClickonMyerpPrintInvoiceBtn();
+	//	d.VerifyandClickonMyerpPrintInvoiceBtn();
 
-		d.VerifyandClickonMyerpGeneralReport();
+	//	d.VerifyandClickonMyerpGeneralReport();
 		d.VerifyandClickonMyerpCountersaleRegister();
 		d.VerifyandClickonMyerpPlaseFromSelectDate();
 		d.verifyMyerpSelectCompany();

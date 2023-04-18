@@ -22,6 +22,7 @@ public class AcceptedLoad {
 				@FindBy (xpath="//button[@id='btnSubmit']") private WebElement alsubmitbtn;
 				@FindBy (xpath="//*[@id=\"tblmain\"]/tbody/tr/td[2]/a") private WebElement alinvoicenum;
 				@FindBy (xpath="//select[@id='ddlCompanyID']") private WebElement alselectcompany;
+				@FindBy (xpath="//*[@id=\"CompanInvoicedate\"]") private WebElement companyinvoicedate;
 				@FindBy (xpath="//select[@id='ddlSupplierID']") private WebElement alselectsupplier;
 				@FindBy (xpath="//input[@id='txtAccount']") private WebElement alaccounttxt; 
 				@FindBy (xpath="//button[@id='btnSubmit']") private WebElement allsubmitbtn;
@@ -81,13 +82,13 @@ public class AcceptedLoad {
 						 Assert.assertTrue(alinvoicenumtxt.isEnabled(),"alinvoicenumtxt is enabled");
 						 Reporter.log(" verifyMyerpalinvoicenumtxt", true);
 						 alinvoicenumtxt.click();
-						 alinvoicenumtxt.sendKeys("5008");
+						 alinvoicenumtxt.sendKeys("5002");
 					}
 					public void VerifyandClickonMyerpGTSearchInvoceNum() {
 						 Assert.assertTrue(searchbar.isEnabled(),"searchbar is enabled");
 						 Reporter.log(" verifyMyerpsearchbar", true);
 						 searchbar.click();
-						 searchbar.sendKeys("5008");
+						 searchbar.sendKeys("5002");
 					}
 				
 					public void VerifyandClickonMyerpGTALsubmitbtn() throws InterruptedException {
@@ -109,7 +110,7 @@ public class AcceptedLoad {
 						 Assert.assertTrue(alaccounttxt.isEnabled(),"alaccounttxt is enabled");
 						 Reporter.log(" verifyMyerpalaccounttxt", true);
 						 alaccounttxt.click();
-						 alaccounttxt.sendKeys("MAYA 4545 : 400280");
+						 alaccounttxt.sendKeys("PURCHASE : 300005");
 					}
 					public void VerifyandClickonMyerpGTClearBtn() {
 						 Assert.assertTrue(alclearbtn.isEnabled(),"alclearbtn is enabled");
@@ -121,25 +122,32 @@ public class AcceptedLoad {
 						 Reporter.log(" verifyMyerpallsubmitbtn", true);
 						 allsubmitbtn.click();
 					}
+					public void VerifyandClickoncompanyinvoicedate() {
+						 Assert.assertTrue(companyinvoicedate.isEnabled(),"companyinvoicedate is enabled");
+						 Reporter.log("verifycompanyinvoicedate", true);
+						 companyinvoicedate.click();
+						 companyinvoicedate.sendKeys("30/03/2023");
+					}
+					
 					public void VerifyMyerpALSelectCompany()  throws InterruptedException {
 						Thread.sleep(1000);
 						Select alsc = new Select(alselectcompany);
 				        Assert.assertFalse(alselectcompany.isDisplayed(),"alselectcompany is displayed");
 						Assert.assertFalse(alselectcompany.isSelected());
-						alsc.selectByVisibleText("ANITA GAS SERVICES");
+						alsc.selectByVisibleText("BUGFIX GAS");
 					}
 					public void VerifyMyerpALSelectSupplier()  throws InterruptedException {
 						Thread.sleep(500);
 						Select alss = new Select(alselectsupplier);
 				        Assert.assertFalse(alselectsupplier.isDisplayed(),"alselectsupplier is displayed");
 						Assert.assertFalse(alselectsupplier.isSelected());
-						alss.selectByVisibleText("SUP_ROHIT_40");
+						alss.selectByVisibleText("SUP_BPCL_1");
 					}
 					public void VerifyandClickonMyerpALAccountTextbox() {
 						 Assert.assertTrue(alaccounttxt.isEnabled(),"alaccounttxt is enabled");
 						 Reporter.log(" verifyMyerpalaccounttxt", true);
 						 alaccounttxt.click();
-						 alaccounttxt.sendKeys("MAYA 4545 : 400280");
+						 alaccounttxt.sendKeys("PURCHASE : 300005");
 					}
 					public void VerifyandClickonMyerpALSubmitBtn() throws InterruptedException {
 						 Assert.assertTrue(allsubmitbtn.isEnabled(),"allsubmitbtn is enabled");

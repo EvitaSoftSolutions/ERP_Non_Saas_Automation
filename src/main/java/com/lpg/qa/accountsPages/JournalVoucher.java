@@ -88,7 +88,7 @@ public class JournalVoucher {
 					 Reporter.log("VerifyMyercrvtransactiondate", true);
 					 jvtransactiondate.clear();
 					 jvtransactiondate.click();
-					 jvtransactiondate.sendKeys("6/03/2023");
+					 jvtransactiondate.sendKeys("6/04/2023");
 
                 } 
 				public void VerifyandClickonMyerpJVLedger() throws InterruptedException { 
@@ -159,8 +159,32 @@ public class JournalVoucher {
 					 Assert.assertTrue(jvaddheaderbtn.isEnabled(),"jvaddheaderbtn is enabled");
 					 Reporter.log("Verifymyerpjvaddheaderbtn", true);
 					 jvaddheaderbtn.click();
+   }
+				public void VerifyandClickonMyerpJVLedger1() throws InterruptedException { 
+					 Assert.assertTrue(jvledger.isEnabled(),"jvledger is enabled");
+					 Reporter.log("Verifymyerpjvledger", true);
+					 jvledger.clear();
+					 jvledger.click();
+					 jvledger.sendKeys("PURCHASE : 300005");
+					 jvfbody.click();
+					 Thread.sleep(700);
 
             } 
+				public void VerifyandClickonMyerpJVAmount1() throws InterruptedException { 
+					Thread.sleep(700);
+					 Assert.assertTrue(jvamount.isEnabled(),"jvamount is enabled");
+					 Reporter.log("Verifymyerpjvamount", true);
+					 jvamount.click();
+					 jvamount.sendKeys("1000");
+
+            }
+				public void VerifyandClickonMyerpJVSelectDebitCredit1() throws InterruptedException { 
+		               Select jscb = new Select(jvselectdebitcredit);
+						Thread.sleep(1000);
+						Assert.assertTrue(jvselectdebitcredit.isDisplayed(),"jvselectdebitcredit is displayed");
+						Assert.assertFalse(jvselectdebitcredit.isSelected());
+						jscb.selectByVisibleText("Credit");
+				}
 }
 			
 				

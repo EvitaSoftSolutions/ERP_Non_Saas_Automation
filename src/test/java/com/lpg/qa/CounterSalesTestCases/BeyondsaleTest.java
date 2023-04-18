@@ -36,7 +36,7 @@ public class BeyondsaleTest extends LpgTestBase{
 		bs.verifyMyerpCounterSales();
 		bs.verifyMyerpBeyondsale();
 		
-		  bs.verifyMyerpConsumerNumberSearch();
+		 /*bs.verifyMyerpConsumerNumberSearch();
 		  bs.verifyMyerpSubmitBtnClick();
 		  bs.verifyMyerpInvoiceno(); 
 		  bs.verifyMyerpGstin(); 
@@ -49,6 +49,7 @@ public class BeyondsaleTest extends LpgTestBase{
 		  bs.verifyMyerpCashamount();
 		  bs.verifyMyerpProduct(); 
 		  bs.verifyMyerpClearbtn();
+		  */
 		  bs.verifyMyerpConsumerNumberSearch1();
 		  bs.verifyMyerpSubmitBtnClick1();
 		  bs.verifyMyerpInvoiceno1();

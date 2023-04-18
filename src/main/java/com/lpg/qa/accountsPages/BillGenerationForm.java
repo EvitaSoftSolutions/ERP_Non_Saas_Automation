@@ -105,7 +105,7 @@ public class BillGenerationForm {
 		Thread.sleep(500);
 		Assert.assertTrue(billingdatedaily.isEnabled(),"billingdatedaily is enable");
 		Reporter.log("verifyMyerpbillingdatedaily",true);
-		billingdatedaily.sendKeys("10/03/2023");
+		billingdatedaily.sendKeys("5/04/2023");
 	}
 	public void verifyMyerpinvoicenumber() {
 		Assert.assertTrue(invoicenum.isEnabled(),"invoicenum is enable");
@@ -182,7 +182,7 @@ public class BillGenerationForm {
 		Thread.sleep(500);
 		Assert.assertTrue(billingdatemon.isEnabled(),"billingdatemon is enable");
 		Reporter.log("verifyMyerpbillingdatemon",true);
-		billingdatemon.sendKeys("10/03/2023");
+		billingdatemon.sendKeys("5/04/2023");
 	}
 
 
@@ -222,7 +222,7 @@ public class BillGenerationForm {
 		Thread.sleep(500);
 		Assert.assertTrue(billinddatefn.isEnabled(),"billinddatefn is enable");
 		Reporter.log("verifyMyerpbillinddatefn",true);
-		billinddatefn.sendKeys("10/03/2023");
+		billinddatefn.sendKeys("5/04/2023");
 	}
 
 	public void verifyMyerpbillgenerationcustom() throws InterruptedException {
@@ -252,7 +252,7 @@ public class BillGenerationForm {
 		Thread.sleep(500);
 		Assert.assertTrue(billinddatecustom.isEnabled(),"billinddatecustom is enable");
 		Reporter.log("verifyMyerpbillinddatecustom",true);
-		billinddatecustom.sendKeys("10/03/2023");
+		billinddatecustom.sendKeys("5/04/2023");
 
 	}
 
@@ -276,7 +276,7 @@ public class BillGenerationForm {
 		Thread.sleep(500);
 		Assert.assertTrue(billinddateimmegiate.isEnabled(),"billinddateimmegiate is enable");
 		Reporter.log("verifyMyerpbillinddateimmegiate",true);
-		billinddateimmegiate.sendKeys("10/03/2023");
+		billinddateimmegiate.sendKeys("5/04/2023");
 
 	}
 }

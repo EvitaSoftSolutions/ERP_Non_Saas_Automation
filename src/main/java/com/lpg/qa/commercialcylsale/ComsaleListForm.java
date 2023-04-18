@@ -141,6 +141,8 @@ public class ComsaleListForm {
 		Assert.assertTrue(submitbtn2.isEnabled(),"submitbtn2 is enable");
 		Reporter.log("verifyMyerpsubmitbtn2",true);
 		submitbtn2.click();
+		submitbtn2.click();
+
 		Thread.sleep(800);
 		if (isAlertPresent2(driver)) { System.out.println("alert is present");
 

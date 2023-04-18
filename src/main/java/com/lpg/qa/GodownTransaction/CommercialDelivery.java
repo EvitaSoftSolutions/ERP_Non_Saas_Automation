@@ -91,14 +91,14 @@ public class CommercialDelivery {
 								Thread.sleep(500);
 								Assert.assertTrue(cdselectgodown.isDisplayed(),"cdselectgodown is displayed");
 								Assert.assertFalse(cdselectgodown.isSelected());
-								cdsp.selectByVisibleText("VIRAR");
+								cdsp.selectByVisibleText("VIRAR EAST");
 							}
 							public void VerifyMyerpTVSelectDeliveryMan()  throws InterruptedException {
 								Select cdsp = new Select(cdselectdeliveryman);
 								Thread.sleep(500);
 								Assert.assertFalse(cdselectdeliveryman.isDisplayed(),"cdselectdeliveryman is displayed");
 								Assert.assertFalse(cdselectdeliveryman.isSelected());
-								cdsp.selectByVisibleText("KING");
+								cdsp.selectByVisibleText("DEEPAK PARAMAR");
 								Thread.sleep(500);
 							}
 							
@@ -107,7 +107,7 @@ public class CommercialDelivery {
 								Thread.sleep(1000);
 								Assert.assertFalse(cdselectproducttype.isDisplayed(),"cdselectproducttype is displayed");
 								Assert.assertFalse(cdselectproducttype.isSelected());
-								cdsp.selectByVisibleText("111KG");
+								cdsp.selectByVisibleText("19 KG");
 							}
 							
 							public void VerifyandClickonMyerpFullCyl() { 
@@ -170,7 +170,7 @@ public class CommercialDelivery {
 								 Reporter.log("verifyMyerpselectdate", true);
 								 selectdate.click(); 
 								 selectdate.clear();
-								 selectdate.sendKeys("5/02/2023");
+								 selectdate.sendKeys("30/03/2023");
 							}
 
 							public void verifyMyerpSelectGodown() throws InterruptedException {
@@ -178,7 +178,7 @@ public class CommercialDelivery {
 								Thread.sleep(1000);
 								Assert.assertFalse(selectgodowen.isDisplayed(),"selectgodown is displayed");
 								Assert.assertFalse(selectgodowen.isSelected());
-								su.selectByVisibleText("VIRAR");
+								su.selectByVisibleText("VIRAR EAST");
 							
 							}
 							public void VerifyandClickonMyerpGetDataBtn() throws InterruptedException {
@@ -192,7 +192,7 @@ public class CommercialDelivery {
 								 Assert.assertTrue(reportsearchbtn.isEnabled(),"reportsearchbtn is enabled");
 								 Reporter.log("verifyMyerpreportsearchbtn", true);
 								 reportsearchbtn.click();
-								 reportsearchbtn.sendKeys("111KG");
+								 reportsearchbtn.sendKeys("19 KG");
 								 Thread.sleep(1000);
 							}
 							public void VerifyandClickonMyerpFindBtn() throws InterruptedException {

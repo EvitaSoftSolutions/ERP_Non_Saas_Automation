@@ -31,6 +31,34 @@ public class ReceiptVoucher {
 			@FindBy (xpath="//button[@id='btnSubmit']") private WebElement rvsavebtn;
 			@FindBy (xpath="//button[@id='btnclear']") private WebElement rvnewbtn;
 			@FindBy (xpath="//button[@id='btnAddHeader']") private WebElement rvaddheaderbtn;
+			@FindBy (xpath="//*[@id=\"divContentHolder\"]/form/div/section[2]/div/div/div/div") private WebElement body;
+			
+			
+			@FindBy (xpath="//*[@id=\"divContentHolder\"]/form/section[1]/h1/a[1]") private WebElement updatereceiptvoucher;
+			@FindBy (xpath="//input[@id='txtMDLDocumentNo']") private WebElement documentno;
+			@FindBy (xpath="//button[@id='btnMDLGet']") private WebElement ugetdatabtn;
+			@FindBy (xpath="//button[@id='btnSubmit']") private WebElement usubmitbtn;
+			
+			@FindBy (xpath="//span[text()='Accounts Report']") private WebElement accountreport;
+			@FindBy (xpath="//a[text()=' Accounting Reports']") private WebElement accountingreport;
+			@FindBy (xpath="//*[@id=\"tblGeneralMasters\"]/tbody/tr[1]/td[2]/a") private WebElement receiptregister;
+			@FindBy(xpath="//select[@id='ddlCompanyCode']")private WebElement selectcomp;
+			@FindBy(xpath="//select[@id='ddlSaleType']")private WebElement selectsaletype; 
+			@FindBy (xpath="//input[@id='FromDate']") private WebElement fromdate;
+			@FindBy (xpath="//input[@id='ToDate']") private WebElement todate;
+			@FindBy (xpath="//select[@id='ddlBank']") private WebElement selectbank;
+			@FindBy (xpath="//button[@id='btnGetdata']") private WebElement getdatabtn;
+			
+			@FindBy (xpath="//*[@id=\"tblGeneralMasters\"]/tbody/tr[2]/td[2]/a") private WebElement receiptnowisereport;
+			@FindBy(xpath="//select[@id='ddlCompanyCode']")private WebElement nowiseselectcomp;
+			@FindBy (xpath="//input[@id='txtFromDocNo']") private WebElement fromdocno;
+			@FindBy (xpath="//input[@id='txtToDocNo']") private WebElement todocno;
+		    @FindBy (xpath="//button[@id='btnGetdata']") private WebElement nowisegetdatabtn;
+			
+			
+			
+			
+			
 			
 			
 			// initialization
@@ -89,7 +117,7 @@ public class ReceiptVoucher {
 					 Assert.assertTrue(rvvnumber.isEnabled(),"rvvnumber is enabled");
 					 Reporter.log("Verifymyerppvvnumber", true);
 					 rvvnumber.click();
-					 rvvnumber.sendKeys("1001");
+					 rvvnumber.sendKeys("7001");
 
                 } 
 				public void VerifyandClickonMyerpRVTransactionDate () { 
@@ -97,7 +125,7 @@ public class ReceiptVoucher {
 					 Reporter.log("VerifyMyerprvtransactiondate", true);
 					 rvtransactiondate.clear();
 					 rvtransactiondate.click();
-					 rvtransactiondate.sendKeys("06/03/2023");
+					 rvtransactiondate.sendKeys("16/03/2023");
 
                 } 
 				
@@ -113,7 +141,7 @@ public class ReceiptVoucher {
 					 Assert.assertTrue(rvchequeno.isEnabled(),"rvchequeno is enabled");
 					 Reporter.log("Verifymyerprvchequeno", true);
 					 rvchequeno.click();
-					 rvchequeno.sendKeys("4395");
+					 rvchequeno.sendKeys("43955");
 
                } 
 				public void VerifyandClickonMyerpRVChequeDate () { 
@@ -121,14 +149,14 @@ public class ReceiptVoucher {
 					 Reporter.log("Verifymyerppvchequedate", true);
 					 rvchequedate.clear();
 					 rvchequedate.click();
-					 rvchequedate.sendKeys("06/03/2023");
+					 rvchequedate.sendKeys("16/03/2023");
 
                } 
 				public void VerifyandClickonMyerpRVNarration1 () { 
 					 Assert.assertTrue(rvnarriation1.isEnabled(),"rpvnarriation1 is enabled");
 					 Reporter.log("Verifymyerprvpvnarriation1", true);
 					 rvnarriation1.click();
-					 rvnarriation1.sendKeys("Received to Rahul");
+					 rvnarriation1.sendKeys("Received to PARMAR");
 
                } 
 				public void VerifyandClickonMyerpRVLedger() { 
@@ -173,6 +201,7 @@ public class ReceiptVoucher {
 							Alert al=driver.switchTo().alert();
 							Thread.sleep(2500); 
 							al.accept(); 
+							 Thread.sleep(3000);
 
 							return true; }
 
@@ -215,4 +244,169 @@ public class ReceiptVoucher {
              } 
 				
 				
-}
+				
+				
+				public void VerifyandClickonMyerpupdatepaymentvoucher() throws InterruptedException {
+					Thread.sleep(3000);
+					 Assert.assertTrue(updatereceiptvoucher.isEnabled(),"updatereceiptvoucher is enabled");
+					 Reporter.log("verifyMyerpupupdatereceiptvoucher", true);
+					 updatereceiptvoucher.click();
+					 
+				}
+
+				public void VerifyandClickonMyerpdocumentno() throws InterruptedException {
+					Thread.sleep(1000);
+		          	 Assert.assertTrue(documentno.isEnabled(),"documentno is enabled");
+					 Reporter.log("verifyMyerpupdocumentno", true);
+					 documentno.click();
+					 documentno.sendKeys("2200004");
+				}
+				public void VerifyandClickonMyerpugetdatabtn() throws InterruptedException {
+					 Assert.assertTrue(ugetdatabtn.isEnabled(),"ugetdatabtn is enabled");
+					 Reporter.log("verifyMyerpugetdatabtn", true);
+					 ugetdatabtn.click();
+					 Thread.sleep(3000);
+				}
+				public void VerifyandClickonMyerpusubmitbtn() throws InterruptedException {
+					Thread.sleep(3000);
+					 Assert.assertTrue(usubmitbtn.isEnabled(),"usubmitbtn is enabled");
+					 Reporter.log("verifyMyerpusubmitbtn", true);
+					 usubmitbtn.click();
+					 Thread.sleep(2000);
+					 if (isAlertPresent4(driver)) { System.out.println("alert is present");
+
+						}else
+						{ System.out.println("alert is not present"); }
+					}
+
+					public static boolean isAlertPresent4(WebDriver driver) throws
+					InterruptedException { 
+						try {
+							Thread.sleep(1000);
+							Alert al=driver.switchTo().alert();
+							Thread.sleep(2000); 
+							al.accept(); 
+
+							return true; }
+
+						catch (UnhandledAlertException u) 
+						{ // TODO Auto-generated catch block
+							u.printStackTrace(); } return false;
+					}
+				
+					
+					
+					
+					
+					
+					
+				public void VerifyandClickonMyerpAccountReport() throws InterruptedException {
+					Thread.sleep(2000);
+					 Assert.assertTrue(accountreport.isEnabled(),"accountreport is enabled");
+					 Reporter.log("verifyMyerpaccountreport", true);
+					 accountreport.click();
+				}
+				public void VerifyandClickonMyerpAccountingReport() throws InterruptedException {
+					 Thread.sleep(1000);
+					 Assert.assertTrue(accountingreport.isEnabled(),"accountingreport is enabled");
+					 Reporter.log("verifyMyerpaccountingreport", true);
+					 accountingreport.click();
+				}
+				public void VerifyandClickonMyerpRepceiptRegisterReport() throws InterruptedException {
+					Thread.sleep(900);
+					 Assert.assertTrue(receiptregister.isEnabled(),"receiptregister is enabled");
+					 Reporter.log("verifyMyerpreceiptregister", true);
+					 receiptregister.click();
+					 
+				}
+				public void verifyMyerpSelectCompany() throws InterruptedException {
+					Select su = new Select(selectcomp);
+					Thread.sleep(1000);
+					Assert.assertFalse(selectcomp.isDisplayed(),"SelectCompany is displayed");
+					Assert.assertFalse(selectcomp.isSelected());
+					su.selectByVisibleText("ANITA GAS SERVICES");
+				
+				}
+				public void verifyMyerpSelectSaleType() throws InterruptedException {
+					Select su = new Select(selectsaletype);
+					Thread.sleep(1000);
+					Assert.assertFalse(selectsaletype.isDisplayed(),"selectsaletype is displayed");
+					Assert.assertFalse(selectsaletype.isSelected());
+					su.selectByVisibleText("Domestic");
+				
+				}
+				public void VerifyMyerpFromDate() {
+					 Assert.assertTrue(fromdate.isEnabled(),"fromdate field is enabled");		 
+					 Reporter.log("verifyMyerpfromdate", true);
+					 fromdate.click(); 
+					 fromdate.clear();
+					 fromdate.sendKeys("16/03/2023");
+				}
+
+				public void VerifyMyerpTodate() {
+					 Assert.assertTrue(todate.isEnabled(),"todate field is enabled");		 
+					 Reporter.log("verifyMyerptodate", true);
+					 todate.click(); 
+					 todate.clear();
+					 todate.sendKeys("17/03/2023");
+					 body.click();
+				}
+				public void VerifyMyerpPVSelectBank()  throws InterruptedException {
+					Thread.sleep(800);
+					Select alss = new Select(selectbank);
+			        Assert.assertFalse(selectbank.isDisplayed(),"selectbank is displayed");
+					Assert.assertFalse(selectbank.isSelected());
+					alss.selectByVisibleText("STATE BANK OF INDIA");
+				}
+				public void VerifyandClickonMyerpGetdataBtn() throws InterruptedException {
+					 Assert.assertTrue(getdatabtn.isEnabled(),"getdatabtn is enabled");
+					 Reporter.log(" verifyMyerpgetdatabtn", true);
+					 getdatabtn.click();
+					 Thread.sleep(3000);
+				
+				}
+
+				
+				
+				
+				
+				public void VerifyandClickonMyerpRepceiptNoWiseReport() throws InterruptedException {
+					Thread.sleep(600);
+					 Assert.assertTrue(receiptnowisereport.isEnabled(),"receiptnowisereport is enabled");
+					 Reporter.log("verifyMyerpreceiptnowisereport", true);
+					 receiptnowisereport.click();
+					 
+				}
+				public void verifyMyerpSelectCompany1() throws InterruptedException {
+					Select su = new Select(selectcomp);
+					Thread.sleep(1000);
+					Assert.assertFalse(selectcomp.isDisplayed(),"SelectCompany is displayed");
+					Assert.assertFalse(selectcomp.isSelected());
+					su.selectByVisibleText("ANITA GAS SERVICES");
+				
+				}
+				
+				public void VerifyMyerpFromDocNo() {
+					 Assert.assertTrue(fromdocno.isEnabled(),"fromdocno field is enabled");		 
+					 Reporter.log("verifyMyerpfromdocno", true);
+					 fromdocno.click(); 
+					 fromdocno.clear();
+					 fromdocno.sendKeys("2200004");
+				}
+
+				public void VerifyMyerpToDocNo() {
+					 Assert.assertTrue(todocno.isEnabled(),"todocno field is enabled");		 
+					 Reporter.log("verifyMyerptodocno", true);
+					 todocno.click(); 
+					 todocno.clear();
+					 todocno.sendKeys("220004");
+					
+				}
+				
+				public void VerifyandClickonMyerpnowiseGetdataBtn() {
+					 Assert.assertTrue(getdatabtn.isEnabled(),"getdatabtn is enabled");
+					 Reporter.log(" verifyMyerpgetdatabtn", true);
+					 getdatabtn.click();
+				
+				}
+}                   

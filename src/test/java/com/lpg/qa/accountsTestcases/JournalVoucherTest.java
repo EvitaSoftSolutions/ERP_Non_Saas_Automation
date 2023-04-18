@@ -41,10 +41,11 @@ import com.lpg.qa.accountsPages.JournalVoucher;
 				jv.VerifyandClickonMyerpJVSelectDebitCredit();
 				jv.VerifyandClickonMyerpJVSavebtn();
 			//	jv.VerifyandClickonMyerpJVNewbtn();
-				//jv.VerifyandClickonMyerpJVAddHeaderbtn();
-				//jv.VerifyandClickonMyerpJVLedger();
-				//jv.VerifyandClickonMyerpJVAmount();
-			//	jv.VerifyandClickonMyerpJVSavebtn();
+				jv.VerifyandClickonMyerpJVAddHeaderbtn();
+				jv.VerifyandClickonMyerpJVLedger1();
+				jv.VerifyandClickonMyerpJVAmount1();
+				jv.VerifyandClickonMyerpJVSelectDebitCredit1();
+			jv.VerifyandClickonMyerpJVSavebtn();
 				
 				
 				 }

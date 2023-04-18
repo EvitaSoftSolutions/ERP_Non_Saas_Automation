@@ -90,20 +90,20 @@ public class ERV {
 					Thread.sleep(500);
 					Assert.assertFalse(eselectgodown.isDisplayed(),"eselectgodown is displayed");
 					Assert.assertFalse(eselectgodown.isSelected());
-					ervsg.selectByVisibleText("VIRAR");
+					ervsg.selectByVisibleText("VIRAR EAST");
 				}
 				public void VerifyMyerpERVVehicleNumber()  throws InterruptedException {
 					Select  ervsg= new Select(selectvehiclenum);
 					Thread.sleep(500);
 					Assert.assertFalse(selectvehiclenum.isDisplayed(),"eselectgodown is displayed");
 					Assert.assertFalse(selectvehiclenum.isSelected());
-					ervsg.selectByVisibleText("MH 04 HY 7867");
+					ervsg.selectByVisibleText("MH 02 BA 1237");
 				}
 				public void VerifyandClickonMyerpEProductTextBox() { 
 					 Assert.assertTrue(eproducttxt.isEnabled(),"eproducttxt is enabled");
 					 Reporter.log(" verifyMyerpeproducttxt", true);
 					 eproducttxt.click();
-					 eproducttxt.sendKeys("5 KG COMM");
+					 eproducttxt.sendKeys("19 KG");
 				}
 				public void VerifyandClickonMyerpSoundQantityTextBox() { 
 					 Assert.assertTrue(esoundqauntity.isEnabled(),"esoundqauntity is enabled");
@@ -151,7 +151,7 @@ public class ERV {
 	            	   Assert.assertTrue(vehicleno.isEnabled(),"vehicleno is enabled");
 	            	   Reporter.log(" verifyMyerpvehicleno", true);
 	            	   vehicleno.click();
-	            	   vehicleno.sendKeys("MH AD 3456");
+	            	   vehicleno.sendKeys("MH 02 BA 1237");
 	               }
 	                
                 public void VerifyandClickonMyerpSubmitBtn() throws InterruptedException { 
@@ -198,7 +198,7 @@ public class ERV {
 					 Reporter.log("verifyMyerpselectdate", true);
 					 selectdate.click(); 
 					 selectdate.clear();
-					 selectdate.sendKeys("5/02/2023");
+					 selectdate.sendKeys("30/03/2023");
 				}
 
 				public void verifyMyerpSelectGodown() throws InterruptedException {
@@ -206,7 +206,7 @@ public class ERV {
 					Thread.sleep(1000);
 					Assert.assertFalse(selectgodowen.isDisplayed(),"selectgodown is displayed");
 					Assert.assertFalse(selectgodowen.isSelected());
-					su.selectByVisibleText("VIRAR");
+					su.selectByVisibleText("VIRAR EAST");
 			
 				}
 				public void VerifyandClickonMyerpGetDataBtn() throws InterruptedException {

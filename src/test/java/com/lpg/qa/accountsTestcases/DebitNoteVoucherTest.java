@@ -34,8 +34,8 @@ public class DebitNoteVoucherTest  extends LpgTestBase{
 		dbv.setup(driver);
 		dbv.VerifyandClickonMyerpAccountsModule();
 		dbv.VerifyandClickonMyerpDebitNoteVoucherForm();
-		dbv.VerifyandClickonMyerpDBVoucherNumber();
-		dbv.VerifyandClickonMyerpDBVTransactionDate();
+	    dbv.VerifyandClickonMyerpDBVoucherNumber();
+		dbv.VerifyandClickonMyerpDBVTransactionDate() ;
 		dbv.VerifyandClickonMyerpDBVDebitFromLedger();
 		dbv.VerifyandClickonMyerpDBVAmount();
 		dbv.VerifyandClickonMyerpDBVLedger1();
@@ -65,6 +65,20 @@ public class DebitNoteVoucherTest  extends LpgTestBase{
 		dbv.VerifyandClickonMyerpUpdateDebitNoteVoucherForm();
 		dbv.VerifyandClickonMyerpDBVUpdateDocNumber();
 		dbv.VerifyandClickonMyerpUpdateGetDataBtn();
+		dbv.VerifyandClickonMyerpDBVUSavebtn();
+
+		dbv.VerifyandClickonMyerpDebitnoteRegisterReport();
+		dbv.verifyMyerpSelectCompany();
+		dbv.VerifyMyerpFromDate();
+		dbv.VerifyMyerpTodate();
+		dbv.VerifyandClickonMyerpGetdataBtn();
+		dbv.VerifyandClickonMyerpBackBtn();
+
+		dbv.VerifyandClickonMyerpDebitNoteNoWiseReport();
+		dbv.verifyMyerpSelectCompany1();
+		dbv.VerifyMyerpFromDocNo();
+		dbv.VerifyMyerpToDocNo();
+		dbv.VerifyandClickonMyerpGetdataBtn1();
 
 	}
 }

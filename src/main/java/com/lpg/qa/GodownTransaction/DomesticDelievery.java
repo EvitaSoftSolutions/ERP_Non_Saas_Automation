@@ -88,7 +88,7 @@ public class DomesticDelievery {
 								Thread.sleep(500);
 								Assert.assertTrue(ddselectproduct.isDisplayed(),"ddselectproduct is displayed");
 								Assert.assertFalse(ddselectproduct.isSelected());
-								ddsp.selectByVisibleText("14.2 KG DOM");
+								ddsp.selectByVisibleText("14.2 KG");
 							}
 							public void VerifyandClickonMyerpGTDDGetDataBtn() throws InterruptedException { 
 								Thread.sleep(1000);
@@ -101,7 +101,7 @@ public class DomesticDelievery {
 								 Assert.assertTrue(ddsearchdtabtn.isEnabled(),"ddsearchdtabtn is enabled");
 								 Reporter.log(" verifyMyerpddsearchdtabtn", true);
 								 ddsearchdtabtn.click();
-								 ddsearchdtabtn.sendKeys("AJIT");
+								 ddsearchdtabtn.sendKeys("RAMESH SACHAN");
 
                            }
 							public void VerifyMyerpTVSelectGodown()  throws InterruptedException {
@@ -110,7 +110,7 @@ public class DomesticDelievery {
 								Thread.sleep(500);
 								Assert.assertTrue(ddselectgodown.isDisplayed(),"ddselectgodown is displayed");
 								Assert.assertFalse(ddselectgodown.isSelected());
-								ddsp.selectByVisibleText("VIRAR");
+								ddsp.selectByVisibleText("VIRAR EAST");
 							}
 							public void VerifyandClickonMyerpGTDDFullCyl() { 
 								 Assert.assertTrue(ddfullcyl.isEnabled(),"ddfullcyl is enabled");
@@ -157,7 +157,7 @@ public class DomesticDelievery {
 								Thread.sleep(500);
 								Assert.assertTrue(ddselectproduct.isDisplayed(),"ddselectproduct is displayed");
 								Assert.assertFalse(ddselectproduct.isSelected());
-								ddsp.selectByVisibleText("14.2 KG DOM");
+								ddsp.selectByVisibleText("14.2 KG");
 							}
 							public void VerifyandClickonMyerpGTDDGetDataBtn1() throws InterruptedException { 
 								Thread.sleep(1000);
@@ -170,7 +170,7 @@ public class DomesticDelievery {
 								 Assert.assertTrue(ddsearchdtabtn.isEnabled(),"ddsearchdtabtn is enabled");
 								 Reporter.log(" verifyMyerpddsearchdtabtn", true);
 								 ddsearchdtabtn.click();
-								 ddsearchdtabtn.sendKeys("AJIT");
+								 ddsearchdtabtn.sendKeys("RAMESH SACHAN");
 
                            }
 							public void VerifyMyerpTVSelectGodown1()  throws InterruptedException {
@@ -179,7 +179,7 @@ public class DomesticDelievery {
 								Thread.sleep(500);
 								Assert.assertTrue(ddselectgodown.isDisplayed(),"ddselectgodown is displayed");
 								Assert.assertFalse(ddselectgodown.isSelected());
-								ddsp.selectByVisibleText("VIRAR");
+								ddsp.selectByVisibleText("VIRAR EAST");
 							}
 							public void VerifyandClickonMyerpGTDDFullCyl1() { 
 								 Assert.assertTrue(ddfullcyl.isEnabled(),"ddfullcyl is enabled");
@@ -243,7 +243,7 @@ public class DomesticDelievery {
 								 Reporter.log("verifyMyerpselectdate", true);
 								 selectdate.click(); 
 								 selectdate.clear();
-								 selectdate.sendKeys("5/02/2023");
+								 selectdate.sendKeys("30/03/2023");
 							}
 
 							public void verifyMyerpSelectGodown() throws InterruptedException {
@@ -251,7 +251,7 @@ public class DomesticDelievery {
 								Thread.sleep(1000);
 								Assert.assertFalse(selectgodowen.isDisplayed(),"selectgodown is displayed");
 								Assert.assertFalse(selectgodowen.isSelected());
-								su.selectByVisibleText("VIRAR");
+								su.selectByVisibleText("VIRAR EAST");
 							
 							}
 							public void VerifyandClickonMyerpGetDataBtn() throws InterruptedException {
